@@ -1,0 +1,424 @@
+{
+  "$__mpe_config_新建Pipeline1": {
+    "$__mpe_code": {
+      "prefix": "",
+      "savedViewport": {
+        "x": 80,
+        "y": 241,
+        "zoom": 0.5
+      },
+      "filename": "新建Pipeline1",
+      "version": "v0.14.2"
+    }
+  },
+  "活动": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": "活动",
+        "roi": [
+          1180,
+          170,
+          68,
+          86
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 2000,
+    "focus": "[color:green]活动[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 1
+      }
+    },
+    "next": [
+      "活动滑动"
+    ]
+  },
+  "活动滑动": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "Swipe",
+      "param": {
+        "begin": [
+          110,
+          414,
+          1,
+          1
+        ],
+        "end": [
+          [
+            110,
+            313,
+            1,
+            1
+          ]
+        ]
+      }
+    },
+    "post_wait_freezes": 2000,
+    "focus": "[color:green]活动滑动[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 300,
+        "y": 2
+      }
+    },
+    "next": [
+      "遍历活动"
+    ]
+  },
+  "遍历活动": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": "[color:green]遍历活动[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 600,
+        "y": 50
+      }
+    },
+    "next": [
+      "影之国编年史"
+    ]
+  },
+  "影之国编年史": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "影之国编年史.png",
+        "roi": [
+          6,
+          68,
+          193,
+          605
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": "[color:green]影之国编年史[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 900,
+        "y": 16
+      }
+    },
+    "next": [
+      "前往活动"
+    ]
+  },
+  "前往活动": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "海少女.png",
+        "roi": [
+          1074,
+          565,
+          198,
+          130
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": "[color:green]前往活动[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 1200,
+        "y": 16
+      }
+    },
+    "next": [
+      "未来存亡之战"
+    ]
+  },
+  "未来存亡之战": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "未来存亡之战.png",
+        "roi": [
+          1032,
+          270,
+          172,
+          75
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": "[color:green]未来存亡之战[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 1500,
+        "y": 16
+      }
+    },
+    "next": [
+      "难度选择"
+    ]
+  },
+  "难度选择": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "难度选择.png",
+        "roi": [
+          927,
+          576,
+          307,
+          101
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": "[color:green]难度选择[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 1800,
+        "y": 16
+      }
+    },
+    "next": [
+      "扫荡"
+    ]
+  },
+  "扫荡": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "扫荡.png",
+        "roi": [
+          655,
+          549,
+          150,
+          55
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "timeout": 3000,
+    "focus": "[color:green]扫荡[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 2100,
+        "y": 0
+      }
+    },
+    "next": [
+      "扫荡MAX"
+    ],
+    "on_error": [
+      "扫荡退出"
+    ]
+  },
+  "扫荡MAX": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "扫荡MAX.png"
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": "[color:green]扫荡MAX[/color]",
+    "recommended roi": [
+      718,
+      210,
+      124,
+      56
+    ],
+    "$__mpe_code": {
+      "position": {
+        "x": 2400,
+        "y": 16
+      }
+    },
+    "next": [
+      "开始扫荡"
+    ]
+  },
+  "开始扫荡": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "开始扫荡.png"
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 2000,
+    "focus": "[color:green]开始扫荡[/color]",
+    "recommended roi": [
+      505,
+      514,
+      248,
+      53
+    ],
+    "$__mpe_code": {
+      "position": {
+        "x": 2700,
+        "y": 0
+      }
+    },
+    "next": [
+      "扫荡完成确认"
+    ]
+  },
+  "扫荡完成确认": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "扫荡完成确认.png"
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": "[color:green]扫荡完成确认[/color]",
+    "recommended roi": [
+      508,
+      580,
+      246,
+      60
+    ],
+    "$__mpe_code": {
+      "position": {
+        "x": 3000,
+        "y": 16
+      }
+    },
+    "next": [
+      "扫荡",
+      {
+        "name": "单击确认",
+        "jump_back": true
+      },
+      {
+        "name": "联合取消",
+        "jump_back": true
+      }
+    ]
+  },
+  "联合取消": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "联合取消.png"
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": "[color:green]联合取消[/color]",
+    "recommended roi": [
+      428,
+      516,
+      139,
+      61
+    ],
+    "$__mpe_code": {
+      "position": {
+        "x": 3300,
+        "y": 462
+      }
+    },
+    "next": [
+      "扫荡"
+    ]
+  },
+  "扫荡退出": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          551,
+          19,
+          110,
+          45
+        ]
+      }
+    },
+    "focus": "[color:green]扫荡退出[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 2400,
+        "y": 329
+      }
+    },
+    "next": [
+      "返回主页"
+    ]
+  },
+  "返回主页": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "返回主页.png"
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": "[color:green]返回主页[/color]",
+    "recommended roi": [
+      124,
+      11,
+      98,
+      58
+    ],
+    "$__mpe_code": {
+      "position": {
+        "x": 2700,
+        "y": 312
+      }
+    }
+  },
+  "$__mpe_external_单击确认_新建Pipeline1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3305,
+        "y": 101
+      }
+    }
+  }
+}

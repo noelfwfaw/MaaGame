@@ -1,0 +1,33 @@
+{
+  "$__mpe_config_新建Pipeline1": {
+    "$__mpe_code": {
+      "prefix": "",
+      "savedViewport": {
+        "x": 905,
+        "y": 366,
+        "zoom": 0.5
+      },
+      "filename": "新建Pipeline1",
+      "version": "v0.14.2"
+    }
+  },
+  "关闭苍雾": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "StopApp",
+      "param": {
+        "package": "com.feimo.hazeworld.bilibili"
+      }
+    },
+    "focus": "[color:red]关闭成功[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  }
+}

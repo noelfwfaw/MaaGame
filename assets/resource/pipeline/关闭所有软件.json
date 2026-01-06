@@ -1,0 +1,104 @@
+{
+  "$__mpe_config_新建Pipeline1": {
+    "$__mpe_code": {
+      "prefix": "",
+      "savedViewport": {
+        "x": 607,
+        "y": 381,
+        "zoom": 0.5
+      },
+      "filename": "新建Pipeline1",
+      "version": "v0.14.2"
+    }
+  },
+  "一键关闭后台": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 14
+      }
+    },
+    "next": [
+      "关闭1"
+    ]
+  },
+  "关闭1": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "StopApp",
+      "param": {
+        "package": "com.neowizgames.game.browndust2"
+      }
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 300,
+        "y": 0
+      }
+    },
+    "next": [
+      "关闭2"
+    ]
+  },
+  "关闭2": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "StopApp",
+      "param": {
+        "package": "com.wemadeconnect.aos.lostdgl"
+      }
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 600,
+        "y": 0
+      }
+    },
+    "next": [
+      "关闭3"
+    ]
+  },
+  "关闭3": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "StopApp",
+      "param": {
+        "package": "com.feimo.hazeworld.bilibili"
+      }
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 900,
+        "y": 0
+      }
+    },
+    "next": [
+      "关闭奇游"
+    ]
+  },
+  "$__mpe_external_关闭奇游_新建Pipeline1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1200,
+        "y": 38
+      }
+    }
+  }
+}

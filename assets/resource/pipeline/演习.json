@@ -1,0 +1,299 @@
+{
+  "$__mpe_config_新建Pipeline1": {
+    "$__mpe_code": {
+      "prefix": "",
+      "savedViewport": {
+        "x": 585,
+        "y": 302,
+        "zoom": 0.29
+      },
+      "filename": "新建Pipeline1",
+      "version": "v0.14.2"
+    }
+  },
+  "演习": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": "演习",
+        "roi": [
+          1101,
+          566,
+          82,
+          50
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 5000,
+    "focus": "[color:green]演习[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    "next": [
+      "演习无票",
+      "代理"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "演习无票": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": "0/15",
+        "roi": [
+          1123,
+          19,
+          63,
+          35
+        ],
+        "threshold": 0.9
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": "[color:green]演习无票[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 2100,
+        "y": 2
+      }
+    },
+    "next": [
+      "返回"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "代理": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": "代理作战",
+        "roi": [
+          825,
+          636,
+          115,
+          43
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 2000,
+    "focus": "[color:green]代理[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 300,
+        "y": 310
+      }
+    },
+    "next": [
+      "代理次数"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "代理次数": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": "MAX",
+        "roi": [
+          760,
+          211,
+          70,
+          47
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": "[color:green]代理次数[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 600,
+        "y": 326
+      }
+    },
+    "next": [
+      "开始代理"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "开始代理": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": "开始代理",
+        "roi": [
+          572,
+          516,
+          122,
+          47
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_delay": 1000,
+    "focus": "[color:green]开始代理[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 900,
+        "y": 310
+      }
+    },
+    "next": [
+      "判断代理完成",
+      "等待15秒"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "判断代理完成": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": "代理完成",
+        "roi": [
+          967,
+          635,
+          117,
+          48
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": "[color:green]判断代理是否完成[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 1500,
+        "y": 326
+      }
+    },
+    "next": [
+      "代理完成确认",
+      "等待结算完成"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "等待15秒": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "post_delay": 15000,
+    "focus": "[color:blue]否，等待15秒[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 1200,
+        "y": 495
+      }
+    },
+    "next": [
+      "判断代理完成",
+      "等待15秒"
+    ]
+  },
+  "代理完成确认": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": "确认",
+        "roi": [
+          590,
+          586,
+          91,
+          46
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 3000,
+    "focus": "[color:green]代理完成[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 2100,
+        "y": 310
+      }
+    },
+    "next": [
+      "返回"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "等待结算完成": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "post_delay": 10000,
+    "focus": "[color:blue]等待结算完成[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 1800,
+        "y": 475
+      }
+    },
+    "next": [
+      "代理完成确认",
+      "等待结算完成"
+    ]
+  },
+  "$__mpe_external_error_新建Pipeline1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2400,
+        "y": 724
+      }
+    }
+  },
+  "$__mpe_external_返回_新建Pipeline1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2400,
+        "y": 101
+      }
+    }
+  }
+}

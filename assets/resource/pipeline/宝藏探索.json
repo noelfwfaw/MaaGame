@@ -1,0 +1,315 @@
+{
+  "$__mpe_config_新建Pipeline1": {
+    "$__mpe_code": {
+      "prefix": "",
+      "savedViewport": {
+        "x": 495,
+        "y": 239,
+        "zoom": 0.29
+      },
+      "filename": "新建Pipeline1",
+      "version": "v0.14.2"
+    }
+  },
+  "宝藏探索": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "宝藏探索.png",
+        "roi": [
+          778,
+          578,
+          94,
+          109
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 1000,
+    "focus": "[color:green]宝藏探索[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    "next": [
+      "获取宝藏"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "获取宝藏": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "获取宝藏.png",
+        "roi": [
+          915,
+          560,
+          135,
+          44
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 1000,
+    "focus": "[color:green]获取宝藏[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 300,
+        "y": 166
+      }
+    },
+    "next": [
+      "获取宝藏确认"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "获取宝藏确认": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "获取宝藏确认.png",
+        "roi": [
+          540,
+          264,
+          174,
+          52
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 1000,
+    "focus": "[color:green]获取宝藏确认[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 600,
+        "y": 332
+      }
+    },
+    "next": [
+      "宝藏探索2"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "宝藏探索2": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "宝藏探索.png",
+        "roi": [
+          778,
+          578,
+          94,
+          109
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 1000,
+    "focus": "[color:green]宝藏探索2[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 900,
+        "y": 498
+      }
+    },
+    "next": [
+      "快速探索"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "快速探索": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "快速探索.png",
+        "roi": [
+          704,
+          559,
+          108,
+          41
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 1000,
+    "focus": "[color:green]快速探索[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 1200,
+        "y": 664
+      }
+    },
+    "next": [
+      "付费",
+      "免费探索"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "付费": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "付费.png",
+        "roi": [
+          538,
+          579,
+          116,
+          43
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          951,
+          92,
+          39,
+          44
+        ]
+      }
+    },
+    "post_wait_freezes": 1000,
+    "focus": "[color:green]付费[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 1800,
+        "y": 830
+      }
+    },
+    "next": [
+      "探索返回"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "探索返回": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "探索返回.png",
+        "roi": [
+          1073,
+          115,
+          39,
+          35
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 1000,
+    "focus": "[color:green]探索返回[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 2100,
+        "y": 1154
+      }
+    },
+    "on_error": [
+      "error"
+    ]
+  },
+  "免费探索": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "免费探索.png",
+        "roi": [
+          584,
+          577,
+          109,
+          45
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 1000,
+    "focus": "[color:green]免费探索[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 1500,
+        "y": 1174
+      }
+    },
+    "next": [
+      "获取宝藏确认2"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "获取宝藏确认2": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "获取宝藏确认.png",
+        "roi": [
+          540,
+          264,
+          174,
+          52
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 1000,
+    "focus": "[color:green]获取宝藏确认2[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 1800,
+        "y": 1174
+      }
+    },
+    "next": [
+      "探索返回"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "$__mpe_external_error_新建Pipeline1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2400,
+        "y": 765
+      }
+    }
+  }
+}

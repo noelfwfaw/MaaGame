@@ -1,0 +1,295 @@
+{
+  "$__mpe_config_新建Pipeline1": {
+    "$__mpe_code": {
+      "prefix": "",
+      "savedViewport": {
+        "x": 382,
+        "y": 242,
+        "zoom": 0.5
+      },
+      "filename": "新建Pipeline1",
+      "version": "v0.14.2"
+    }
+  },
+  "队伍讨伐": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "战斗.png",
+        "roi": [
+          909,
+          590,
+          78,
+          101
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 1000,
+    "focus": "[color:green]队伍讨伐[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 16
+      }
+    },
+    "next": [
+      "队伍"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "队伍": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "队伍.png",
+        "roi": [
+          615,
+          72,
+          93,
+          57
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 1000,
+    "focus": "[color:green]队伍[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 300,
+        "y": 16
+      }
+    },
+    "next": [
+      "队伍讨伐2"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "队伍讨伐2": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "队伍讨伐.png",
+        "roi": [
+          43,
+          180,
+          291,
+          491
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 1000,
+    "focus": "[color:green]队伍讨伐2[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 600,
+        "y": 16
+      }
+    },
+    "next": [
+      "匹配"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "匹配": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "开始匹配.png",
+        "roi": [
+          942,
+          639,
+          259,
+          48
+        ],
+        "threshold": 0.6
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 1000,
+    "focus": "[color:green]匹配[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 900,
+        "y": 0
+      }
+    },
+    "next": [
+      "匹配确认",
+      "匹配次数耗尽"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "匹配确认": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "匹配确认.png",
+        "roi": [
+          529,
+          335,
+          215,
+          41
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          602,
+          458,
+          70,
+          22
+        ]
+      }
+    },
+    "post_wait_freezes": 5000,
+    "focus": "[color:green]匹配确认[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 1200,
+        "y": 328
+      }
+    },
+    "next": [
+      "匹配等待"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "匹配等待": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "post_wait_freezes": 5000,
+    "focus": "[color:green]匹配等待[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 1500,
+        "y": 378
+      }
+    },
+    "next": [
+      "匹配确认2",
+      "匹配等待"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "匹配确认2": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": "胜利",
+        "roi": [
+          1016,
+          508,
+          238,
+          55
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 1000,
+    "focus": "[color:green]匹配确认2[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 1800,
+        "y": 344
+      }
+    },
+    "next": [
+      "讨伐返回"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "匹配次数耗尽": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "财货不足.png",
+        "roi": [
+          336,
+          208,
+          624,
+          291
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          585,
+          502,
+          100,
+          33
+        ]
+      }
+    },
+    "post_wait_freezes": 1000,
+    "focus": "[color:green]匹配次数耗尽[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 1800,
+        "y": 0
+      }
+    },
+    "next": [
+      "讨伐返回"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "$__mpe_external_error_新建Pipeline1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2100,
+        "y": 630
+      }
+    }
+  },
+  "$__mpe_external_讨伐返回_新建Pipeline1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2100,
+        "y": 117
+      }
+    }
+  }
+}

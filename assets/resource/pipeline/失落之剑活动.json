@@ -1,0 +1,120 @@
+{
+  "$__mpe_config_新建Pipeline1": {
+    "$__mpe_code": {
+      "prefix": "",
+      "savedViewport": {
+        "x": 801,
+        "y": 370,
+        "zoom": 0.29
+      },
+      "filename": "新建Pipeline1",
+      "version": "v0.14.2"
+    }
+  },
+  "失落之剑活动": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "战斗.png",
+        "roi": [
+          909,
+          590,
+          78,
+          101
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 1000,
+    "focus": "[color:green]失落之剑活动[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    "next": [
+      "失落之剑活动2"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "失落之剑活动2": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "失落之剑活动.png",
+        "roi": [
+          1108,
+          65,
+          92,
+          53
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 1000,
+    "focus": "[color:green]失落之剑活动2[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 300,
+        "y": 0
+      }
+    },
+    "next": [
+      "失落之剑活动3"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "失落之剑活动3": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "樱花约会大作战.png"
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 1000,
+    "focus": "[color:green]失落之剑活动3[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 600,
+        "y": 16
+      }
+    },
+    "next": [
+      "经验书讨伐"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "$__mpe_external_error_新建Pipeline1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 900,
+        "y": 251
+      }
+    }
+  },
+  "$__mpe_external_经验书讨伐_新建Pipeline1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 900,
+        "y": 101
+      }
+    }
+  }
+}

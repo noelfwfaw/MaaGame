@@ -1,0 +1,40 @@
+{
+    "进化": {
+        "recognition": "OCR",
+        "expected" : "强化上限",
+        "roi" : [1114,530,101,44],
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next": [
+            "英雄进化",
+            "[JumpBack]进化确认"
+        ]
+    },
+    "进化确认": {
+        "recognition": "OCR",
+        "expected" : "确认",
+        "roi" : [600,556,70,43],
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next": []
+    },
+    "英雄进化": {
+        "recognition": "OCR",
+        "expected" : "英雄进化",
+        "roi" : [997,527,102,43],
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next": [
+            "进化",
+            "上线突破",
+            "[JumpBack]进化确认"
+        ]
+    },
+    "上线突破": {
+        "recognition": "OCR",
+        "expected" : "上限突破",
+        "roi" : [1008,528,92,47],
+        "action": "DoNothing",
+        "post_wait_freezes": 1000
+    }
+}

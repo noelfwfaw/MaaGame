@@ -1,0 +1,152 @@
+{
+  "$__mpe_config_新建Pipeline1": {
+    "$__mpe_code": {
+      "prefix": "",
+      "savedViewport": {
+        "x": 928,
+        "y": 174,
+        "zoom": 0.29
+      },
+      "filename": "新建Pipeline1",
+      "version": "v0.14.2"
+    }
+  },
+  "苍雾世界日常": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "Custom",
+      "param": {
+        "custom_action": "GetWeekPlan"
+      }
+    },
+    "focus": "[color:green]苍雾世界日常[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "星期一计划": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": "[color:green]星期一计划[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 244
+      }
+    }
+  },
+  "星期二计划": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": "[color:green]星期二计划[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 456
+      }
+    }
+  },
+  "星期三计划": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": "[color:green]星期三计划[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 668
+      }
+    }
+  },
+  "星期四计划": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": "[color:green]星期四计划[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 880
+      }
+    }
+  },
+  "星期五计划": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": "[color:green]星期五计划[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 1092
+      }
+    }
+  },
+  "星期六计划": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": "[color:green]星期六计划[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 1304
+      }
+    }
+  },
+  "星期日计划": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": "[color:green]星期日计划[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 1516
+      }
+    }
+  }
+}

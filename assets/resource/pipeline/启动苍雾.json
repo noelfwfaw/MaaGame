@@ -1,0 +1,433 @@
+{
+  "$__mpe_config_新建Pipeline1": {
+    "$__mpe_code": {
+      "prefix": "",
+      "savedViewport": {
+        "x": 628,
+        "y": 175,
+        "zoom": 0.29
+      },
+      "filename": "新建Pipeline1",
+      "version": "v0.14.2"
+    }
+  },
+  "初始化": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": "[color:green]初始化[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 32
+      }
+    },
+    "next": [
+      "初始状态",
+      "启动苍雾",
+      {
+        "name": "一键关闭后台",
+        "jump_back": true
+      }
+    ]
+  },
+  "启动苍雾": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "StartApp",
+      "param": {
+        "package": "com.feimo.hazeworld.bilibili"
+      }
+    },
+    "post_delay": 2000,
+    "focus": "[color:green]启动苍雾[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 300,
+        "y": 166
+      }
+    },
+    "next": [
+      "苍雾主页面等待"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "苍雾主页面等待": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "post_delay": 5000,
+    "focus": "[color:blue]苍雾主页面等待[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 600,
+        "y": 182
+      }
+    },
+    "next": [
+      "关闭活动公告",
+      "苍雾更新",
+      "苍雾维护",
+      "苍雾主页面等待"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "苍雾更新": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "roi": [
+          735,
+          407,
+          145,
+          49
+        ],
+        "expected": "确认"
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": "[color:green]苍雾更新[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 900,
+        "y": 1442
+      }
+    },
+    "next": [
+      "苍雾主页面等待"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "苍雾维护": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "roi": [
+          298,
+          271,
+          229,
+          62
+        ],
+        "expected": "苍雾世界维护公告"
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": "[color:green]苍雾维护[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 1800,
+        "y": 1292
+      }
+    },
+    "next": [
+      "关闭苍雾"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "关闭活动公告": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "roi": [
+          454,
+          73,
+          87,
+          37
+        ],
+        "expected": "活动公告"
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          19,
+          320,
+          41,
+          39
+        ]
+      }
+    },
+    "focus": "[color:green]关闭活动公告[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 900,
+        "y": 149
+      }
+    },
+    "next": [
+      "登陆",
+      "关闭活动公告"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "登陆": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "roi": [
+          506,
+          572,
+          265,
+          52
+        ],
+        "template": "登陆.png"
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 3000,
+    "focus": "[color:green]登陆[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 1200,
+        "y": 148
+      }
+    },
+    "next": [
+      "初始状态",
+      "签到",
+      "已签到",
+      "登陆"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "已签到": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "已签到.png",
+        "roi": [
+          1117,
+          607,
+          93,
+          39
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": "[color:green]已签到[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 1500,
+        "y": 938
+      }
+    },
+    "next": [
+      "返回"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "签到": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "roi": [
+          1043,
+          593,
+          232,
+          70
+        ],
+        "template": "签到.png"
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 1000,
+    "focus": "[color:green]签到[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 1500,
+        "y": 276
+      }
+    },
+    "next": [
+      "签到单击确认"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "单击确认": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "点击确认.png",
+        "roi": [
+          544,
+          521,
+          198,
+          27
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 1000,
+    "focus": "[color:green]单击确认[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 1800,
+        "y": 608
+      }
+    },
+    "on_error": [
+      "error"
+    ]
+  },
+  "签到单击确认": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "点击确认.png",
+        "roi": [
+          544,
+          521,
+          198,
+          27
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 1000,
+    "focus": "[color:green]签到单击确认[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 1800,
+        "y": 276
+      }
+    },
+    "next": [
+      "签到"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "返回": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "返回.png",
+        "roi": [
+          7,
+          13,
+          166,
+          41
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 1000,
+    "focus": "[color:green]返回[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 1800,
+        "y": 920
+      }
+    },
+    "on_error": [
+      "error"
+    ]
+  },
+  "初始状态": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "roi": [
+          1094,
+          634,
+          95,
+          57
+        ],
+        "expected": "作战"
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": "[color:green]初始状态[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 1500,
+        "y": 0
+      }
+    },
+    "on_error": [
+      "error"
+    ]
+  },
+  "$__mpe_external_一键关闭后台_新建Pipeline1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 305,
+        "y": 442
+      }
+    }
+  },
+  "$__mpe_external_error_新建Pipeline1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2100,
+        "y": 1187
+      }
+    }
+  },
+  "$__mpe_external_关闭苍雾_新建Pipeline1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2100,
+        "y": 1377
+      }
+    }
+  }
+}

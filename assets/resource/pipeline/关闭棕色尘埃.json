@@ -1,0 +1,54 @@
+{
+  "$__mpe_config_新建Pipeline1": {
+    "$__mpe_code": {
+      "prefix": "",
+      "savedViewport": {
+        "x": 832,
+        "y": 363,
+        "zoom": 0.5
+      },
+      "filename": "新建Pipeline1",
+      "version": "v0.14.2"
+    }
+  },
+  "关闭棕色尘埃": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "StopApp",
+      "param": {
+        "package": "com.neowizgames.game.browndust2"
+      }
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    "next": [
+      "关闭奇游"
+    ],
+    "on_error": [
+      "error"
+    ]
+  },
+  "$__mpe_external_关闭奇游_新建Pipeline1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 300,
+        "y": 38
+      }
+    }
+  },
+  "$__mpe_external_error_新建Pipeline1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 300,
+        "y": 148
+      }
+    }
+  }
+}

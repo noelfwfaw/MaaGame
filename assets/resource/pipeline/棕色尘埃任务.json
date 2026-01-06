@@ -1,0 +1,143 @@
+{
+  "$__mpe_config_新建Pipeline1": {
+    "$__mpe_code": {
+      "prefix": "",
+      "savedViewport": {
+        "x": 758,
+        "y": 351,
+        "zoom": 0.29
+      },
+      "filename": "新建Pipeline1",
+      "version": "v0.14.2"
+    }
+  },
+  "棕色尘埃任务": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "棕色尘埃任务.png",
+        "roi": [
+          552,
+          622,
+          39,
+          66
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 1000,
+    "focus": "[color:green]棕色尘埃任务[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 16
+      }
+    },
+    "next": [
+      "棕色尘埃任务领取"
+    ]
+  },
+  "棕色尘埃任务领取": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "棕色尘埃任务领取.png",
+        "roi": [
+          1050,
+          645,
+          78,
+          28
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 5000,
+    "timeout": 5000,
+    "focus": "[color:green]棕色尘埃任务领取[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 300,
+        "y": 0
+      }
+    },
+    "next": [
+      "棕色尘埃任务奖励"
+    ],
+    "on_error": [
+      "棕色尘埃任务返回"
+    ]
+  },
+  "棕色尘埃任务奖励": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "快速战斗奖励.png",
+        "roi": [
+          558,
+          628,
+          144,
+          35
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 1000,
+    "focus": "[color:green]棕色尘埃任务奖励[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 600,
+        "y": 182
+      }
+    },
+    "next": [
+      "棕色尘埃任务返回"
+    ]
+  },
+  "棕色尘埃任务返回": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": "抽抽乐返回2.png",
+        "roi": [
+          0,
+          10,
+          164,
+          63
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_wait_freezes": 1000,
+    "focus": "[color:green]棕色尘埃任务返回[/color]",
+    "$__mpe_code": {
+      "position": {
+        "x": 900,
+        "y": 16
+      }
+    },
+    "next": [
+      "棕色尘埃主页面2",
+      "棕色尘埃任务返回"
+    ]
+  },
+  "$__mpe_external_棕色尘埃主页面2_新建Pipeline1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1200,
+        "y": 117
+      }
+    }
+  }
+}
