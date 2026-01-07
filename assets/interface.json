@@ -5,7 +5,7 @@
     "license": "MIT",
     "welcome": "欢迎使用 MaaGame!",
     "github": "https://github.com/noelfwfaw/MMGS",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "controller": [
         {
             "name": "安卓端",
