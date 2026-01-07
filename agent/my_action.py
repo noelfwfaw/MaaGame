@@ -32,7 +32,7 @@ class ActionTime(CustomAction):
         weekday_plan = weekday_name+"计划"
         try:
             context.override_pipeline({"苍雾世界日常": {
-                      "next":["星期二计划"]
+                      "next":[weekday_plan]
                     }})
 
             print(f"执行{weekday_plan}")
