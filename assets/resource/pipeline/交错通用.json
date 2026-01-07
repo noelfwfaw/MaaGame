@@ -1,0 +1,284 @@
+{
+  "战斗_自动战斗": {
+    "is_sub": true,
+    "recognition": "TemplateMatch",
+    "template": "Combat/Combat_Auto.png",
+    "roi": [
+      1069,
+      27,
+      105,
+      59
+    ],
+    "action": "Click"
+  },
+  "战斗_启用二倍速": {
+    "is_sub": true,
+    "recognition": "TemplateMatch",
+    "template": "Combat/Combat_Doublespeed.png",
+    "roi": [
+      973,
+      30,
+      95,
+      57
+    ],
+    "threshold": 0.9,
+    "action": "Click",
+    "target": [
+      1012,
+      52,
+      10,
+      10
+    ]
+  },
+  "首页_出击": {
+    "recognition": "TemplateMatch",
+    "template": "StartUp/chuji.png",
+    "roi": [
+      1094,
+      539,
+      176,
+      175
+    ],
+    "action": "Click",
+    "next_doc": "Set in code."
+  },
+  "子任务_进入首页": {
+    "is_sub": true,
+    "next": [
+      "首页标志2",
+      "子任务_点击首页按钮",
+      "子任务_点击返回",
+      "子任务_获得物品",
+      "子任务_点击取消",
+      "子任务_点击确认",
+      "子任务_关闭公告",
+      "交错签到",
+      "首页标志1",
+      "开始游戏",
+      "NERI"
+    ]
+  },
+  "子任务_点击确认": {
+    "is_sub": true,
+    "recognition": "OCR",
+    "expected": [
+      "确认"
+    ],
+    "roi": [
+      665,
+      364,
+      331,
+      152
+    ],
+    "action": "Click"
+  },
+  "子任务_点击取消": {
+    "is_sub": true,
+    "recognition": "OCR",
+    "expected": [
+      "取消"
+    ],
+    "roi": [
+      330,
+      346,
+      313,
+      150
+    ],
+    "action": "Click"
+  },
+  "子任务_获得物品": {
+    "is_sub": true,
+    "recognition": "OCR",
+    "expected": [
+      "获得物品",
+      "合成成功"
+    ],
+    "roi": [
+      447,
+      117,
+      405,
+      117
+    ],
+    "action": "Click",
+    "post_delay": 1000
+  },
+  "子任务_点击返回": {
+    "is_sub": true,
+    "recognition": "TemplateMatch",
+    "template": "StartUp/BackButton.png",
+    "roi": [
+      14,
+      10,
+      126,
+      72
+    ],
+    "action": "Click"
+  },
+  "子任务_点击首页按钮": {
+    "is_sub": true,
+    "recognition": "TemplateMatch",
+    "template": [
+      "StartUp/HomeButton.png",
+      "StartUp/HomeButton1.png"
+    ],
+    "roi": [
+      180,
+      10,
+      100,
+      70
+    ],
+    "action": "Click",
+    "post_delay": 5000
+  },
+  "子任务_关闭公告": {
+    "is_sub": true,
+    "recognition": "TemplateMatch",
+    "template": "StartUp/CloseAnnouncement.png",
+    "roi": [
+      900,
+      55,
+      362,
+      200
+    ],
+    "action": "Click"
+  },
+  "子任务_关闭周年公告": {
+    "is_sub": true,
+    "recognition": "TemplateMatch",
+    "template": "StartUp/ZNGG.png",
+    "roi": [
+      900,
+      55,
+      362,
+      200
+    ],
+    "action": "Click"
+  },
+  "通用-返回主页": {
+    "recognition": "TemplateMatch",
+    "template": "交错返回主页.png",
+    "roi": [
+      164,
+      21,
+      112,
+      51
+    ],
+    "pre_wait_freezes": {
+      "time": 1000,
+      "threshold": 0.95
+    },
+    "action": "Click",
+    "focus": "返回主页"
+  },
+  "通用-确认获得物品": {
+    "recognition": "OCR",
+    "expected": "获得物品",
+    "roi": [
+      511,
+      154,
+      276,
+      116
+    ],
+    "pre_wait_freezes": {
+      "time": 2000,
+      "threshold": 0.95
+    },
+    "action": "Click"
+  },
+  "通用-返回": {
+    "recognition": "TemplateMatch",
+    "template": "交错返回.png",
+    "roi": [
+      11,
+      8,
+      426,
+      102
+    ],
+    "pre_wait_freezes": {
+      "time": 1000,
+      "threshold": 0.95
+    },
+    "action": "Click"
+  },
+  "通用-啥也不做": {
+    "action": "DoNothing",
+    "focus": "结束任务"
+  },
+  "活动探索-首页-出击": {
+    "recognition": "TemplateMatch",
+    "template": "StartUp/chuji.png",
+    "roi": [
+      1085,
+      557,
+      194,
+      152
+    ],
+    "action": "Click",
+    "post_wait_freezes": 200,
+    "next": "进入活动探索界面"
+  },
+  "进入活动探索界面": {
+    "recognition": "OCR",
+    "expected": "活动探索",
+    "roi": [
+      527,
+      110,
+      227,
+      90
+    ],
+    "action": "Click",
+    "post_wait_freezes": {
+      "time": 1000,
+      "threshold": 0.95
+    },
+    "next": "活动选择",
+    "interrupt": "活动探索-右滑"
+  },
+  "活动选择": {
+    "recognition": "OCR",
+    "expected": "活动选择",
+    "roi": [
+      91,
+      173,
+      1139,
+      422
+    ],
+    "action": "Click",
+    "post_wait_freezes": {
+      "time": 1000,
+      "threshold": 0.95
+    }
+  },
+  "活动探索-右滑": {
+    "action": "Swipe",
+    "begin": [
+      1116,
+      376,
+      37,
+      47
+    ],
+    "end": [
+      858,
+      379,
+      49,
+      44
+    ],
+    "duration": 1000,
+    "post_wait_freezes": {
+      "time": 1000,
+      "threshold": 0.95
+    }
+  },
+  "跳过boss演出动画": {
+    "is_sub": true,
+    "recognition": "OCR",
+    "expected": "跳过",
+    "roi": [
+      1119,
+      30,
+      87,
+      44
+    ],
+    "action": "Click"
+  }
+}

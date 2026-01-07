@@ -118,7 +118,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: MaaGame-${{ matrix.os }}-${{ matrix.arch }}
+          name: MMGS-${{ matrix.os }}-${{ matrix.arch }}
           path: "install"
 
   changelog:

@@ -1,0 +1,79 @@
+{
+    "Shopping": {
+        "next": [
+            "子任务_关闭公告",
+            "Shop",
+            "子任务_进入首页"
+        ]
+    },
+    "Shop": {
+        "recognition": "OCR",
+        "expected": [
+            "补给站"
+        ],
+        "roi": [1008, 593, 111, 118],
+        "action": "Click",
+        "next": [
+            "DailyGift",
+            "Shop"
+        ]
+    },
+    "DailyGift": {
+        "recognition": "OCR",
+        "expected": [
+            "礼包"
+        ],
+        "roi": [
+            362,
+            57,
+            166,
+            89
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "DailyGiftYes",
+         
+            "进入首页"
+        ]
+    },
+    "DailyGiftYes": {
+        "recognition": "OCR",
+        "expected": "免费",
+        "roi": [273, 522, 985, 79],
+        "action":"Click",
+        "next": [
+            "ForFree",
+            "进入首页"
+        ]
+    },
+    "ForFree": {
+        "recognition": "OCR",
+        "expected": [
+            "免费"
+        ],
+        "roi": [163, 9, 409, 239],
+        "next": [
+            "Purchase",
+            "ForFree"
+        ]
+    },
+    "Purchase": {
+        "recognition": "OCR",
+        "expected": [
+            "购买"
+        ],
+        "roi": [
+            758,
+            513,
+            191,
+            75
+        ],
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "子任务_获得物品",
+            "进入首页"
+        ]
+    }
+}
