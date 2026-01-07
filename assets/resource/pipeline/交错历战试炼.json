@@ -1,347 +1,725 @@
 {
-    "历战试炼": {
-        "next": [
-            "活动探索-首页-出击",
-            "历战试炼-关卡选择"
-        ],
-        "interrupt": "通用-返回主页"
+  "$__mpe_config_交错战线": {
+    "$__mpe_code": {
+      "filePath": "C:\\Users\\Administrator\\Documents\\GitHub\\MaaGame\\assets\\resource\\pipeline\\交错历战试炼.json",
+      "filename": "交错战线",
+      "lastSyncTime": 1767772188481,
+      "prefix": "",
+      "savedViewport": {
+        "x": -87,
+        "y": 87,
+        "zoom": 0.4
+      },
+      "version": "v0.14.2"
+    }
+  },
+  "$__mpe_external_子任务_获得物品_交错战线": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4800,
+        "y": 895
+      }
+    }
+  },
+  "$__mpe_external_战斗_启用二倍速_交错战线": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3905,
+        "y": 659
+      }
+    }
+  },
+  "$__mpe_external_战斗_自动战斗_交错战线": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3905,
+        "y": 549
+      }
+    }
+  },
+  "$__mpe_external_活动探索-首页-出击_交错战线": {
+    "$__mpe_code": {
+      "position": {
+        "x": 305,
+        "y": 24
+      }
+    }
+  },
+  "$__mpe_external_跳过boss演出动画_交错战线": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3905,
+        "y": 439
+      }
+    }
+  },
+  "$__mpe_external_通用-返回主页_交错战线": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4800,
+        "y": 1145
+      }
+    }
+  },
+  "历战演练-一键领取": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4500,
+        "y": 810
+      }
     },
-    "历战试炼-关卡选择": {
-        "recognition": "OCR",
-        "expected": [
-            "列表视图"
-        ],
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "roi": [
-            1034,
-            571,
-            156,
-            66
-        ],
-        "action": "Click",
-        "next": [
-            "历战试炼-高进度(暂时为大于10)",
-            "历战试炼-限时boss"
-        ]
+    "action": {
+      "param": {},
+      "type": "Click"
     },
-    "历战试炼-高进度(暂时为大于10)": {
-        "recognition": "OCR",
-        "expected": "^ (1 [1-9]| [2-9]d+) (.d+)?$",
-        "roi": [
-            374,
-            207,
-            23,
-            25
-        ],
-        "action": "DoNothing",
-        "next": "通用-返回主页"
+    "focus": "[color:green]一键领取[/color]",
+    "next": [
+      {
+        "jump_back": true,
+        "name": "子任务_获得物品"
+      },
+      "通用-返回主页"
+    ],
+    "post_wait_freezes": {
+      "threshold": 0.95,
+      "time": 1000
     },
-    "历战试炼-限时boss": {
-        "recognition": "OCR",
-        "expected": [
-            "关闭任务"
-        ],
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "roi": [
-            75,
-            118,
-            1131,
-            434
-        ],
-        "threshold": 0.7,
-        "action": "Click",
-        "next": [
-            "历战试炼-boss难度选择"
-        ]
-    },
-    "历战试炼-boss难度选择": {
-        "recognition": "TemplateMatch",
-        "template": "历战试炼-锁定.png",
-        "post_delay": 300,
-        "roi": [
-            269,
-            588,
-            554,
-            78
-        ],
-        "order_by": "Horizontal",
-        "index": 1,
-        "action": "Click",
-        "target": true,
-        "target_offset": [
-            -160,
-            0,
-            0,
-            0
-        ],
-        "next": [
-            "历战试炼-开始战斗"
-        ]
-    },
-    "历战试炼-开始战斗": {
-        "recognition": "OCR",
-        "expected": "开始战斗",
-        "roi": [
-            902,
-            581,
-            319,
-            81
-        ],
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "action": "Click",
-        "next": [
-            "历战试炼-开始行动"
-        ]
-    },
-    "历战试炼-开始行动": {
-        "recognition": "OCR",
-        "expected": "开始行动",
-        "roi": [
-            915,
-            614,
-            316,
-            85
-        ],
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "action": "Click",
-        "next": [
-            "历战试炼_战斗中"
-        ]
-    },
-    "历战试炼_战斗中": {
-        "recognition": "TemplateMatch",
-        "template": "Combat/Combat_Combating.png",
-        "roi": [
-            1169,
-            27,
-            105,
-            59
-        ],
-        "rate_limit": 5000,
-        "timeout": 1200000,
-        "next": [
-            "跳过boss演出动画",
-            "战斗_自动战斗",
-            "战斗_启用二倍速",
-            "历战试炼_战斗结束",
-            "历战试炼_战斗中"
-        ]
-    },
-    "历战试炼_战斗结束": {
-        "recognition": "OCR",
-        "expected": [
-            "等级"
-        ],
-        "roi": [
-            210,
-            481,
-            97,
-            82
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "历战试炼-下一难度",
-            "历战试炼-boss挑战难度",
-            "历战演练-任务奖励领取",
-            "通用-返回主页"
-        ]
-    },
-    "历战试炼-下一难度": {
-        "recognition": "TemplateMatch",
-        "template": "历战试炼-挑战锁定.png",
-        "roi": [
-            271,
-            596,
-            540,
-            60
-        ],
-        "action": "DoNothing",
-        "next": [
-            "历战试炼-boss难度选择"
-        ]
-    },
-    "历战演练-任务奖励领取": {
-        "recognition": "OCR",
-        "expected": "任务目标",
-        "roi": [
-            38,
-            593,
-            155,
-            51
-        ],
-        "action": "Click",
-        "post_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "next": [
-            "历战演练-一键领取",
-            "历战演练-无奖励可领",
-            "历战演练-任务奖励领取"
-        ]
-    },
-    "历战演练-一键领取": {
-        "recognition": "OCR",
+    "recognition": {
+      "param": {
         "expected": "一键领取",
         "roi": [
-            1025,
-            86,
-            154,
-            57
-        ],
-        "action": "Click",
-        "post_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "next": [
-            "子任务_获得物品",
-            "通用-返回主页"
+          1025,
+          86,
+          154,
+          57
         ]
+      },
+      "type": "OCR"
+    }
+  },
+  "历战演练-任务奖励领取": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4200,
+        "y": 803
+      }
     },
-    "历战演练-无奖励可领": {
-        "recognition": "TemplateMatch",
-        "template": "历战演练-无奖励可领.png",
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]任务奖励领取[/color]",
+    "next": [
+      "历战演练-一键领取",
+      "历战演练-无奖励可领",
+      "历战演练-任务奖励领取"
+    ],
+    "post_wait_freezes": {
+      "threshold": 0.95,
+      "time": 1000
+    },
+    "recognition": {
+      "param": {
+        "expected": "任务目标",
         "roi": [
-            1005,
-            75,
-            190,
-            79
-        ],
-        "next": [
-            "通用-返回主页"
+          38,
+          593,
+          155,
+          51
         ]
+      },
+      "type": "OCR"
+    }
+  },
+  "历战演练-无奖励可领": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4500,
+        "y": 1089
+      }
     },
-    "历战试炼-boss挑战难度": {
-        "recognition": "OCR",
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:green]无奖励可领[/color]",
+    "next": [
+      "通用-返回主页"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          1005,
+          75,
+          190,
+          79
+        ],
+        "template": "历战演练-无奖励可领.png"
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "历战试炼": {
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:orange]历战试炼[/color]",
+    "next": [
+      "活动探索-首页-出击",
+      "历战试炼-关卡选择",
+      {
+        "jump_back": true,
+        "name": "通用-返回主页"
+      }
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "历战试炼-boss挑战难度": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2400,
+        "y": 752
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]挑战难度[/color]",
+    "next": [
+      "历战试炼-boss挑战难度-选择",
+      {
+        "jump_back": true,
+        "name": "历战试炼-boss挑战难度-选择-右滑"
+      }
+    ],
+    "recognition": {
+      "param": {
         "expected": "挑战",
         "roi": [
-            306,
-            596,
-            482,
-            68
+          306,
+          596,
+          482,
+          68
         ],
-        "threshold": 0.7,
-        "action": "Click",
-        "next": [
-            "历战试炼-boss挑战难度-选择"
-        ],
-        "interrupt": "历战试炼-boss挑战难度-选择-右滑"
+        "threshold": 0.7
+      },
+      "type": "OCR"
+    }
+  },
+  "历战试炼-boss挑战难度-开始战斗": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3000,
+        "y": 724
+      }
     },
-    "历战试炼-boss挑战难度-选择": {
-        "recognition": "OCR",
-        "expected": "1",
-        "pre_delay": 200,
-        "roi": [
-            891,
-            493,
-            356,
-            84
-        ],
-        "action": "Click",
-        "next": [
-            "历战试炼-boss挑战难度-开始战斗"
-        ]
+    "action": {
+      "param": {},
+      "type": "Click"
     },
-    "历战试炼-boss挑战难度-选择-右滑": {
-        "target": [
-            1080,
-            503,
-            43,
-            52
-        ],
-        "post_wait_freezes": {
-            "target": [
-                891,
-                493,
-                356,
-                84
-            ],
-            "time": 1000,
-            "threshold": 0.95
-        }
-    },
-    "历战试炼-boss挑战难度-开始战斗": {
-        "recognition": "OCR",
+    "focus": "[color:green]开始战斗[/color]",
+    "next": [
+      "历战试炼-boss挑战难度-开始行动"
+    ],
+    "post_delay": 1000,
+    "pre_delay": 200,
+    "recognition": {
+      "param": {
         "expected": "开始战斗",
         "roi": [
-            908,
-            62,
-            310,
-            84
-        ],
-        "pre_delay": 200,
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "历战试炼-boss挑战难度-开始行动"
+          908,
+          62,
+          310,
+          84
         ]
+      },
+      "type": "OCR"
+    }
+  },
+  "历战试炼-boss挑战难度-开始行动": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3300,
+        "y": 740
+      }
     },
-    "历战试炼-boss挑战难度-开始行动": {
-        "recognition": "OCR",
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]开始行动[/color]",
+    "next": [
+      "历战试炼-boss挑战难度-战斗中"
+    ],
+    "pre_wait_freezes": {
+      "threshold": 0.95,
+      "time": 1000
+    },
+    "recognition": {
+      "param": {
         "expected": "开始行动",
         "roi": [
-            915,
-            614,
-            316,
-            85
-        ],
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "action": "Click",
-        "next": [
-            "历战试炼-boss挑战难度-战斗中"
+          915,
+          614,
+          316,
+          85
         ]
-    },
-    "历战试炼-boss挑战难度-战斗中": {
-        "recognition": "TemplateMatch",
-        "template": "Combat/Combat_Combating.png",
-        "roi": [
-            1169,
-            27,
-            105,
-            59
-        ],
-        "rate_limit": 5000,
-        "timeout": 1200000,
-        "next": [
-            "跳过boss演出动画",
-            "战斗_自动战斗",
-            "战斗_启用二倍速",
-            "历战试炼-boss挑战难度-战斗结束",
-            "历战试炼-boss挑战难度-战斗中"
-        ]
-    },
-    "历战试炼-boss挑战难度-战斗结束": {
-        "recognition": "OCR",
-        "expected": [
-            "等级"
-        ],
-        "roi": [
-            210,
-            481,
-            97,
-            82
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "历战演练-任务奖励领取"
-        ]
+      },
+      "type": "OCR"
     }
+  },
+  "历战试炼-boss挑战难度-战斗中": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3600,
+        "y": 725
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:blue]战斗中[/color]",
+    "next": [
+      {
+        "jump_back": true,
+        "name": "跳过boss演出动画"
+      },
+      {
+        "jump_back": true,
+        "name": "战斗_自动战斗"
+      },
+      {
+        "jump_back": true,
+        "name": "战斗_启用二倍速"
+      },
+      "历战试炼-boss挑战难度-战斗结束",
+      "历战试炼-boss挑战难度-战斗中"
+    ],
+    "rate_limit": 5000,
+    "recognition": {
+      "param": {
+        "roi": [
+          1169,
+          27,
+          105,
+          59
+        ],
+        "template": "Combat/Combat_Combating.png"
+      },
+      "type": "TemplateMatch"
+    },
+    "timeout": 1200000
+  },
+  "历战试炼-boss挑战难度-战斗结束": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3900,
+        "y": 803
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]战斗结束[/color]",
+    "next": [
+      "历战演练-任务奖励领取"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "等级"
+        ],
+        "roi": [
+          210,
+          481,
+          97,
+          82
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "历战试炼-boss挑战难度-选择": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2700,
+        "y": 740
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]选择[/color]",
+    "next": [
+      "历战试炼-boss挑战难度-开始战斗"
+    ],
+    "pre_delay": 200,
+    "recognition": {
+      "param": {
+        "expected": "1",
+        "roi": [
+          891,
+          493,
+          356,
+          84
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "历战试炼-boss挑战难度-选择-右滑": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2700,
+        "y": 1033
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1080,
+          503,
+          43,
+          52
+        ]
+      },
+      "type": "DoNothing"
+    },
+    "focus": "[color:green]右滑[/color]",
+    "post_wait_freezes": {
+      "target": [
+        891,
+        493,
+        356,
+        84
+      ],
+      "threshold": 0.95,
+      "time": 1000
+    },
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "历战试炼-boss难度选择": {
+    "$__mpe_code": {
+      "position": {
+        "x": 900,
+        "y": 283
+      }
+    },
+    "action": {
+      "param": {
+        "target": true,
+        "target_offset": [
+          -160,
+          0,
+          0,
+          0
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]难度选择[/color]",
+    "next": [
+      "历战试炼-开始战斗"
+    ],
+    "post_delay": 300,
+    "recognition": {
+      "param": {
+        "index": 1,
+        "order_by": "Horizontal",
+        "roi": [
+          269,
+          588,
+          554,
+          78
+        ],
+        "template": "历战试炼-锁定.png"
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "历战试炼-下一难度": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2400,
+        "y": 1069
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:green]下一难度[/color]",
+    "next": [
+      "历战试炼-boss难度选择"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          271,
+          596,
+          540,
+          60
+        ],
+        "template": "历战试炼-挑战锁定.png"
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "历战试炼-关卡选择": {
+    "$__mpe_code": {
+      "position": {
+        "x": 300,
+        "y": 134
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]关卡选择[/color]",
+    "next": [
+      "历战试炼-高进度(暂时为大于10)",
+      "历战试炼-限时boss"
+    ],
+    "pre_wait_freezes": {
+      "threshold": 0.95,
+      "time": 1000
+    },
+    "recognition": {
+      "param": {
+        "expected": [
+          "列表视图"
+        ],
+        "roi": [
+          1034,
+          571,
+          156,
+          66
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "历战试炼-开始战斗": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1200,
+        "y": 355
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]开始战斗[/color]",
+    "next": [
+      "历战试炼-开始行动"
+    ],
+    "pre_wait_freezes": {
+      "threshold": 0.95,
+      "time": 1000
+    },
+    "recognition": {
+      "param": {
+        "expected": "开始战斗",
+        "roi": [
+          902,
+          581,
+          319,
+          81
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "历战试炼-开始行动": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1500,
+        "y": 355
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]开始行动[/color]",
+    "next": [
+      "历战试炼_战斗中"
+    ],
+    "pre_wait_freezes": {
+      "threshold": 0.95,
+      "time": 1000
+    },
+    "recognition": {
+      "param": {
+        "expected": "开始行动",
+        "roi": [
+          915,
+          614,
+          316,
+          85
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "历战试炼-限时boss": {
+    "$__mpe_code": {
+      "position": {
+        "x": 600,
+        "y": 339
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]限时boss[/color]",
+    "next": [
+      "历战试炼-boss难度选择"
+    ],
+    "pre_wait_freezes": {
+      "threshold": 0.95,
+      "time": 1000
+    },
+    "recognition": {
+      "param": {
+        "expected": [
+          "关闭任务"
+        ],
+        "roi": [
+          75,
+          118,
+          1131,
+          434
+        ],
+        "threshold": 0.7
+      },
+      "type": "OCR"
+    }
+  },
+  "历战试炼-高进度(暂时为大于10)": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4500,
+        "y": 156
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:green]高进度[/color]",
+    "next": [
+      "通用-返回主页"
+    ],
+    "recognition": {
+      "param": {
+        "expected": "^ (1 [1-9]| [2-9]d+) (.d+)?$",
+        "roi": [
+          374,
+          207,
+          23,
+          25
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "历战试炼_战斗中": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1800,
+        "y": 340
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:blue]战斗中[/color]",
+    "next": [
+      {
+        "jump_back": true,
+        "name": "跳过boss演出动画"
+      },
+      {
+        "jump_back": true,
+        "name": "战斗_自动战斗"
+      },
+      {
+        "jump_back": true,
+        "name": "战斗_启用二倍速"
+      },
+      "历战试炼_战斗结束",
+      "历战试炼_战斗中"
+    ],
+    "rate_limit": 5000,
+    "recognition": {
+      "param": {
+        "roi": [
+          1169,
+          27,
+          105,
+          59
+        ],
+        "template": "Combat/Combat_Combating.png"
+      },
+      "type": "TemplateMatch"
+    },
+    "timeout": 1200000
+  },
+  "历战试炼_战斗结束": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2100,
+        "y": 727
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]战斗结束[/color]",
+    "next": [
+      "历战试炼-下一难度",
+      "历战试炼-boss挑战难度",
+      "历战演练-任务奖励领取",
+      "通用-返回主页"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "等级"
+        ],
+        "roi": [
+          210,
+          481,
+          97,
+          82
+        ]
+      },
+      "type": "OCR"
+    }
+  }
 }

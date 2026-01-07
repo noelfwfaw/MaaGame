@@ -1,361 +1,714 @@
 {
-    "DailyExplore": {
-        "next": [
-            "首页_出击",
-            "子任务_进入首页"
-        ]
-    },
-    "DailyExplore_Entry": {
-        "recognition": "OCR",
-        "expected": [
-            "每日探索"
-        ],
-        "roi": [
-            874,
-            294,
-            218,
-            132
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next_doc": "Set in code."
-    },
-    "DailyExplore_ReAc": {
-        "recognition": "OCR",
-        "expected": [
-            "资源采集"
-        ],
-        "roi": [
-            259,
-            205,
-            243,
-            70
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next_doc": "Set in code."
-    },
-    "DailyExplore_ReAc_Skill": {
-        "recognition": "OCR",
-        "expected": [
-            "技能磨砺"
-        ],
-        "roi": [
-            830,
-            127,
-            190,
-            60
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "DailyExplore_LevelSelect"
-        ]
-    },
-    "DailyExplore_ReAc_Money": {
-        "recognition": "OCR",
-        "expected": [
-            "星币开采"
-        ],
-        "roi": [
-            838,
-            237,
-            176,
-            60
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "DailyExplore_LevelSelect"
-        ]
-    },
-    "DailyExplore_ReAc_Experience": {
-        "recognition": "OCR",
-        "expected": [
-            "技术解析"
-        ],
-        "roi": [
-            838,
-            347,
-            176,
-            60
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "DailyExplore_LevelSelect"
-        ]
-    },
-    "DailyExplore_ReAc_Token": {
-        "recognition": "OCR",
-        "expected": [
-            "荒墟拾遗"
-        ],
-        "roi": [
-            838,
-            455,
-            176,
-            60
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "DailyExplore_LevelSelect"
-        ]
-    },
-    "DailyExplore_LevelSelect": {
-        "recognition": "OCR",
-        "text_doc": "Set in code.",
-        "roi": [
-            1147,
-            258,
-            93,
-            365
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "DailyExplore_MopUp"
-        ]
-    },
-    "DailyExplore_MopUp": {
-        "recognition": "OCR",
-        "expected": [
-            "扫荡"
-        ],
-        "roi": [
-            843,
-            559,
-            115,
-            91
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "DailyExplore_MopUpStart",
-            "DailyExplore_MopUp"
-        ]
-    },
-    "DailyExplore_MopUpStart": {
-        "recognition": "OCR",
-        "expected": [
-            "开始战斗"
-        ],
-        "roi": [
-            943,
-            521,
-            159,
-            85
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "DailyExplore_MopUpDoubleMarkup",
-            "DailyExplore_MopUpAwards",
-            "DailyExplore_NoFuel",
-            "DailyExplore_MopUpStart"
-        ]
-    },
-    "DailyExplore_NoFuel": {
-        "recognition": "OCR",
-        "expected": [
-            "燃料补给"
-        ],
-        "roi": [
-            212,
-            139,
-            180,
-            60
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "target": [
-            584,
-            57,
-            10,
-            10
-        ],
-        "next": [
-            "进入首页"
-        ]
-    },
-    "DailyExplore_MopUpAwards": {
-        "recognition": "OCR",
-        "expected": [
-            "扫荡奖励"
-        ],
-        "roi": [
-            569,
-            5,
-            181,
-            66
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "DailyExplore_LevelUp",
-            "DailyExplore_MopUp",
-            "DailyExplore_MopUpAwards"
-        ]
-    },
-    "DailyExplore_LevelUp": {
-        "is_sub": true,
-        "recognition": "TemplateMatch",
-        "template": "Combat/DailyExplore_LevelUp.png",
-        "roi": [
-            540,
-            242,
-            207,
-            91
-        ],
-        "action": "Click"
-    },
-    "DailyExplore_MopUpDoubleMarkup": {
-        "is_sub": true,
-        "recognition": "OCR",
-        "expected": [
-            "开启"
-        ],
-        "roi": [
-            702,
-            398,
-            252,
-            100
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": []
-    },
-    "DailyExplore_ChEm": {
-        "recognition": "OCR",
-        "expected": [
-            "芯片嵌合"
-        ],
-        "roi": [
-            287,
-            372,
-            205,
-            64
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next_doc": "Set in code."
-    },
-    "DailyExplore_ChEm_1": {
-        "recognition": "OCR",
-        "expected": [
-            "鼓军嵌合"
-        ],
-        "roi": [
-            830,
-            127,
-            190,
-            60
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "DailyExplore_LevelSelect"
-        ]
-    },
-    "DailyExplore_ChEm_2": {
-        "recognition": "OCR",
-        "expected": [
-            "光"
-        ],
-        "roi": [
-            830,
-            241,
-            190,
-            60
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "DailyExplore_LevelSelect"
-        ]
-    },
-    "DailyExplore_ChEm_3": {
-        "recognition": "OCR",
-        "expected": [
-            "注"
-        ],
-        "roi": [
-            830,
-            341,
-            190,
-            60
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "DailyExplore_LevelSelect"
-        ]
-    },
-    "DailyExplore_UpAc": {
-        "recognition": "OCR",
-        "expected": [
-            "跃升行动"
-        ],
-        "roi": [
-            287,
-            534,
-            205,
-            64
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next_doc": "Set in code."
-    },
-    "DailyExplore_UpAc_1": {
-        "recognition": "OCR",
-        "expected": [
-            "自然"
-        ],
-        "roi": [
-            830,
-            127,
-            190,
-            60
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "DailyExplore_LevelSelect"
-        ]
-    },
-    "DailyExplore_UpAc_2": {
-        "recognition": "OCR",
-        "expected": [
-            "人造"
-        ],
-        "roi": [
-            830,
-            241,
-            190,
-            60
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "DailyExplore_LevelSelect"
-        ]
-    },
-    "DailyExplore_UpAc_3": {
-        "recognition": "OCR",
-        "expected": [
-            "生命"
-        ],
-        "roi": [
-            830,
-            341,
-            190,
-            60
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "DailyExplore_LevelSelect"
-        ]
+  "$__mpe_config_交错战线": {
+    "$__mpe_code": {
+      "filePath": "C:\\Users\\Administrator\\Documents\\GitHub\\MaaGame\\assets\\resource\\pipeline\\交错每日探索.json",
+      "filename": "交错战线",
+      "lastSyncTime": 1767771920744,
+      "prefix": "",
+      "savedViewport": {
+        "x": 630,
+        "y": 61,
+        "zoom": 0.26
+      },
+      "version": "v0.14.2"
     }
+  },
+  "$__mpe_external_子任务_进入首页_交错战线": {
+    "$__mpe_code": {
+      "position": {
+        "x": 305,
+        "y": 222
+      }
+    }
+  },
+  "$__mpe_external_进入首页_交错战线": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1505,
+        "y": 2004
+      }
+    }
+  },
+  "$__mpe_external_首页_出击_交错战线": {
+    "$__mpe_code": {
+      "position": {
+        "x": 305,
+        "y": 24
+      }
+    }
+  },
+  "DailyExplore": {
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:orange]每日探索[/color]",
+    "next": [
+      "首页_出击",
+      {
+        "jump_back": true,
+        "name": "子任务_进入首页"
+      }
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "DailyExplore_ChEm": {
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 3003
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]芯片嵌合[/color]",
+    "next_doc": "Set in code.",
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "芯片嵌合"
+        ],
+        "roi": [
+          287,
+          372,
+          205,
+          64
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "DailyExplore_ChEm_1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 2724
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]鼓军嵌合[/color]",
+    "next": [
+      "DailyExplore_LevelSelect"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "鼓军嵌合"
+        ],
+        "roi": [
+          830,
+          127,
+          190,
+          60
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "DailyExplore_ChEm_2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 2445
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]光[/color]",
+    "next": [
+      "DailyExplore_LevelSelect"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "光"
+        ],
+        "roi": [
+          830,
+          241,
+          190,
+          60
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "DailyExplore_ChEm_3": {
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 2166
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]注[/color]",
+    "next": [
+      "DailyExplore_LevelSelect"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "注"
+        ],
+        "roi": [
+          830,
+          341,
+          190,
+          60
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "DailyExplore_Entry": {
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 3314
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]每日探索[/color]",
+    "next_doc": "Set in code.",
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "每日探索"
+        ],
+        "roi": [
+          874,
+          294,
+          218,
+          132
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "DailyExplore_LevelSelect": {
+    "$__mpe_code": {
+      "position": {
+        "x": 300,
+        "y": 1287
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]等级选择[/color]",
+    "next": [
+      "DailyExplore_MopUp"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "roi": [
+          1147,
+          258,
+          93,
+          365
+        ]
+      },
+      "type": "OCR"
+    },
+    "text_doc": "Set in code."
+  },
+  "DailyExplore_LevelUp": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1500,
+        "y": 1321
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "recognition": {
+      "param": {
+        "roi": [
+          540,
+          242,
+          207,
+          91
+        ],
+        "template": "Combat/DailyExplore_LevelUp.png"
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "DailyExplore_MopUp": {
+    "$__mpe_code": {
+      "position": {
+        "x": 600,
+        "y": 1294
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]扫荡[/color]",
+    "next": [
+      "DailyExplore_MopUpStart",
+      "DailyExplore_MopUp"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "扫荡"
+        ],
+        "roi": [
+          843,
+          559,
+          115,
+          91
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "DailyExplore_MopUpAwards": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1200,
+        "y": 1287
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]扫荡奖励[/color]",
+    "next": [
+      {
+        "jump_back": true,
+        "name": "DailyExplore_LevelUp"
+      },
+      "DailyExplore_MopUp",
+      "DailyExplore_MopUpAwards"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "扫荡奖励"
+        ],
+        "roi": [
+          569,
+          5,
+          181,
+          66
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "DailyExplore_MopUpDoubleMarkup": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1200,
+        "y": 1610
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]开启[/color]",
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "开启"
+        ],
+        "roi": [
+          702,
+          398,
+          252,
+          100
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "DailyExplore_MopUpStart": {
+    "$__mpe_code": {
+      "position": {
+        "x": 869,
+        "y": 1396
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]开始战斗[/color]",
+    "next": [
+      {
+        "jump_back": true,
+        "name": "DailyExplore_MopUpDoubleMarkup"
+      },
+      "DailyExplore_MopUpAwards",
+      "DailyExplore_NoFuel",
+      "DailyExplore_MopUpStart"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "开始战斗"
+        ],
+        "roi": [
+          943,
+          521,
+          159,
+          85
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "DailyExplore_NoFuel": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1200,
+        "y": 1903
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          584,
+          57,
+          10,
+          10
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]燃料补给[/color]",
+    "next": [
+      "进入首页"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "燃料补给"
+        ],
+        "roi": [
+          212,
+          139,
+          180,
+          60
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "DailyExplore_ReAc": {
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 3625
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]资源采集[/color]",
+    "next_doc": "Set in code.",
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "资源采集"
+        ],
+        "roi": [
+          259,
+          205,
+          243,
+          70
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "DailyExplore_ReAc_Experience": {
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 1873
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]技术解析[/color]",
+    "next": [
+      "DailyExplore_LevelSelect"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "技术解析"
+        ],
+        "roi": [
+          838,
+          347,
+          176,
+          60
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "DailyExplore_ReAc_Money": {
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 1580
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]星币开采[/color]",
+    "next": [
+      "DailyExplore_LevelSelect"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "星币开采"
+        ],
+        "roi": [
+          838,
+          237,
+          176,
+          60
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "DailyExplore_ReAc_Skill": {
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 1287
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]技能磨砺[/color]",
+    "next": [
+      "DailyExplore_LevelSelect"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "技能磨砺"
+        ],
+        "roi": [
+          830,
+          127,
+          190,
+          60
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "DailyExplore_ReAc_Token": {
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 994
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]自然[/color]",
+    "next": [
+      "DailyExplore_LevelSelect"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "荒墟拾遗"
+        ],
+        "roi": [
+          838,
+          455,
+          176,
+          60
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "DailyExplore_UpAc": {
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 3936
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]跃升行动[/color]",
+    "next_doc": "Set in code.",
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "跃升行动"
+        ],
+        "roi": [
+          287,
+          534,
+          205,
+          64
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "DailyExplore_UpAc_1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 715
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]自然[/color]",
+    "next": [
+      "DailyExplore_LevelSelect"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "自然"
+        ],
+        "roi": [
+          830,
+          127,
+          190,
+          60
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "DailyExplore_UpAc_2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 436
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]人造[/color]",
+    "next": [
+      "DailyExplore_LevelSelect"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "人造"
+        ],
+        "roi": [
+          830,
+          241,
+          190,
+          60
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "DailyExplore_UpAc_3": {
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 157
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]生命[/color]",
+    "next": [
+      "DailyExplore_LevelSelect"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "生命"
+        ],
+        "roi": [
+          830,
+          341,
+          190,
+          60
+        ]
+      },
+      "type": "OCR"
+    }
+  }
 }

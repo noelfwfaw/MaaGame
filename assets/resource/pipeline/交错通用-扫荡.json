@@ -1,368 +1,681 @@
 {
-    "扫荡": {
-        "recognition": "OCR",
-        "expected": "扫荡",
-        "roi": [
-            764,
-            554,
-            234,
-            120
-        ],
-        "action": "Click",
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "next": [
-            "扫荡次数选择"
-        ],
-        "focus": true
+  "$__mpe_config_交错战线": {
+    "$__mpe_code": {
+      "filePath": "C:\\Users\\Administrator\\Documents\\GitHub\\MaaGame\\assets\\resource\\pipeline\\交错通用-扫荡.json",
+      "filename": "交错战线",
+      "lastSyncTime": 1767771144138,
+      "prefix": "",
+      "savedViewport": {
+        "x": 127,
+        "y": 214,
+        "zoom": 0.26
+      },
+      "version": "v0.14.2"
+    }
+  },
+  "$__mpe_external_通用-返回主页_交错战线": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4800,
+        "y": 285
+      }
+    }
+  },
+  "$__mpe_external_重连网络_交错战线": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3605,
+        "y": 644
+      }
+    }
+  },
+  "使用10燃料": {
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 15
+      }
     },
-    "扫荡次数选择": {
-        "enabled": true,
-        "next": [
-            "检查体力-红",
-            "检查体力-白"
-        ],
-        "interrupt": [
-            "重连网络"
-        ]
+    "action": {
+      "param": {},
+      "type": "Click"
     },
-    "增加次数": {
-        "recognition": "TemplateMatch",
-        "template": "选择次数.png",
-        "roi": [
-            503,
-            531,
-            84,
-            59
-        ],
-        "action": "Click",
-        "next": [
-            "扫荡次数选择"
-        ]
+    "focus": "[color:green]使用10燃料[/color]",
+    "next": [
+      "使用10燃料2"
+    ],
+    "pre_wait_freezes": {
+      "threshold": 0.95,
+      "time": 1000
     },
-    "检查体力-白": {
-        "recognition": "ColorMatch",
-        "roi": [
-            730,
-            547,
-            56,
-            38
-        ],
-        "method": 4,
-        "lower": [
-            255,
-            255,
-            255
-        ],
-        "upper": [
-            255,
-            255,
-            255
-        ],
-        "action": "DoNothing",
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "next": [
-            "增加次数"
-        ]
-    },
-    "检查体力-红": {
-        "recognition": "TemplateMatch",
-        "template": "扫荡次数.png",
-        "roi": [
-            719,
-            549,
-            67,
-            35
-        ],
-        "action": "DoNothing",
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "next": [
-            "减少次数"
-        ]
-    },
-    "减少次数": {
-        "recognition": "TemplateMatch",
-        "template": "减少次数.png",
-        "roi": [
-            204,
-            534,
-            93,
-            50
-        ],
-        "action": "Click",
-        "next": [
-            "检查体力-红（次数为1）",
-            "开始战斗"
-        ]
-    },
-    "检查体力-红（次数为1）": {
-        "recognition": "TemplateMatch",
-        "template": "扫荡次数.png",
-        "roi": [
-            719,
-            549,
-            67,
-            35
-        ],
-        "action": "DoNothing",
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "next": [
-            "扫荡-取消界面"
-        ],
-        "focus": true
-    },
-    "扫荡-取消界面": {
-        "recognition": "TemplateMatch",
-        "template": "交错返回主页.png",
-        "roi": [
-            164,
-            21,
-            112,
-            51
-        ],
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "action": "Click",
-        "next": [
-            "通用-返回主页"
-        ]
-    },
-    "使用燃料界面": {
-        "enabled": false,
-        "recognition": "OCR",
-        "expected": "燃料补给",
-        "roi": [
-            229,
-            136,
-            130,
-            65
-        ],
-        "action": "DoNothing",
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "next": [
-            "使用10燃料"
-        ]
-    },
-    "使用10燃料": {
-        "recognition": "OCR",
+    "recognition": {
+      "param": {
         "expected": "使用",
         "roi": [
-            679,
-            493,
-            118,
-            74
-        ],
-        "action": "Click",
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "next": [
-            "使用10燃料2"
+          679,
+          493,
+          118,
+          74
         ]
+      },
+      "type": "OCR"
+    }
+  },
+  "使用10燃料2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 300,
+        "y": 180
+      }
     },
-    "使用10燃料2": {
-        "recognition": "OCR",
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]使用10燃料[/color]",
+    "next": [
+      "燃料补给"
+    ],
+    "pre_wait_freezes": {
+      "threshold": 0.95,
+      "time": 1000
+    },
+    "recognition": {
+      "param": {
         "expected": "使用",
         "roi": [
-            744,
-            451,
-            97,
-            56
-        ],
-        "action": "Click",
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "next": [
-            "燃料补给"
+          744,
+          451,
+          97,
+          56
         ]
+      },
+      "type": "OCR"
+    }
+  },
+  "使用燃料界面": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1800,
+        "y": 0
+      }
     },
-    "燃料补给": {
-        "recognition": "OCR",
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "enabled": false,
+    "focus": "[color:green]使用燃料界面[/color]",
+    "next": [
+      "使用10燃料"
+    ],
+    "pre_wait_freezes": {
+      "threshold": 0.95,
+      "time": 1000
+    },
+    "recognition": {
+      "param": {
         "expected": "燃料补给",
         "roi": [
-            499,
-            154,
-            258,
-            103
-        ],
-        "action": "Click",
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "next": [
-            "燃料返回"
+          229,
+          136,
+          130,
+          65
         ]
+      },
+      "type": "OCR"
+    }
+  },
+  "减少次数": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3900,
+        "y": 227
+      }
     },
-    "燃料返回": {
-        "recognition": "OCR",
-        "expected": "使用",
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]减少次数[/color]",
+    "next": [
+      "检查体力-红（次数为1）",
+      "开始战斗"
+    ],
+    "recognition": {
+      "param": {
         "roi": [
-            744,
-            451,
-            97,
-            56
+          204,
+          534,
+          93,
+          50
         ],
-        "action": "Click",
-        "target": [
-            632,
-            82,
-            1,
-            1
-        ],
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "next": [
-            "燃料返回2"
-        ]
+        "template": "减少次数.png"
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "增加次数": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3900,
+        "y": 651
+      }
     },
-    "燃料返回2": {
-        "recognition": "OCR",
-        "expected": "燃料补给",
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]增加次数[/color]",
+    "next": [
+      "扫荡次数选择"
+    ],
+    "recognition": {
+      "param": {
         "roi": [
-            229,
-            136,
-            130,
-            65
+          503,
+          531,
+          84,
+          59
         ],
-        "action": "Click",
-        "target": [
-            550,
-            34,
-            1,
-            1
-        ],
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "next": [
-            "开始战斗"
-        ]
+        "template": "选择次数.png"
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "开启加成": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1800,
+        "y": 515
+      }
     },
-    "开始战斗": {
-        "recognition": "OCR",
-        "expected": "开始战斗",
-        "roi": [
-            946,
-            541,
-            127,
-            39
-        ],
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "action": "Click",
-        "next": [
-            "使用燃料界面",
-            "开启加成",
-            "扫荡成功"
-        ],
-        "focus": true
+    "action": {
+      "param": {},
+      "type": "Click"
     },
-    "开启加成": {
-        "recognition": "OCR",
+    "focus": "[color:green]开启加成[/color]",
+    "next": [
+      "扫荡成功"
+    ],
+    "pre_wait_freezes": {
+      "threshold": 0.95,
+      "time": 1000
+    },
+    "recognition": {
+      "param": {
         "expected": "开启",
         "roi": [
-            761,
-            416,
-            83,
-            66
-        ],
-        "action": "Click",
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "next": [
-            "扫荡成功"
+          761,
+          416,
+          83,
+          66
         ]
-    },
-    "扫荡成功": {
-        "recognition": "OCR",
-        "expected": "扫荡",
-        "roi": [
-            5,
-            2,
-            530,
-            155
-        ],
-        "pre_wait_freezes": {
-            "time": 3000,
-            "threshold": 0.95
-        },
-        "action": "Click",
-        "next": [
-            "扫荡升级",
-            "扫荡成功-检查",
-            "扫荡结束"
-        ]
-    },
-    "扫荡升级": {
-        "is_sub": true,
-        "recognition": "TemplateMatch",
-        "template": "Combat/DailyExplore_LevelUp.png",
-        "roi": [
-            540,
-            242,
-            207,
-            91
-        ],
-        "action": "Click"
-    },
-    "扫荡成功-检查": {
-        "recognition": "OCR",
-        "expected": "扫荡",
-        "roi": [
-            5,
-            2,
-            530,
-            155
-        ],
-        "pre_wait_freezes": {
-            "time": 3000,
-            "threshold": 0.95
-        },
-        "action": "Click",
-        "next": [
-            "扫荡成功-检查",
-            "扫荡结束"
-        ]
-    },
-    "扫荡结束": {
-        "recognition": "OCR",
-        "expected": "扫荡",
-        "roi": [
-            766,
-            521,
-            328,
-            149
-        ],
-        "action": "DoNothing",
-        "next": [
-            "扫荡"
-        ]
+      },
+      "type": "OCR"
     }
+  },
+  "开始战斗": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1500,
+        "y": 164
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]开始战斗[/color]",
+    "next": [
+      "使用燃料界面",
+      "开启加成",
+      "扫荡成功"
+    ],
+    "pre_wait_freezes": {
+      "threshold": 0.95,
+      "time": 1000
+    },
+    "recognition": {
+      "param": {
+        "expected": "开始战斗",
+        "roi": [
+          946,
+          541,
+          127,
+          39
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "扫荡": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3000,
+        "y": 350
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]扫荡[/color]",
+    "next": [
+      "扫荡次数选择"
+    ],
+    "pre_wait_freezes": {
+      "threshold": 0.95,
+      "time": 1000
+    },
+    "recognition": {
+      "param": {
+        "expected": "扫荡",
+        "roi": [
+          764,
+          554,
+          234,
+          120
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "扫荡-取消界面": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4500,
+        "y": 200
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:re'd]返回主页[/color]",
+    "next": [
+      "通用-返回主页"
+    ],
+    "pre_wait_freezes": {
+      "threshold": 0.95,
+      "time": 1000
+    },
+    "recognition": {
+      "param": {
+        "roi": [
+          164,
+          21,
+          112,
+          51
+        ],
+        "template": "交错返回主页.png"
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "扫荡升级": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2400,
+        "y": 105
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]扫荡升级[/color]",
+    "recognition": {
+      "param": {
+        "roi": [
+          540,
+          242,
+          207,
+          91
+        ],
+        "template": "Combat/DailyExplore_LevelUp.png"
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "扫荡成功": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2100,
+        "y": 366
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]扫荡成功[/color]",
+    "next": [
+      {
+        "jump_back": true,
+        "name": "扫荡升级"
+      },
+      "扫荡成功-检查",
+      "扫荡结束"
+    ],
+    "pre_wait_freezes": {
+      "threshold": 0.95,
+      "time": 3000
+    },
+    "recognition": {
+      "param": {
+        "expected": "扫荡",
+        "roi": [
+          5,
+          2,
+          530,
+          155
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "扫荡成功-检查": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2400,
+        "y": 366
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]扫荡成功-检查[/color]",
+    "next": [
+      "扫荡成功-检查",
+      "扫荡结束"
+    ],
+    "pre_wait_freezes": {
+      "threshold": 0.95,
+      "time": 3000
+    },
+    "recognition": {
+      "param": {
+        "expected": "扫荡",
+        "roi": [
+          5,
+          2,
+          530,
+          155
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "扫荡次数选择": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3300,
+        "y": 399
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "enabled": true,
+    "focus": "[color:green]扫荡次数选择[/color]",
+    "next": [
+      "检查体力-红",
+      "检查体力-白",
+      {
+        "jump_back": true,
+        "name": "重连网络"
+      }
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "扫荡结束": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2700,
+        "y": 395
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:green]扫荡结束[/color]",
+    "next": [
+      "扫荡"
+    ],
+    "recognition": {
+      "param": {
+        "expected": "扫荡",
+        "roi": [
+          766,
+          521,
+          328,
+          149
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "检查体力-白": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3600,
+        "y": 774
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:green]检查体力-白[/color]",
+    "next": [
+      "增加次数"
+    ],
+    "pre_wait_freezes": {
+      "threshold": 0.95,
+      "time": 1000
+    },
+    "recognition": {
+      "param": {
+        "lower": [
+          255,
+          255,
+          255
+        ],
+        "method": 4,
+        "roi": [
+          730,
+          547,
+          56,
+          38
+        ],
+        "upper": [
+          255,
+          255,
+          255
+        ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "检查体力-红": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3600,
+        "y": 367
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:green]检查体力-红[/color]",
+    "next": [
+      "减少次数"
+    ],
+    "pre_wait_freezes": {
+      "threshold": 0.95,
+      "time": 1000
+    },
+    "recognition": {
+      "param": {
+        "roi": [
+          719,
+          549,
+          67,
+          35
+        ],
+        "template": "扫荡次数.png"
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "检查体力-红（次数为1）": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4200,
+        "y": 178
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:green]检查体力-红（次数为1）[/color]",
+    "next": [
+      "扫荡-取消界面"
+    ],
+    "pre_wait_freezes": {
+      "threshold": 0.95,
+      "time": 1000
+    },
+    "recognition": {
+      "param": {
+        "roi": [
+          719,
+          549,
+          67,
+          35
+        ],
+        "template": "扫荡次数.png"
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "燃料补给": {
+    "$__mpe_code": {
+      "position": {
+        "x": 600,
+        "y": 180
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]燃料补给[/color]",
+    "next": [
+      "燃料返回"
+    ],
+    "pre_wait_freezes": {
+      "threshold": 0.95,
+      "time": 1000
+    },
+    "recognition": {
+      "param": {
+        "expected": "燃料补给",
+        "roi": [
+          499,
+          154,
+          258,
+          103
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "燃料返回": {
+    "$__mpe_code": {
+      "position": {
+        "x": 900,
+        "y": 164
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          632,
+          82,
+          1,
+          1
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]燃料返回[/color]",
+    "next": [
+      "燃料返回2"
+    ],
+    "pre_wait_freezes": {
+      "threshold": 0.95,
+      "time": 1000
+    },
+    "recognition": {
+      "param": {
+        "expected": "使用",
+        "roi": [
+          744,
+          451,
+          97,
+          56
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "燃料返回2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1200,
+        "y": 164
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          550,
+          34,
+          1,
+          1
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]燃料返回[/color]",
+    "next": [
+      "开始战斗"
+    ],
+    "pre_wait_freezes": {
+      "threshold": 0.95,
+      "time": 1000
+    },
+    "recognition": {
+      "param": {
+        "expected": "燃料补给",
+        "roi": [
+          229,
+          136,
+          130,
+          65
+        ]
+      },
+      "type": "OCR"
+    }
+  }
 }

@@ -1,1237 +1,2385 @@
 {
-    "Infrastructures": {
-        "next": [
-            "Base",
-            "Infr_收取资源",
-            "子任务_进入首页"
-        ]
+  "$__mpe_config_交错战线": {
+    "$__mpe_code": {
+      "filePath": "C:\\Users\\Administrator\\Documents\\GitHub\\MaaGame\\assets\\resource\\pipeline\\交错基建.json",
+      "filename": "交错战线",
+      "lastSyncTime": 1767771763414,
+      "prefix": "",
+      "savedViewport": {
+        "x": -9806,
+        "y": -3267,
+        "zoom": 0.8
+      },
+      "version": "v0.14.2"
+    }
+  },
+  "$__mpe_external_子任务_点击返回_交错战线": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9005,
+        "y": 4921
+      }
+    }
+  },
+  "$__mpe_external_子任务_获得物品_交错战线": {
+    "$__mpe_code": {
+      "position": {
+        "x": 13205,
+        "y": 3159
+      }
+    }
+  },
+  "$__mpe_external_子任务_进入首页_交错战线": {
+    "$__mpe_code": {
+      "position": {
+        "x": 8405,
+        "y": 217
+      }
+    }
+  },
+  "$__mpe_external_进入首页_交错战线": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9305,
+        "y": 5312
+      }
+    }
+  },
+  "$__mpe_external_通用-返回主页_交错战线": {
+    "$__mpe_code": {
+      "position": {
+        "x": 13205,
+        "y": 3269
+      }
+    }
+  },
+  "Base": {
+    "$__mpe_code": {
+      "position": {
+        "x": 6600,
+        "y": 898
+      }
     },
-    "Infrastructures_Deal": {
-        "next": [
-            "Base_Deal",
-            "Infr_DealDefaltYes",
-            "子任务_进入首页"
-        ]
+    "action": {
+      "param": {},
+      "type": "Click"
     },
-    "Base_Deal": {
-        "recognition": "OCR",
+    "next": [
+      "Infr_收取资源",
+      "Infr_驻员状况",
+      "Base"
+    ],
+    "post_delay": 3000,
+    "recognition": {
+      "param": {
+        "roi": [
+          543,
+          561,
+          168,
+          147
+        ],
+        "template": "Infrastructures/Infr_JD.png"
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Base_Deal": {
+    "$__mpe_code": {
+      "position": {
+        "x": 8400,
+        "y": 390
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]基地[/color]",
+    "next": [
+      "Infr_收取资源_不换班",
+      "Infr_DealDefaltYes",
+      "Base_Deal"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
         "expected": [
-            "基地"
+          "基地"
         ],
         "roi": [
-            1020,
-            619,
-            167,
-            93
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "Infr_收取资源_不换班",
-            "Infr_DealDefaltYes",
-            "Base_Deal"
+          1020,
+          619,
+          167,
+          93
         ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Infr_1号物品售罄": {
+    "$__mpe_code": {
+      "position": {
+        "x": 13200,
+        "y": 4422
+      }
     },
-    "Base": {
-        "recognition": "TemplateMatch",
-        "template": "Infrastructures/Infr_JD.png",
-        "roi": [
-            543,
-            561,
-            168,
-            147
-        ],
-        "action": "Click",
-        "post_delay": 3000,
-        "next": [
-            "Infr_收取资源",
-            "Infr_驻员状况",
-            "Base"
-        ]
+    "action": {
+      "param": {},
+      "type": "DoNothing"
     },
-    "Infr_收取资源": {
-        "recognition": "TemplateMatch",
-        "template": "Infrastructures/Infr_Recourse.png",
-        "roi": [
-            422,
-            423,
-            145,
-            140
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "子任务_获得物品",
-            "Infr_驻员状况"
-        ]
-    },
-    "Infr_收取资源_不换班": {
-        "recognition": "TemplateMatch",
-        "template": "Infrastructures/Infr_Recourse.png",
-        "roi": [
-            412,
-            425,
-            331,
-            288
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "子任务_获得物品",
-            "Infr_收取资源_不换班",
-            "Infr_DealDefaltYes"
-        ]
-    },
-    "Infr_驻员状况": {
-        "recognition": "OCR",
-        "expected": [
-            "驻员",
-            "状况"
-        ],
-        "roi": [
-            54,
-            554,
-            176,
-            89
-        ],
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "Infr_驻员预设1",
-            "Infr_驻员状况"
-        ]
-    },
-    "Infr_驻员预设1": {
-        "recognition": "OCR",
-        "expected": [
-            "驻员",
-            "预设"
-        ],
-        "roi": [
-            960,
-            180,
-            120,
-            90
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "Infr_使用",
-            "Infr_驻员预设2"
-        ]
-    },
-    "Infr_驻员预设2": {
-        "recognition": "OCR",
-        "expected": [
-            "驻员",
-            "预设"
-        ],
-        "roi": [
-            960,
-            320,
-            120,
-            90
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "Infr_使用",
-            "Infr_驻员预设3"
-        ]
-    },
-    "Infr_驻员预设3": {
-        "recognition": "OCR",
-        "expected": [
-            "驻员",
-            "预设"
-        ],
-        "roi": [
-            960,
-            460,
-            120,
-            90
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "Infr_使用",
-            "Infr_驻员预设4"
-        ]
-    },
-    "Infr_驻员预设4": {
-        "recognition": "OCR",
-        "expected": [
-            "驻员",
-            "预设"
-        ],
-        "roi": [
-            960,
-            600,
-            120,
-            90
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "Infr_使用",
-            "Infr_BackButton"
-        ]
-    },
-    "Infr_BackButton": {
-        "recognition": "TemplateMatch",
-        "template": "StartUp/BackButton.png",
-        "roi": [
-            14,
-            10,
-            126,
-            72
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "Infr_Deal",
-            "Infr_Exit",
-            "Infr_BackButton"
-        ]
-    },
-    "Infr_使用": {
-        "is_sub": true,
-        "recognition": "OCR",
-        "expected": [
-            "使用"
-        ],
-        "roi": [
-            847,
-            201,
-            215,
-            356
-        ],
-        "action": "Click",
-        "post_delay": 2000
-    },
-    "Infr_GetResources": {
-        "recognition": "OCR",
-        "expected": [
-            "收取资源"
-        ],
-        "roi": [
-            342,
-            575,
-            227,
-            134
-        ],
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "Infr_GetAll",
-            "Infr_GetResources"
-        ]
-    },
-    "Infr_GetAll": {
-        "recognition": "OCR",
-        "expected": [
-            "全部收取"
-        ],
-        "roi": [
-            498,
-            539,
-            329,
-            145
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "Infr_Occupancy",
-            "子任务_获得物品",
-            "子任务_点击返回"
-        ]
-    },
-    "Infr_Occupancy": {
-        "recognition": "ColorMatch",
-        "roi": [
-            678,
-            629,
-            32,
-            36
+    "focus": "[color:re'd]1号物品售罄[/color]",
+    "recognition": {
+      "param": {
+        "count": 300,
+        "lower": [
+          0,
+          0,
+          0
         ],
         "method": 4,
+        "roi": "Infr_DealSelf1",
+        "upper": [
+          50,
+          50,
+          50
+        ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "Infr_2号物品售罄": {
+    "$__mpe_code": {
+      "position": {
+        "x": 13200,
+        "y": 3379
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:red]2号物品售罄[/color]",
+    "recognition": {
+      "param": {
+        "count": 100,
         "lower": [
-            230,
-            178,
-            60
+          0,
+          0,
+          0
+        ],
+        "method": 4,
+        "roi": "Infr_DealSelf2",
+        "upper": [
+          50,
+          50,
+          50
+        ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "Infr_3号物品售罄": {
+    "$__mpe_code": {
+      "position": {
+        "x": 13200,
+        "y": 2787
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:re'd]3号物品售罄[/color]",
+    "recognition": {
+      "param": {
+        "count": 100,
+        "lower": [
+          0,
+          0,
+          0
+        ],
+        "method": 4,
+        "roi": "Infr_DealSelf3",
+        "upper": [
+          50,
+          50,
+          50
+        ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "Infr_BackButton": {
+    "$__mpe_code": {
+      "position": {
+        "x": 8700,
+        "y": 898
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "Infr_Deal",
+      "Infr_Exit",
+      "Infr_BackButton"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "roi": [
+          14,
+          10,
+          126,
+          72
+        ],
+        "template": "StartUp/BackButton.png"
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Infr_Deal": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9000,
+        "y": 5521
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "enabled": true,
+    "next": [
+      "Infr_制作素材",
+      "Infr_DealmySelf",
+      "Infr_Deal"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "roi": [
+          980,
+          225,
+          263,
+          235
+        ],
+        "template": "Infrastructures/Infr_Deal.png"
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Infr_DealDefaltYes": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9000,
+        "y": 406
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "Infr_行星指挥部_返回",
+      "Infr_DealDefaltYes",
+      "Infr_制作素材"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "roi": [
+          980,
+          225,
+          263,
+          235
+        ],
+        "template": "Infrastructures/Infr_Deal.png"
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Infr_DealNextFriends": {
+    "$__mpe_code": {
+      "position": {
+        "x": 12000,
+        "y": 2293
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          96,
+          607,
+          62,
+          56
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]好友交付记录[/color]",
+    "next": [
+      "Infr_DealNextFriends1",
+      "Infr_DealNextFriends"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "roi": [
+          75,
+          474,
+          106,
+          76
+        ],
+        "template": "好友交付记录.png"
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Infr_DealNextFriends1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 12300,
+        "y": 2294
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          276,
+          497,
+          136,
+          37
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]好友列表[/color]",
+    "next": [
+      "Infr_Dealothers",
+      "Infr_DealNextFriends1"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "好友列表"
+        ],
+        "roi": [
+          173,
+          126,
+          229,
+          80
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Infr_DealNextFriends_End": {
+    "$__mpe_code": {
+      "position": {
+        "x": 12900,
+        "y": 4069
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:green]好友交付记录[/color]",
+    "next": [
+      "通用-返回主页"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "roi": [
+          75,
+          474,
+          106,
+          76
+        ],
+        "template": "好友交付记录.png",
+        "threshold": 0.9
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Infr_DealNextFriends_VisitNext": {
+    "$__mpe_code": {
+      "position": {
+        "x": 12900,
+        "y": 2475
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]切换[/color]",
+    "recognition": {
+      "param": {
+        "roi": [
+          92,
+          595,
+          134,
+          82
+        ],
+        "template": "向右箭头.png"
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Infr_DealSelf1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 12900,
+        "y": 4392
+      }
+    },
+    "action": {
+      "param": {
+        "target": true,
+        "target_offset": [
+          90,
+          128,
+          -90,
+          -128
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:blue]构建订单[/color]",
+    "next": [
+      "Infr_DealSelf_Yes",
+      "Infr_DealSelf_No",
+      {
+        "jump_back": true,
+        "name": "子任务_获得物品"
+      },
+      "Infr_1号物品售罄"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "roi": [
+          272,
+          89,
+          909,
+          603
+        ],
+        "template": [
+          "InfrastructureS/构建订单3.png",
+          "InfrastructureS/构建订单1.png",
+          "InfrastructureS/构建订单4.png"
+        ],
+        "threshold": 0.9
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Infr_DealSelf2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 12900,
+        "y": 3350
+      }
+    },
+    "action": {
+      "param": {
+        "target": true,
+        "target_offset": [
+          90,
+          128,
+          -90,
+          -128
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]星币[/color]",
+    "next": [
+      "Infr_DealSelf_Yes",
+      "Infr_DealSelf_No",
+      {
+        "jump_back": true,
+        "name": "子任务_获得物品"
+      },
+      "Infr_2号物品售罄"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "roi": [
+          272,
+          89,
+          909,
+          603
+        ],
+        "template": "InfrastructureS/星币120000.png",
+        "threshold": 0.95
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Infr_DealSelf3": {
+    "$__mpe_code": {
+      "position": {
+        "x": 12900,
+        "y": 2769
+      }
+    },
+    "action": {
+      "param": {
+        "target": true,
+        "target_offset": [
+          90,
+          128,
+          -90,
+          -128
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]经验[/color]",
+    "next": [
+      "Infr_DealSelf_Yes",
+      "Infr_DealSelf_No",
+      {
+        "jump_back": true,
+        "name": "子任务_获得物品"
+      },
+      "Infr_3号物品售罄"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "roi": [
+          272,
+          89,
+          909,
+          603
+        ],
+        "template": "InfrastructureS/经验120000.png",
+        "threshold": 0.95
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Infr_DealSelf_No": {
+    "$__mpe_code": {
+      "position": {
+        "x": 13200,
+        "y": 3696
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          447,
+          431,
+          65,
+          36
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]订单兑换[/color]",
+    "post_delay": 1000,
+    "pre_wait_freezes": 100,
+    "recognition": {
+      "param": {
+        "expected": [
+          "订单兑换",
+          "是否进行合成"
+        ],
+        "roi": [
+          392,
+          261,
+          543,
+          154
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Infr_DealSelf_Yes": {
+    "$__mpe_code": {
+      "position": {
+        "x": 13200,
+        "y": 4039
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          767,
+          428,
+          70,
+          36
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]是否确认提交订单[/color]",
+    "post_delay": 1000,
+    "pre_wait_freezes": 100,
+    "recognition": {
+      "param": {
+        "expected": [
+          "是否确认提交订单"
+        ],
+        "roi": [
+          489,
+          277,
+          340,
+          126
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Infr_DealmySelf": {
+    "$__mpe_code": {
+      "position": {
+        "x": 11700,
+        "y": 2177
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "Infr_DealSelf1"
+      },
+      {
+        "jump_back": true,
+        "name": "Infr_DealSelf2"
+      },
+      {
+        "jump_back": true,
+        "name": "Infr_DealSelf3"
+      },
+      "Infr_DealNextFriends",
+      "通用-返回主页"
+    ],
+    "post_wait_freezes": {
+      "threshold": 0.95,
+      "time": 2000
+    },
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "Infr_Dealothers": {
+    "$__mpe_code": {
+      "position": {
+        "x": 12600,
+        "y": 2359
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "next": [
+      "Infr_DealNextFriends_End",
+      {
+        "jump_back": true,
+        "name": "Infr_DealSelf1"
+      },
+      {
+        "jump_back": true,
+        "name": "Infr_DealSelf2"
+      },
+      {
+        "jump_back": true,
+        "name": "Infr_DealSelf3"
+      },
+      {
+        "jump_back": true,
+        "name": "Infr_DealNextFriends_VisitNext"
+      }
+    ],
+    "on_error": [
+      "通用-返回主页"
+    ],
+    "post_wait_freezes": {
+      "threshold": 0.95,
+      "time": 2000
+    },
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "Infr_Exit": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9000,
+        "y": 5213
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:green]研发中心[/color]",
+    "next": [
+      "进入首页"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "研发中心"
+        ],
+        "roi": [
+          523,
+          282,
+          155,
+          51
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Infr_GetAll": {
+    "$__mpe_code": {
+      "position": {
+        "x": 300,
+        "y": 0
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]全部收取[/color]",
+    "next": [
+      "Infr_Occupancy",
+      {
+        "jump_back": true,
+        "name": "子任务_获得物品"
+      },
+      {
+        "jump_back": true,
+        "name": "子任务_点击返回"
+      }
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "全部收取"
+        ],
+        "roi": [
+          498,
+          539,
+          329,
+          145
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Infr_GetResources": {
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]收取资源[/color]",
+    "next": [
+      "Infr_GetAll",
+      "Infr_GetResources"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "收取资源"
+        ],
+        "roi": [
+          342,
+          575,
+          227,
+          134
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Infr_Occupancy": {
+    "$__mpe_code": {
+      "position": {
+        "x": 600,
+        "y": 4788
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "Infr_Substitute1",
+      "Infr_Occupancy"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "count": 4,
+        "lower": [
+          230,
+          178,
+          60
+        ],
+        "method": 4,
+        "roi": [
+          678,
+          629,
+          32,
+          36
         ],
         "upper": [
-            255,
-            200,
-            80
-        ],
-        "count": 4,
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "Infr_Substitute1",
-            "Infr_Occupancy"
+          255,
+          200,
+          80
         ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "Infr_Substitute1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 900,
+        "y": 4820
+      }
     },
-    "Infr_Substitute1": {
-        "recognition": "OCR",
+    "action": {
+      "param": {
+        "target": [
+          885,
+          189,
+          37,
+          27
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]设施详情[/color]",
+    "next": [
+      "Infr_Substitute1_0",
+      "Infr_Substitute1"
+    ],
+    "recognition": {
+      "param": {
         "expected": [
-            "设施详情"
+          "设施详情"
         ],
         "roi": [
-            240,
-            77,
-            188,
-            75
-        ],
-        "action": "Click",
-        "target": [
-            885,
-            189,
-            37,
-            27
-        ],
-        "next": [
-            "Infr_Substitute1_0",
-            "Infr_Substitute1"
+          240,
+          77,
+          188,
+          75
         ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Infr_Substitute1_0": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1200,
+        "y": 4863
+      }
     },
-    "Infr_Substitute1_0": {
-        "recognition": "TemplateMatch",
-        "template": "Infrastructures/Infr_Substitute1.png",
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "Infr_Substitute1_0",
+      "Infr_Substitute1_1"
+    ],
+    "recognition": {
+      "param": {
         "roi": [
-            418,
-            124,
-            811,
-            91
+          418,
+          124,
+          811,
+          91
         ],
-        "action": "Click",
-        "next": [
-            "Infr_Substitute1_0",
-            "Infr_Substitute1_1"
-        ]
+        "template": "Infrastructures/Infr_Substitute1.png"
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Infr_Substitute1_1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1500,
+        "y": 4882
+      }
     },
-    "Infr_Substitute1_1": {
-        "action": "Click",
+    "action": {
+      "param": {
         "target": [
-            950,
-            237,
-            50,
-            50
-        ],
-        "next": [
-            "Infr_Substitute1_2"
+          950,
+          237,
+          50,
+          50
         ]
+      },
+      "type": "Click"
     },
-    "Infr_Substitute1_2": {
-        "action": "Click",
+    "next": [
+      "Infr_Substitute1_2"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "Infr_Substitute1_2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1800,
+        "y": 4882
+      }
+    },
+    "action": {
+      "param": {
         "target": [
-            1110,
-            240,
-            50,
-            50
-        ],
-        "next": [
-            "Infr_Substitute1_3"
+          1110,
+          240,
+          50,
+          50
         ]
+      },
+      "type": "Click"
     },
-    "Infr_Substitute1_3": {
-        "action": "Click",
+    "next": [
+      "Infr_Substitute1_3"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "Infr_Substitute1_3": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2100,
+        "y": 4882
+      }
+    },
+    "action": {
+      "param": {
         "target": [
-            473,
-            496,
-            50,
-            50
-        ],
-        "next": [
-            "Infr_Substitute1_4"
+          473,
+          496,
+          50,
+          50
         ]
+      },
+      "type": "Click"
     },
-    "Infr_Substitute1_4": {
-        "action": "Click",
+    "next": [
+      "Infr_Substitute1_4"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "Infr_Substitute1_4": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2400,
+        "y": 4882
+      }
+    },
+    "action": {
+      "param": {
         "target": [
-            625,
-            496,
-            50,
-            50
-        ],
-        "next": [
-            "Infr_Substitute1_5"
+          625,
+          496,
+          50,
+          50
         ]
+      },
+      "type": "Click"
     },
-    "Infr_Substitute1_5": {
-        "action": "Click",
+    "next": [
+      "Infr_Substitute1_5"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "Infr_Substitute1_5": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2700,
+        "y": 4882
+      }
+    },
+    "action": {
+      "param": {
         "target": [
-            780,
-            496,
-            50,
-            50
-        ],
-        "next": [
-            "Infr_Substitute2",
-            "Infr_SubstituteComfirm",
-            "子任务_点击返回"
+          780,
+          496,
+          50,
+          50
         ]
+      },
+      "type": "Click"
     },
-    "Infr_SubstituteComfirm": {
-        "is_sub": true,
-        "recognition": "OCR",
+    "next": [
+      "Infr_Substitute2",
+      {
+        "jump_back": true,
+        "name": "Infr_SubstituteComfirm"
+      },
+      {
+        "jump_back": true,
+        "name": "子任务_点击返回"
+      }
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "Infr_Substitute2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3000,
+        "y": 5006
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          885,
+          328,
+          37,
+          27
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]设施详情[/color]",
+    "next": [
+      "Infr_Substitute2_0",
+      "Infr_Substitute2"
+    ],
+    "recognition": {
+      "param": {
         "expected": [
-            "确定"
+          "设施详情"
         ],
         "roi": [
-            889,
-            627,
-            218,
-            87
-        ],
-        "action": "Click"
+          240,
+          77,
+          188,
+          75
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Infr_Substitute2_0": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3300,
+        "y": 5049
+      }
     },
-    "Infr_Substitute2": {
-        "recognition": "OCR",
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "Infr_Substitute2_0",
+      "Infr_Substitute2_1"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          418,
+          124,
+          811,
+          91
+        ],
+        "template": "Infrastructures/Infr_Substitute1.png"
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Infr_Substitute2_1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3600,
+        "y": 5067
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          950,
+          237,
+          50,
+          50
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "Infr_Substitute2_2"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "Infr_Substitute2_2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3900,
+        "y": 5067
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1110,
+          240,
+          50,
+          50
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "Infr_Substitute2_3"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "Infr_Substitute2_3": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4200,
+        "y": 5067
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          473,
+          496,
+          50,
+          50
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "Infr_Substitute2_4"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "Infr_Substitute2_4": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4500,
+        "y": 5067
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          625,
+          496,
+          50,
+          50
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "Infr_Substitute2_5"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "Infr_Substitute2_5": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4800,
+        "y": 5067
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          780,
+          496,
+          50,
+          50
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "Infr_Substitute3",
+      {
+        "jump_back": true,
+        "name": "Infr_SubstituteComfirm"
+      },
+      {
+        "jump_back": true,
+        "name": "子任务_点击返回"
+      }
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "Infr_Substitute3": {
+    "$__mpe_code": {
+      "position": {
+        "x": 5083,
+        "y": 5166
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          702,
+          468,
+          37,
+          27
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]设施详情[/color]",
+    "next": [
+      "Infr_Substitute3_0",
+      "Infr_Substitute3"
+    ],
+    "recognition": {
+      "param": {
         "expected": [
-            "设施详情"
+          "设施详情"
         ],
         "roi": [
-            240,
-            77,
-            188,
-            75
-        ],
-        "action": "Click",
-        "target": [
-            885,
-            328,
-            37,
-            27
-        ],
-        "next": [
-            "Infr_Substitute2_0",
-            "Infr_Substitute2"
+          240,
+          77,
+          188,
+          75
         ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Infr_Substitute3_0": {
+    "$__mpe_code": {
+      "position": {
+        "x": 5400,
+        "y": 5234
+      }
     },
-    "Infr_Substitute2_0": {
-        "recognition": "TemplateMatch",
-        "template": "Infrastructures/Infr_Substitute1.png",
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "Infr_Substitute3_0",
+      "Infr_Substitute3_1"
+    ],
+    "recognition": {
+      "param": {
         "roi": [
-            418,
-            124,
-            811,
-            91
+          418,
+          124,
+          811,
+          91
         ],
-        "action": "Click",
-        "next": [
-            "Infr_Substitute2_0",
-            "Infr_Substitute2_1"
-        ]
+        "template": "Infrastructures/Infr_Substitute1.png"
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Infr_Substitute3_1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 5700,
+        "y": 5253
+      }
     },
-    "Infr_Substitute2_1": {
-        "action": "Click",
+    "action": {
+      "param": {
         "target": [
-            950,
-            237,
-            50,
-            50
-        ],
-        "next": [
-            "Infr_Substitute2_2"
+          473,
+          496,
+          50,
+          50
         ]
+      },
+      "type": "Click"
     },
-    "Infr_Substitute2_2": {
-        "action": "Click",
+    "next": [
+      "Infr_Substitute3_2"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "Infr_Substitute3_2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 6000,
+        "y": 5253
+      }
+    },
+    "action": {
+      "param": {
         "target": [
-            1110,
-            240,
-            50,
-            50
-        ],
-        "next": [
-            "Infr_Substitute2_3"
+          625,
+          496,
+          50,
+          50
         ]
+      },
+      "type": "Click"
     },
-    "Infr_Substitute2_3": {
-        "action": "Click",
+    "next": [
+      "Infr_Substitute3_3"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "Infr_Substitute3_3": {
+    "$__mpe_code": {
+      "position": {
+        "x": 6300,
+        "y": 5253
+      }
+    },
+    "action": {
+      "param": {
         "target": [
-            473,
-            496,
-            50,
-            50
-        ],
-        "next": [
-            "Infr_Substitute2_4"
+          789,
+          496,
+          50,
+          50
         ]
+      },
+      "type": "Click"
     },
-    "Infr_Substitute2_4": {
-        "action": "Click",
+    "next": [
+      "Infr_Substitute3_4"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "Infr_Substitute3_4": {
+    "$__mpe_code": {
+      "position": {
+        "x": 6600,
+        "y": 5253
+      }
+    },
+    "action": {
+      "param": {
         "target": [
-            625,
-            496,
-            50,
-            50
-        ],
-        "next": [
-            "Infr_Substitute2_5"
+          950,
+          496,
+          50,
+          50
         ]
+      },
+      "type": "Click"
     },
-    "Infr_Substitute2_5": {
-        "action": "Click",
+    "next": [
+      "Infr_Substitute3_5"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "Infr_Substitute3_5": {
+    "$__mpe_code": {
+      "position": {
+        "x": 6900,
+        "y": 5253
+      }
+    },
+    "action": {
+      "param": {
         "target": [
-            780,
-            496,
-            50,
-            50
-        ],
-        "next": [
-            "Infr_Substitute3",
-            "Infr_SubstituteComfirm",
-            "子任务_点击返回"
+          1100,
+          496,
+          50,
+          50
         ]
+      },
+      "type": "Click"
     },
-    "Infr_Substitute3": {
-        "recognition": "OCR",
-        "expected": [
-            "设施详情"
-        ],
-        "roi": [
-            240,
-            77,
-            188,
-            75
-        ],
-        "action": "Click",
-        "target": [
-            702,
-            468,
-            37,
-            27
-        ],
-        "next": [
-            "Infr_Substitute3_0",
-            "Infr_Substitute3"
-        ]
+    "next": [
+      "Infr_Substitute4_0"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "Infr_Substitute4_0": {
+    "$__mpe_code": {
+      "position": {
+        "x": 7200,
+        "y": 5222
+      }
     },
-    "Infr_Substitute3_0": {
-        "recognition": "TemplateMatch",
-        "template": "Infrastructures/Infr_Substitute1.png",
-        "roi": [
-            418,
-            124,
-            811,
-            91
-        ],
-        "action": "Click",
-        "next": [
-            "Infr_Substitute3_0",
-            "Infr_Substitute3_1"
-        ]
-    },
-    "Infr_Substitute3_1": {
-        "action": "Click",
-        "target": [
-            473,
-            496,
-            50,
-            50
-        ],
-        "next": [
-            "Infr_Substitute3_2"
-        ]
-    },
-    "Infr_Substitute3_2": {
-        "action": "Click",
-        "target": [
-            625,
-            496,
-            50,
-            50
-        ],
-        "next": [
-            "Infr_Substitute3_3"
-        ]
-    },
-    "Infr_Substitute3_3": {
-        "action": "Click",
-        "target": [
-            789,
-            496,
-            50,
-            50
-        ],
-        "next": [
-            "Infr_Substitute3_4"
-        ]
-    },
-    "Infr_Substitute3_4": {
-        "action": "Click",
-        "target": [
-            950,
-            496,
-            50,
-            50
-        ],
-        "next": [
-            "Infr_Substitute3_5"
-        ]
-    },
-    "Infr_Substitute3_5": {
-        "action": "Click",
-        "target": [
-            1100,
-            496,
-            50,
-            50
-        ],
-        "next": [
-            "Infr_Substitute4_0"
-        ]
-    },
-    "Infr_Substitute4_0": {
-        "action": "Swipe",
+    "action": {
+      "param": {
         "begin": [
-            890,
-            610,
-            4,
-            4
+          890,
+          610,
+          4,
+          4
         ],
+        "duration": 3000,
         "end": [
+          [
             890,
             298,
             4,
             4
-        ],
-        "duration": 3000,
-        "next": [
-            "Infr_Substitute4_1"
+          ]
         ]
+      },
+      "type": "Swipe"
     },
-    "Infr_Substitute4_1": {
-        "action": "Click",
-        "target": [
-            473,
-            496,
-            50,
-            50
-        ],
-        "next": [
-            "Infr_Substitute4_2"
-        ]
-    },
-    "Infr_Substitute4_2": {
-        "action": "Click",
-        "target": [
-            625,
-            496,
-            50,
-            50
-        ],
-        "next": [
-            "Infr_Substitute4_3"
-        ]
-    },
-    "Infr_Substitute4_3": {
-        "action": "Click",
-        "target": [
-            789,
-            496,
-            50,
-            50
-        ],
-        "next": [
-            "Infr_Substitute4_4"
-        ]
-    },
-    "Infr_Substitute4_4": {
-        "action": "Click",
-        "target": [
-            950,
-            496,
-            50,
-            50
-        ],
-        "next": [
-            "Infr_Substitute4_5"
-        ]
-    },
-    "Infr_Substitute4_5": {
-        "action": "Click",
-        "target": [
-            1100,
-            496,
-            50,
-            50
-        ],
-        "next": [
-            "Infr_SubstituteComfirm",
-            "Infr_Deal",
-            "Infr_Exit",
-            "子任务_点击返回"
-        ]
-    },
-    "Infr_Exit": {
-        "recognition": "OCR",
-        "expected": [
-            "研发中心"
-        ],
-        "roi": [
-            523,
-            282,
-            155,
-            51
-        ],
-        "post_delay": 2000,
-        "next": [
-            "进入首页"
-        ]
-    },
-    "Infr_Deal": {
-        "enabled": true,
-        "recognition": "TemplateMatch",
-        "template": "Infrastructures/Infr_Deal.png",
-        "roi": [
-            980,
-            225,
-            263,
-            235
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "Infr_制作素材",
-            "Infr_DealmySelf",
-            "Infr_Deal"
-        ]
-    },
-    "Infr_DealDefaltYes": {
-        "recognition": "TemplateMatch",
-        "template": "Infrastructures/Infr_Deal.png",
-        "roi": [
-            980,
-            225,
-            263,
-            235
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "Infr_行星指挥部_返回",
-            "Infr_DealDefaltYes",
-            "Infr_制作素材"
-        ]
-    },
-    "Infr_DealmySelf": {
-        "post_wait_freezes": {
-            "time": 2000,
-            "threshold": 0.95
-        },
-        "next": [
-            "Infr_DealSelf1",
-            "Infr_DealSelf2",
-            "Infr_DealSelf3",
-            "Infr_DealNextFriends",
-            "通用-返回主页"
-        ]
-    },
-    "Infr_Dealothers": {
-        "post_wait_freezes": {
-            "time": 2000,
-            "threshold": 0.95
-        },
-        "next": [
-            "Infr_DealNextFriends_End",
-            "Infr_DealSelf1",
-            "Infr_DealSelf2",
-            "Infr_DealSelf3",
-            "Infr_DealNextFriends_VisitNext"
-        ],
-        "on_error": "通用-返回主页"
-    },
-    "Infr_DealSelf1": {
-        "is_sub": true,
-        "recognition": "TemplateMatch",
-        "template": [
-            "InfrastructureS/构建订单3.png",
-            "InfrastructureS/构建订单1.png",
-            "InfrastructureS/构建订单4.png"
-        ],
-        "threshold": 0.90,
-        "roi": [
-            272,
-            89,
-            909,
-            603
-        ],
-        "action": "Click",
-        "target": true,
-        "target_offset": [
-            90,
-            128,
-            -90,
-            -128
-        ],
-        "post_delay": 1000,
-        "next": [
-            "Infr_DealSelf_Yes",
-            "Infr_DealSelf_No",
-            "子任务_获得物品",
-            "Infr_1号物品售罄"
-        ]
-    },
-    "Infr_DealSelf2": {
-        "is_sub": true,
-        "recognition": "TemplateMatch",
-        "template": "InfrastructureS/星币120000.png",
-        "threshold": 0.95,
-        "roi": [
-            272,
-            89,
-            909,
-            603
-        ],
-        "action": "Click",
-        "target": true,
-        "target_offset": [
-            90,
-            128,
-            -90,
-            -128
-        ],
-        "post_delay": 1000,
-        "next": [
-            "Infr_DealSelf_Yes",
-            "Infr_DealSelf_No",
-            "子任务_获得物品",
-            "Infr_2号物品售罄"
-        ]
-    },
-    "Infr_DealSelf3": {
-        "is_sub": true,
-        "recognition": "TemplateMatch",
-        "template": "InfrastructureS/经验120000.png",
-        "threshold": 0.95,
-        "roi": [
-            272,
-            89,
-            909,
-            603
-        ],
-        "action": "Click",
-        "target": true,
-        "target_offset": [
-            90,
-            128,
-            -90,
-            -128
-        ],
-        "post_delay": 1000,
-        "next": [
-            "Infr_DealSelf_Yes",
-            "Infr_DealSelf_No",
-            "子任务_获得物品",
-            "Infr_3号物品售罄"
-        ]
-    },
-    "Infr_1号物品售罄": {
-        "recognition": "ColorMatch",
-        "roi": "Infr_DealSelf1",
-        "method": 4,
-        "lower": [
-            0,
-            0,
-            0
-        ],
-        "upper": [
-            50,
-            50,
-            50
-        ],
-        "count": 300
-    },
-    "Infr_2号物品售罄": {
-        "recognition": "ColorMatch",
-        "roi": "Infr_DealSelf2",
-        "method": 4,
-        "lower": [
-            0,
-            0,
-            0
-        ],
-        "upper": [
-            50,
-            50,
-            50
-        ],
-        "count": 100
-    },
-    "Infr_3号物品售罄": {
-        "recognition": "ColorMatch",
-        "roi": "Infr_DealSelf3",
-        "method": 4,
-        "lower": [
-            0,
-            0,
-            0
-        ],
-        "upper": [
-            50,
-            50,
-            50
-        ],
-        "count": 100
-    },
-    "Infr_DealSelf_Yes": {
-        "recognition": "OCR",
-        "expected": [
-            "是否确认提交订单"
-        ],
-        "roi": [
-            489,
-            277,
-            340,
-            126
-        ],
-        "pre_wait_freezes": 100,
-        "action": "Click",
-        "post_delay": 1000,
-        "target": [
-            767,
-            428,
-            70,
-            36
-        ]
-    },
-    "Infr_DealSelf_No": {
-        "recognition": "OCR",
-        "expected": [
-            "订单兑换",
-            "是否进行合成"
-        ],
-        "roi": [
-            392,
-            261,
-            543,
-            154
-        ],
-        "pre_wait_freezes": 100,
-        "action": "Click",
-        "post_delay": 1000,
-        "target": [
-            447,
-            431,
-            65,
-            36
-        ]
-    },
-    "Infr_DealNextFriends": {
-        "recognition": "TemplateMatch",
-        "template": "好友交付记录.png",
-        "roi": [
-            75,
-            474,
-            106,
-            76
-        ],
-        "action": "Click",
-        "target": [
-            96,
-            607,
-            62,
-            56
-        ],
-        "post_delay": 1000,
-        "next": [
-            "Infr_DealNextFriends1",
-            "Infr_DealNextFriends"
-        ]
-    },
-    "Infr_DealNextFriends1": {
-        "recognition": "OCR",
-        "expected": [
-            "好友列表"
-        ],
-        "roi": [
-            173,
-            126,
-            229,
-            80
-        ],
-        "action": "Click",
-        "target": [
-            276,
-            497,
-            136,
-            37
-        ],
-        "post_delay": 1000,
-        "next": [
-            "Infr_Dealothers",
-            "Infr_DealNextFriends1"
-        ]
-    },
-    "Infr_DealNextFriends_VisitNext": {
-        "is_sub": true,
-        "recognition": "TemplateMatch",
-        "template": "向右箭头.png",
-        "roi": [
-            92,
-            595,
-            134,
-            82
-        ],
-        "action": "Click"
-    },
-    "Infr_DealNextFriends_End": {
-        "recognition": "TemplateMatch",
-        "template": "好友交付记录.png",
-        "roi": [
-            75,
-            474,
-            106,
-            76
-        ],
-        "threshold": 0.9,
-        "post_delay": 1000,
-        "next": [
-            "通用-返回主页"
-        ]
-    },
-    "Infr_制作素材": {
-        "recognition": "OCR",
-        "expected": [
-            "制作素材"
-        ],
-        "roi": [
-            42,
-            99,
-            108,
-            34
-        ],
-        "action": "Click",
-        "post_delay": 1000,
-        "target": [
-            53,
-            358,
-            79,
-            73
-        ],
-        "next": [
-            "Infr_制作素材",
-            "Infr_制作素材_材料不足",
-            "Infr_制作素材_材料充足"
-        ]
-    },
-    "Infr_制作素材_材料充足": {
-        "recognition": "ColorMatch",
-        "roi": [
-            461,
-            520,
-            85,
-            28
-        ],
-        "lower": [
-            59,
-            65,
-            74
-        ],
-        "upper": [
-            99,
-            97,
-            107
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "target": [
-            272,
-            525,
-            145,
-            140
-        ],
-        "next": [
-            "Infr_制作素材_材料充足_合成",
-            "Infr_制作素材_材料充足"
-        ]
-    },
-    "Infr_制作素材_材料不足": {
-        "recognition": "ColorMatch",
-        "roi": [
-            461,
-            520,
-            85,
-            28
-        ],
-        "lower": [
-            33,
-            20,
-            33
-        ],
-        "upper": [
-            57,
-            32,
-            49
-        ],
-        "post_delay": 1000,
-        "next": [
-            "Infr_制作素材_返回"
-        ]
-    },
-    "Infr_制作素材_材料充足_合成": {
-        "recognition": "OCR",
-        "expected": [
-            "合成份数"
-        ],
-        "roi": [
-            901,
-            95,
-            106,
-            33
-        ],
-        "action": "Click",
-        "post_delay": 1000,
-        "target": [
-            1159,
-            342,
-            67,
-            33
-        ],
-        "next": [
-            "Infr_制作素材_材料充足_最大",
-            "Infr_制作素材_材料充足_合成"
-        ]
-    },
-    "Infr_制作素材_材料充足_最大": {
-        "recognition": "ColorMatch",
-        "roi": [
-            414,
-            308,
-            405,
-            107
-        ],
-        "lower": [
-            33,
-            20,
-            33
-        ],
-        "upper": [
-            57,
-            32,
-            49
-        ],
-        "post_delay": 1000,
-        "next": [
-            "Infr_制作素材_材料充足_确定"
-        ]
-    },
-    "Infr_制作素材_材料充足_确定": {
-        "recognition": "OCR",
-        "expected": [
-            "合成份数"
-        ],
-        "roi": [
-            896,
-            94,
-            111,
-            35
-        ],
-        "action": "Click",
-        "post_delay": 1000,
-        "target": [
-            1020,
-            603,
-            90,
-            39
-        ],
-        "next": [
-            "子任务_获得物品",
-            "Infr_制作素材_合成_返回"
-        ]
-    },
-    "Infr_制作素材_合成_返回": {
-        "action": "Click",
-        "recognition": "TemplateMatch",
-        "template": [
-            "合成菜单.png"
-        ],
-        "roi": [
-            274,
-            97,
-            88,
-            27
-        ],
-        "target": [
-            44,
-            29,
-            120,
-            39
-        ],
-        "post_delay": 1000,
-        "next": [
-            "子任务_获得物品",
-            "Infr_制作素材_返回",
-            "Infr_换取页面",
-            "Infr_制作素材_合成_返回"
-        ]
-    },
-    "Infr_制作素材_返回": {
-        "action": "Click",
-        "recognition": "TemplateMatch",
-        "template": [
-            "InfrastructureS/Infr_JDSC.png"
-        ],
-        "roi": [
-            1,
-            458,
-            235,
-            104
-        ],
-        "target": [
-            44,
-            29,
-            120,
-            39
-        ],
-        "post_delay": 1000,
-        "next": [
-            "Infr_换取页面",
-            "Infr_制作素材_返回"
-        ]
-    },
-    "Infr_换取页面": {
-        "recognition": "OCR",
-        "expected": [
-            "制作素材"
-        ],
-        "roi": [
-            44,
-            44,
-            100,
-            100
-        ],
-        "post_delay": 1000,
-        "next": [
-            "Infr_DealmySelf"
-        ]
-    },
-    "Infr_行星指挥部_返回": {
-        "recognition": "OCR",
-        "expected": [
-            "行星指挥部"
-        ],
-        "roi": [
-            137,
-            105,
-            143,
-            35
-        ],
-        "action": "Click",
-        "post_delay": 1000,
-        "target": [
-            52,
-            24,
-            102,
-            43
-        ],
-        "next": [
-            "Infr_DealDefaltYes",
-            "Infr_行星指挥部_返回"
-        ]
+    "next": [
+      "Infr_Substitute4_1"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
     }
+  },
+  "Infr_Substitute4_1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 7500,
+        "y": 5253
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          473,
+          496,
+          50,
+          50
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "Infr_Substitute4_2"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "Infr_Substitute4_2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 7800,
+        "y": 5253
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          625,
+          496,
+          50,
+          50
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "Infr_Substitute4_3"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "Infr_Substitute4_3": {
+    "$__mpe_code": {
+      "position": {
+        "x": 8100,
+        "y": 5253
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          789,
+          496,
+          50,
+          50
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "Infr_Substitute4_4"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "Infr_Substitute4_4": {
+    "$__mpe_code": {
+      "position": {
+        "x": 8400,
+        "y": 5253
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          950,
+          496,
+          50,
+          50
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "Infr_Substitute4_5"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "Infr_Substitute4_5": {
+    "$__mpe_code": {
+      "position": {
+        "x": 8700,
+        "y": 5253
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1100,
+          496,
+          50,
+          50
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "Infr_SubstituteComfirm"
+      },
+      "Infr_Deal",
+      "Infr_Exit",
+      {
+        "jump_back": true,
+        "name": "子任务_点击返回"
+      }
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "Infr_SubstituteComfirm": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9000,
+        "y": 5863
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]确定[/color]",
+    "recognition": {
+      "param": {
+        "expected": [
+          "确定"
+        ],
+        "roi": [
+          889,
+          627,
+          218,
+          87
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Infr_使用": {
+    "$__mpe_code": {
+      "position": {
+        "x": 8700,
+        "y": 1208
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]使用预设[/color]",
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "使用"
+        ],
+        "roi": [
+          847,
+          201,
+          215,
+          356
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Infr_制作素材": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9300,
+        "y": 1562
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          53,
+          358,
+          79,
+          73
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]制作素材[/color]",
+    "next": [
+      "Infr_制作素材",
+      "Infr_制作素材_材料不足",
+      "Infr_制作素材_材料充足"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "制作素材"
+        ],
+        "roi": [
+          42,
+          99,
+          108,
+          34
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Infr_制作素材_合成_返回": {
+    "$__mpe_code": {
+      "position": {
+        "x": 10800,
+        "y": 1554
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          44,
+          29,
+          120,
+          39
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]返回[/color]",
+    "next": [
+      {
+        "jump_back": true,
+        "name": "子任务_获得物品"
+      },
+      "Infr_制作素材_返回",
+      "Infr_换取页面",
+      "Infr_制作素材_合成_返回"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "roi": [
+          274,
+          97,
+          88,
+          27
+        ],
+        "template": [
+          "合成菜单.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Infr_制作素材_材料不足": {
+    "$__mpe_code": {
+      "position": {
+        "x": 10800,
+        "y": 4446
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:green][/color]",
+    "next": [
+      "Infr_制作素材_返回"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "lower": [
+          33,
+          20,
+          33
+        ],
+        "roi": [
+          461,
+          520,
+          85,
+          28
+        ],
+        "upper": [
+          57,
+          32,
+          49
+        ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "Infr_制作素材_材料充足": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9600,
+        "y": 1539
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          272,
+          525,
+          145,
+          140
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]材料充足[/color]",
+    "next": [
+      "Infr_制作素材_材料充足_合成",
+      "Infr_制作素材_材料充足"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "lower": [
+          59,
+          65,
+          74
+        ],
+        "roi": [
+          461,
+          520,
+          85,
+          28
+        ],
+        "upper": [
+          99,
+          97,
+          107
+        ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "Infr_制作素材_材料充足_合成": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9900,
+        "y": 1555
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1159,
+          342,
+          67,
+          33
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]合成[/color]",
+    "next": [
+      "Infr_制作素材_材料充足_最大",
+      "Infr_制作素材_材料充足_合成"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "合成份数"
+        ],
+        "roi": [
+          901,
+          95,
+          106,
+          33
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Infr_制作素材_材料充足_最大": {
+    "$__mpe_code": {
+      "position": {
+        "x": 10200,
+        "y": 1556
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:green]最大[/color]",
+    "next": [
+      "Infr_制作素材_材料充足_确定"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "lower": [
+          33,
+          20,
+          33
+        ],
+        "roi": [
+          414,
+          308,
+          405,
+          107
+        ],
+        "upper": [
+          57,
+          32,
+          49
+        ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "Infr_制作素材_材料充足_确定": {
+    "$__mpe_code": {
+      "position": {
+        "x": 10500,
+        "y": 1555
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1020,
+          603,
+          90,
+          39
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]确定[/color]",
+    "next": [
+      {
+        "jump_back": true,
+        "name": "子任务_获得物品"
+      },
+      "Infr_制作素材_合成_返回"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "合成份数"
+        ],
+        "roi": [
+          896,
+          94,
+          111,
+          35
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Infr_制作素材_返回": {
+    "$__mpe_code": {
+      "position": {
+        "x": 11100,
+        "y": 1783
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          44,
+          29,
+          120,
+          39
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]返回[/color]",
+    "next": [
+      "Infr_换取页面",
+      "Infr_制作素材_返回"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "roi": [
+          1,
+          458,
+          235,
+          104
+        ],
+        "template": [
+          "InfrastructureS/Infr_JDSC.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Infr_换取页面": {
+    "$__mpe_code": {
+      "position": {
+        "x": 11400,
+        "y": 1801
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:orange]换取页面[/color]",
+    "next": [
+      "Infr_DealmySelf"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "制作素材"
+        ],
+        "roi": [
+          44,
+          44,
+          100,
+          100
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Infr_收取资源": {
+    "$__mpe_code": {
+      "position": {
+        "x": 6900,
+        "y": 1353
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]收取资源[/color]",
+    "next": [
+      {
+        "jump_back": true,
+        "name": "子任务_获得物品"
+      },
+      "Infr_驻员状况"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "roi": [
+          422,
+          423,
+          145,
+          140
+        ],
+        "template": "Infrastructures/Infr_Recourse.png"
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Infr_收取资源_不换班": {
+    "$__mpe_code": {
+      "position": {
+        "x": 8700,
+        "y": 556
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]收取资源_不换班[/color]",
+    "next": [
+      {
+        "jump_back": true,
+        "name": "子任务_获得物品"
+      },
+      "Infr_收取资源_不换班",
+      "Infr_DealDefaltYes"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "roi": [
+          412,
+          425,
+          331,
+          288
+        ],
+        "template": "Infrastructures/Infr_Recourse.png"
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Infr_行星指挥部_返回": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9300,
+        "y": 374
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          52,
+          24,
+          102,
+          43
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]行星指挥部[/color]",
+    "next": [
+      "Infr_DealDefaltYes",
+      "Infr_行星指挥部_返回"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "行星指挥部"
+        ],
+        "roi": [
+          137,
+          105,
+          143,
+          35
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Infr_驻员状况": {
+    "$__mpe_code": {
+      "position": {
+        "x": 7200,
+        "y": 882
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]驻员状况[/color]",
+    "next": [
+      "Infr_驻员预设1",
+      "Infr_驻员状况"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "驻员",
+          "状况"
+        ],
+        "roi": [
+          54,
+          554,
+          176,
+          89
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Infr_驻员预设1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 7500,
+        "y": 882
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]驻员预设[/color]",
+    "next": [
+      {
+        "jump_back": true,
+        "name": "Infr_使用"
+      },
+      "Infr_驻员预设2"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "驻员",
+          "预设"
+        ],
+        "roi": [
+          960,
+          180,
+          120,
+          90
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Infr_驻员预设2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 7800,
+        "y": 882
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]驻员预设[/color]",
+    "next": [
+      {
+        "jump_back": true,
+        "name": "Infr_使用"
+      },
+      "Infr_驻员预设3"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "驻员",
+          "预设"
+        ],
+        "roi": [
+          960,
+          320,
+          120,
+          90
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Infr_驻员预设3": {
+    "$__mpe_code": {
+      "position": {
+        "x": 8100,
+        "y": 882
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]驻员预设[/color]",
+    "next": [
+      {
+        "jump_back": true,
+        "name": "Infr_使用"
+      },
+      "Infr_驻员预设4"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "驻员",
+          "预设"
+        ],
+        "roi": [
+          960,
+          460,
+          120,
+          90
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Infr_驻员预设4": {
+    "$__mpe_code": {
+      "position": {
+        "x": 8400,
+        "y": 882
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]驻员预设[/color]",
+    "next": [
+      {
+        "jump_back": true,
+        "name": "Infr_使用"
+      },
+      "Infr_BackButton"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "驻员",
+          "预设"
+        ],
+        "roi": [
+          960,
+          600,
+          120,
+          90
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Infrastructures": {
+    "$__mpe_code": {
+      "position": {
+        "x": 6300,
+        "y": 166
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:orange]基建[/color]",
+    "next": [
+      "Base",
+      "Infr_收取资源",
+      {
+        "jump_back": true,
+        "name": "子任务_进入首页"
+      }
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "Infrastructures_Deal": {
+    "$__mpe_code": {
+      "position": {
+        "x": 8100,
+        "y": 282
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "next": [
+      "Base_Deal",
+      "Infr_DealDefaltYes",
+      {
+        "jump_back": true,
+        "name": "子任务_进入首页"
+      }
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  }
 }

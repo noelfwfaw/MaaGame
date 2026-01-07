@@ -1,15 +1,69 @@
 {
-    "重连网络": {
-        "next":[
-        "网络不稳定"
-         ]
-    },
-    "网络不稳定": {
-       "recognition": "OCR",           
-        "expected" : "网络不稳定", 
-        "roi" : [480,311,312,39],            
-        "action": "Click",
-        "target" : [802,448,0,0],
-        "post_delay":2000
+  "$__mpe_config_交错战线": {
+    "$__mpe_code": {
+      "filePath": "C:\\Users\\Administrator\\Documents\\GitHub\\MaaGame\\assets\\resource\\pipeline\\交错重连网络.json",
+      "filename": "交错战线",
+      "lastSyncTime": 1767772442837,
+      "prefix": "",
+      "savedViewport": {
+        "x": 562,
+        "y": 211,
+        "zoom": 1.39
+      },
+      "version": "v0.14.2"
     }
+  },
+  "网络不稳定": {
+    "$__mpe_code": {
+      "position": {
+        "x": 300,
+        "y": 0
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          802,
+          448,
+          0,
+          0
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:red]网络不稳定[/color]",
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": "网络不稳定",
+        "roi": [
+          480,
+          311,
+          312,
+          39
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "重连网络": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1,
+        "y": 80
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:red]重连网络[/color]",
+    "next": [
+      "网络不稳定"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  }
 }

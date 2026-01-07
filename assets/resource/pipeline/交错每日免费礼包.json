@@ -1,79 +1,232 @@
 {
-    "Shopping": {
-        "next": [
-            "子任务_关闭公告",
-            "Shop",
-            "子任务_进入首页"
-        ]
-    },
-    "Shop": {
-        "recognition": "OCR",
-        "expected": [
-            "补给站"
-        ],
-        "roi": [1008, 593, 111, 118],
-        "action": "Click",
-        "next": [
-            "DailyGift",
-            "Shop"
-        ]
-    },
-    "DailyGift": {
-        "recognition": "OCR",
-        "expected": [
-            "礼包"
-        ],
-        "roi": [
-            362,
-            57,
-            166,
-            89
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "DailyGiftYes",
-         
-            "进入首页"
-        ]
-    },
-    "DailyGiftYes": {
-        "recognition": "OCR",
-        "expected": "免费",
-        "roi": [273, 522, 985, 79],
-        "action":"Click",
-        "next": [
-            "ForFree",
-            "进入首页"
-        ]
-    },
-    "ForFree": {
-        "recognition": "OCR",
-        "expected": [
-            "免费"
-        ],
-        "roi": [163, 9, 409, 239],
-        "next": [
-            "Purchase",
-            "ForFree"
-        ]
-    },
-    "Purchase": {
-        "recognition": "OCR",
-        "expected": [
-            "购买"
-        ],
-        "roi": [
-            758,
-            513,
-            191,
-            75
-        ],
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "子任务_获得物品",
-            "进入首页"
-        ]
+  "$__mpe_config_交错战线": {
+    "$__mpe_code": {
+      "filePath": "C:\\Users\\Administrator\\Documents\\GitHub\\MaaGame\\assets\\resource\\pipeline\\交错每日免费礼包.json",
+      "filename": "交错战线",
+      "lastSyncTime": 1767771845660,
+      "prefix": "",
+      "savedViewport": {
+        "x": 514,
+        "y": 264,
+        "zoom": 0.61
+      },
+      "version": "v0.14.2"
     }
+  },
+  "$__mpe_external_子任务_关闭公告_交错战线": {
+    "$__mpe_code": {
+      "position": {
+        "x": 305,
+        "y": 24
+      }
+    }
+  },
+  "$__mpe_external_子任务_获得物品_交错战线": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1800,
+        "y": 191
+      }
+    }
+  },
+  "$__mpe_external_子任务_进入首页_交错战线": {
+    "$__mpe_code": {
+      "position": {
+        "x": 305,
+        "y": 388
+      }
+    }
+  },
+  "$__mpe_external_进入首页_交错战线": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1800,
+        "y": 341
+      }
+    }
+  },
+  "DailyGift": {
+    "$__mpe_code": {
+      "position": {
+        "x": 600,
+        "y": 106
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]礼包[/color]",
+    "next": [
+      "DailyGiftYes",
+      "进入首页"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "礼包"
+        ],
+        "roi": [
+          362,
+          57,
+          166,
+          89
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "DailyGiftYes": {
+    "$__mpe_code": {
+      "position": {
+        "x": 900,
+        "y": 134
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "ForFree",
+      "进入首页"
+    ],
+    "recognition": {
+      "param": {
+        "expected": "免费",
+        "roi": [
+          273,
+          522,
+          985,
+          79
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "ForFree": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1200,
+        "y": 135
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "next": [
+      "Purchase",
+      "ForFree"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "免费"
+        ],
+        "roi": [
+          163,
+          9,
+          409,
+          239
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Purchase": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1500,
+        "y": 106
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]购买[/color]",
+    "next": [
+      {
+        "jump_back": true,
+        "name": "子任务_获得物品"
+      },
+      "进入首页"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "购买"
+        ],
+        "roi": [
+          758,
+          513,
+          191,
+          75
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Shop": {
+    "$__mpe_code": {
+      "position": {
+        "x": 300,
+        "y": 134
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]补给站[/color]",
+    "next": [
+      "DailyGift",
+      "Shop"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "补给站"
+        ],
+        "roi": [
+          1008,
+          593,
+          111,
+          118
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Shopping": {
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:orange]每日礼包[/color]",
+    "next": [
+      {
+        "jump_back": true,
+        "name": "子任务_关闭公告"
+      },
+      "Shop",
+      {
+        "jump_back": true,
+        "name": "子任务_进入首页"
+      }
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  }
 }

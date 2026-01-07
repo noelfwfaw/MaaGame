@@ -1,446 +1,818 @@
 {
-    "Awards": {
-        "next": [
-            "子任务_点击取消",
-            "子任务_关闭公告",
-            "Mail",
-            "NoMail",
-            "子任务_进入首页"
-        ]
-    },
-    "Mail": {
-        "recognition": "TemplateMatch",
-        "template": "Infrastructures/mail.png",
-        "roi": [
-            1025,
-            15,
-            120,
-            50
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "Mail_Receive",
-            "Mail",
-            "进入首页"
-        ]
-    },
-    "Mail_Receive": {
-        "recognition": "ColorMatch",
-        "roi": [
-            230,
-            606,
-            160,
-            64
-        ],
-        "method": 4,
-        "lower": [
-            230,
-            190,
-            76
-        ],
-        "upper": [
-            255,
-            210,
-            90
-        ],
-        "count": 7,
-        "action": "Click",
-           "post_delay": 2000,
-        "next": [
-            "DailyTask",
-            "NoDailyTask",
-            "Mail_Receive",
-            "子任务_进入首页"
-        ]
-    },
-    "NoMail": {
-        "recognition": "TemplateMatch",
-        "template": "StartUp/NoMail.png",
-        "roi": [
-            1025,
-            15,
-            120,
-            50
-        ],
-        "next": [
-            "DailyTask",
-            "NoDailyTask"
-        ]
-    },
-    "DailyTask": {
-        "recognition": "TemplateMatch",
-        "template": "StartUp/DailyTask.png",
-        "roi": [
-            684,
-            606,
-            80,
-            80
-        ],
-        "action": "Click",
-        "next": [
-            "DailyTask_Receive0",
-            "DailyTask_Receive1",
-            "DailyTask_Receive2",
-            "DailyTask"
-        ]
-    },
-    "DailyTask_Receive0": {
-        "recognition": "ColorMatch",
-        "roi": [
-            23,
-            233,
-            36,
-            43
-        ],
-        "method": 4,
-        "lower": [
-            120,
-            120,
-            120
-        ],
-        "upper": [
-            160,
-            160,
-            160
-        ],
-        "count": 7,
-        "action": "Click",
-        "next": [
-            "DailyTask_Receive1",
-            "DailyTask_Receive2"
-        ]
-    },
-    "DailyTask_Receive1": {
-        "recognition": "ColorMatch",
-        "roi": [
-            1083,
-            102,
-            44,
-            30
-        ],
-        "method": 4,
-        "lower": [
-            230,
-            190,
-            76
-        ],
-        "upper": [
-            255,
-            210,
-            90
-        ],
-        "count": 7,
-        "action": "Click",
-        "next": [
-            "子任务_获得物品",
-            "DailyTask_Receive1",
-            "DailyTask_Receive2"
-        ]
-    },
-    "DailyTask_Receive2": {
-        "recognition": "ColorMatch",
-        "roi": [
-            23,
-            303,
-            36,
-            43
-        ],
-        "method": 4,
-        "lower": [
-            120,
-            120,
-            120
-        ],
-        "upper": [
-            160,
-            160,
-            160
-        ],
-        "count": 7,
-        "action": "Click",
-        "next": [
-            "DailyTask_Receive3",
-            "BattlePass",
-            "NoBattlePass",
-            "子任务_进入首页"
-        ]
-    },
-    "DailyTask_Receive3": {
-        "recognition": "ColorMatch",
-        "roi": [
-            1083,
-            102,
-            44,
-            30
-        ],
-        "method": 4,
-        "lower": [
-            230,
-            190,
-            76
-        ],
-        "upper": [
-            255,
-            210,
-            90
-        ],
-        "count": 7,
-        "action": "Click",
-        "next": [
-            "子任务_获得物品",
-            "BattlePass",
-            "NoBattlePass",
-            "DailyTask_Receive3",
-            "子任务_进入首页"
-        ]
-    },
-    "NoDailyTask": {
-        "recognition": "TemplateMatch",
-        "template": "StartUp/NoDailyTask.png",
-        "roi": [
-           684,
-            606,
-            80,
-            80
-        ],
-        "next": [
-            "BattlePass",
-            "NoBattlePass",
-            "子任务_进入首页"
-        ]
-    },
-    "BattlePass": {
-        "recognition": "TemplateMatch",
-        "template": "StartUp/DailyTask.png",
-        "roi": [
-            44,
-            97,
-            36,
-            36
-        ],
-        "action": "Click",
-        "next": [
-            "BattlePass_ReceiveMission",
-            "BattlePass"
-        ]
-    },
-    "BattlePass_ReceiveMission": {
-        "recognition": "OCR",
-        "expected": [
-            "任务"
-        ],
-        "roi": [
-            948,
-            274,
-            159,
-            76
-        ],
-        "action": "Click",
-        "next": [
-            "BattlePass_ReceiveDailyMissionGet",
-            "BattlePass_ReceiveWeeklyMission",
-            "BattlePass_ReceiveMission"
-        ]
-    },
-    "BattlePass_ReceiveDailyMissionGet": {
-        "recognition": "ColorMatch",
-        "roi": [
-            922,
-            211,
-            36,
-            26
-        ],
-        "method": 4,
-        "lower": [
-            220,
-            180,
-            70
-        ],
-        "upper": [
-            255,
-            220,
-            100
-        ],
-        "count": 7,
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "子任务_获得物品",
-            "BattlePass_ReceiveWeeklyMission",
-            "BattlePass_ReceiveDailyMissionGet"
-        ]
-    },
-    "BattlePass_ReceiveWeeklyMission": {
-        "recognition": "ColorMatch",
-        "roi": [
-            197,
-            218,
-            40,
-            37
-        ],
-        "method": 4,
-        "lower": [
-            110,
-            110,
-            110
-        ],
-        "upper": [
-            160,
-            160,
-            160
-        ],
-        "count": 2,
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "子任务_获得物品",
-            "BattlePass_ReceiveWeeklyMissionGet",
-            "BattlePass_ReceiveMonthlyMission",
-            "BattlePass_ReceiveWeeklyMission"
-        ]
-    },
-    "BattlePass_ReceiveWeeklyMissionGet": {
-        "recognition": "ColorMatch",
-        "roi": [
-            922,
-            211,
-            36,
-            26
-        ],
-        "method": 4,
-        "lower": [
-            220,
-            180,
-            70
-        ],
-        "upper": [
-            255,
-            220,
-            100
-        ],
-        "count": 7,
-        "action": "Click",
-        "next": [
-            "子任务_获得物品",
-            "BattlePass_ReceiveMonthlyMission",
-            "BattlePass_ReceiveWeeklyMissionGet"
-        ]
-    },
-    "BattlePass_ReceiveMonthlyMission": {
-        "recognition": "ColorMatch",
-        "roi": [
-            195,
-            291,
-            40,
-            37
-        ],
-        "method": 4,
-        "lower": [
-            110,
-            110,
-            110
-        ],
-        "upper": [
-            160,
-            160,
-            160
-        ],
-        "count": 2,
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "子任务_获得物品",
-            "BattlePass_ReceiveMonthlyMissionGet",
-            "BattlePass_MissionExist",
-            "BattlePass_ReceiveMonthlyMission"
-        ]
-    },
-    "BattlePass_ReceiveMonthlyMissionGet": {
-        "recognition": "ColorMatch",
-        "roi": [
-            922,
-            211,
-            36,
-            26
-        ],
-        "method": 4,
-        "lower": [
-            220,
-            180,
-            70
-        ],
-        "upper": [
-            255,
-            220,
-            100
-        ],
-        "count": 7,
-        "action": "Click",
-        "next": [
-            "子任务_获得物品",
-            "BattlePass_MissionExist",
-            "BattlePass_ReceiveMonthlyMissionGet"
-        ]
-    },
-    "BattlePass_MissionExist": {
-        "recognition": "OCR",
-        "expected": [
-            "本期任务"
-        ],
-        "roi": [
-            182,
-            260,
-            195,
-            85
-        ],
-        "action": "Click",
-        "target": [
-            1170,
-            328,
-            10,
-            10
-        ],
-        "next": [
-            "BattlePass_ReceiveAll",
-            "进入首页"
-        ]
-    },
-    "BattlePass_ReceiveAll": {
-        "recognition": "ColorMatch",
-        "roi": [
-            1218,
-            319,
-            36,
-            26
-        ],
-        "method": 4,
-        "lower": [
-            220,
-            180,
-            70
-        ],
-        "upper": [
-            255,
-            220,
-            100
-        ],
-        "count": 7,
-        "action": "Click",
-        "next": [
-            "进入首页"
-        ]
-    },
-    "NoBattlePass": {
-         "recognition": "OCR",
-        "expected": [
-            "指南"
-        ],
-        "roi": [
-            44,
-            97,
-            160,
-            70
-        ]
+  "$__mpe_config_交错战线": {
+    "$__mpe_code": {
+      "filePath": "C:\\Users\\Administrator\\Documents\\GitHub\\MaaGame\\assets\\resource\\pipeline\\交错领取奖励.json",
+      "filename": "交错战线",
+      "lastSyncTime": 1767772626891,
+      "prefix": "",
+      "savedViewport": {
+        "x": 386,
+        "y": 181,
+        "zoom": 0.2
+      },
+      "version": "v0.14.2"
     }
+  },
+  "$__mpe_external_子任务_关闭公告_交错战线": {
+    "$__mpe_code": {
+      "position": {
+        "x": 305,
+        "y": 134
+      }
+    }
+  },
+  "$__mpe_external_子任务_点击取消_交错战线": {
+    "$__mpe_code": {
+      "position": {
+        "x": 305,
+        "y": 24
+      }
+    }
+  },
+  "$__mpe_external_子任务_获得物品_交错战线": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4505,
+        "y": 1128
+      }
+    }
+  },
+  "$__mpe_external_子任务_进入首页_交错战线": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2405,
+        "y": 1848
+      }
+    }
+  },
+  "$__mpe_external_进入首页_交错战线": {
+    "$__mpe_code": {
+      "position": {
+        "x": 5100,
+        "y": 1893
+      }
+    }
+  },
+  "Awards": {
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:orange]每日收菜[/color]",
+    "next": [
+      {
+        "jump_back": true,
+        "name": "子任务_点击取消"
+      },
+      {
+        "jump_back": true,
+        "name": "子任务_关闭公告"
+      },
+      "Mail",
+      "NoMail",
+      {
+        "jump_back": true,
+        "name": "子任务_进入首页"
+      }
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "BattlePass": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2400,
+        "y": 866
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]通行证[/color]",
+    "next": [
+      "BattlePass_ReceiveMission",
+      "BattlePass"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          44,
+          97,
+          36,
+          36
+        ],
+        "template": "StartUp/DailyTask.png"
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "BattlePass_MissionExist": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4500,
+        "y": 1645
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1170,
+          328,
+          10,
+          10
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]返回[/color]",
+    "next": [
+      "BattlePass_ReceiveAll",
+      "进入首页"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "本期任务"
+        ],
+        "roi": [
+          182,
+          260,
+          195,
+          85
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "BattlePass_ReceiveAll": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4800,
+        "y": 1618
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]领取全部[/color]",
+    "next": [
+      "进入首页"
+    ],
+    "recognition": {
+      "param": {
+        "count": 7,
+        "lower": [
+          220,
+          180,
+          70
+        ],
+        "method": 4,
+        "roi": [
+          1218,
+          319,
+          36,
+          26
+        ],
+        "upper": [
+          255,
+          220,
+          100
+        ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "BattlePass_ReceiveDailyMissionGet": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3000,
+        "y": 784
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "子任务_获得物品"
+      },
+      "BattlePass_ReceiveWeeklyMission",
+      "BattlePass_ReceiveDailyMissionGet"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "count": 7,
+        "lower": [
+          220,
+          180,
+          70
+        ],
+        "method": 4,
+        "roi": [
+          922,
+          211,
+          36,
+          26
+        ],
+        "upper": [
+          255,
+          220,
+          100
+        ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "BattlePass_ReceiveMission": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2700,
+        "y": 859
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]完成任务[/color]",
+    "next": [
+      "BattlePass_ReceiveDailyMissionGet",
+      "BattlePass_ReceiveWeeklyMission",
+      "BattlePass_ReceiveMission"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "任务"
+        ],
+        "roi": [
+          948,
+          274,
+          159,
+          76
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "BattlePass_ReceiveMonthlyMission": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3900,
+        "y": 1370
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "子任务_获得物品"
+      },
+      "BattlePass_ReceiveMonthlyMissionGet",
+      "BattlePass_MissionExist",
+      "BattlePass_ReceiveMonthlyMission"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "count": 2,
+        "lower": [
+          110,
+          110,
+          110
+        ],
+        "method": 4,
+        "roi": [
+          195,
+          291,
+          40,
+          37
+        ],
+        "upper": [
+          160,
+          160,
+          160
+        ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "BattlePass_ReceiveMonthlyMissionGet": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4198,
+        "y": 1574
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "子任务_获得物品"
+      },
+      "BattlePass_MissionExist",
+      "BattlePass_ReceiveMonthlyMissionGet"
+    ],
+    "recognition": {
+      "param": {
+        "count": 7,
+        "lower": [
+          220,
+          180,
+          70
+        ],
+        "method": 4,
+        "roi": [
+          922,
+          211,
+          36,
+          26
+        ],
+        "upper": [
+          255,
+          220,
+          100
+        ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "BattlePass_ReceiveWeeklyMission": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3300,
+        "y": 988
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "子任务_获得物品"
+      },
+      "BattlePass_ReceiveWeeklyMissionGet",
+      "BattlePass_ReceiveMonthlyMission",
+      "BattlePass_ReceiveWeeklyMission"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "count": 2,
+        "lower": [
+          110,
+          110,
+          110
+        ],
+        "method": 4,
+        "roi": [
+          197,
+          218,
+          40,
+          37
+        ],
+        "upper": [
+          160,
+          160,
+          160
+        ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "BattlePass_ReceiveWeeklyMissionGet": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3600,
+        "y": 1193
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "子任务_获得物品"
+      },
+      "BattlePass_ReceiveMonthlyMission",
+      "BattlePass_ReceiveWeeklyMissionGet"
+    ],
+    "recognition": {
+      "param": {
+        "count": 7,
+        "lower": [
+          220,
+          180,
+          70
+        ],
+        "method": 4,
+        "roi": [
+          922,
+          211,
+          36,
+          26
+        ],
+        "upper": [
+          255,
+          220,
+          100
+        ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "DailyTask": {
+    "$__mpe_code": {
+      "position": {
+        "x": 900,
+        "y": 461
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]每日任务[/color]",
+    "next": [
+      "DailyTask_Receive0",
+      "DailyTask_Receive1",
+      "DailyTask_Receive2",
+      "DailyTask"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          684,
+          606,
+          80,
+          80
+        ],
+        "template": "StartUp/DailyTask.png"
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "DailyTask_Receive0": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1200,
+        "y": 414
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "DailyTask_Receive1",
+      "DailyTask_Receive2"
+    ],
+    "recognition": {
+      "param": {
+        "count": 7,
+        "lower": [
+          120,
+          120,
+          120
+        ],
+        "method": 4,
+        "roi": [
+          23,
+          233,
+          36,
+          43
+        ],
+        "upper": [
+          160,
+          160,
+          160
+        ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "DailyTask_Receive1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1500,
+        "y": 414
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "子任务_获得物品"
+      },
+      "DailyTask_Receive1",
+      "DailyTask_Receive2"
+    ],
+    "recognition": {
+      "param": {
+        "count": 7,
+        "lower": [
+          230,
+          190,
+          76
+        ],
+        "method": 4,
+        "roi": [
+          1083,
+          102,
+          44,
+          30
+        ],
+        "upper": [
+          255,
+          210,
+          90
+        ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "DailyTask_Receive2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1800,
+        "y": 614
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "DailyTask_Receive3",
+      "BattlePass",
+      "NoBattlePass",
+      {
+        "jump_back": true,
+        "name": "子任务_进入首页"
+      }
+    ],
+    "recognition": {
+      "param": {
+        "count": 7,
+        "lower": [
+          120,
+          120,
+          120
+        ],
+        "method": 4,
+        "roi": [
+          23,
+          303,
+          36,
+          43
+        ],
+        "upper": [
+          160,
+          160,
+          160
+        ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "DailyTask_Receive3": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2100,
+        "y": 614
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "子任务_获得物品"
+      },
+      "BattlePass",
+      "NoBattlePass",
+      "DailyTask_Receive3",
+      {
+        "jump_back": true,
+        "name": "子任务_进入首页"
+      }
+    ],
+    "recognition": {
+      "param": {
+        "count": 7,
+        "lower": [
+          230,
+          190,
+          76
+        ],
+        "method": 4,
+        "roi": [
+          1083,
+          102,
+          44,
+          30
+        ],
+        "upper": [
+          255,
+          210,
+          90
+        ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "Mail": {
+    "$__mpe_code": {
+      "position": {
+        "x": 300,
+        "y": 244
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]邮件[/color]",
+    "next": [
+      "Mail_Receive",
+      "Mail",
+      "进入首页"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "roi": [
+          1025,
+          15,
+          120,
+          50
+        ],
+        "template": "Infrastructures/mail.png"
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Mail_Receive": {
+    "$__mpe_code": {
+      "position": {
+        "x": 600,
+        "y": 196
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": "[color:green]领取[/color]",
+    "next": [
+      "DailyTask",
+      "NoDailyTask",
+      "Mail_Receive",
+      {
+        "jump_back": true,
+        "name": "子任务_进入首页"
+      }
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "count": 7,
+        "lower": [
+          230,
+          190,
+          76
+        ],
+        "method": 4,
+        "roi": [
+          230,
+          606,
+          160,
+          64
+        ],
+        "upper": [
+          255,
+          210,
+          90
+        ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "NoBattlePass": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2400,
+        "y": 1627
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:green]无可领取[/color]",
+    "recognition": {
+      "param": {
+        "expected": [
+          "指南"
+        ],
+        "roi": [
+          44,
+          97,
+          160,
+          70
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "NoDailyTask": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2100,
+        "y": 1607
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:green]无可领取[/color]",
+    "next": [
+      "BattlePass",
+      "NoBattlePass",
+      {
+        "jump_back": true,
+        "name": "子任务_进入首页"
+      }
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          684,
+          606,
+          80,
+          80
+        ],
+        "template": "StartUp/NoDailyTask.png"
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "NoMail": {
+    "$__mpe_code": {
+      "position": {
+        "x": 600,
+        "y": 1978
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:green]无可领取[/color]",
+    "next": [
+      "DailyTask",
+      "NoDailyTask"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          1025,
+          15,
+          120,
+          50
+        ],
+        "template": "StartUp/NoMail.png"
+      },
+      "type": "TemplateMatch"
+    }
+  }
 }
