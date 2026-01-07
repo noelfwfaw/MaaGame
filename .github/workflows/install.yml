@@ -125,22 +125,34 @@ jobs:
     name: Generate changelog
     runs-on: ubuntu-latest
     outputs:
-      release_body: ${{ steps.git-cliff.outputs.content }}
+      release_body: ${{ steps.generate-changelog.outputs.content }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Generate a changelog
-        uses: orhun/git-cliff-action@v4
-        id: git-cliff
-        with:
-          config: .github/cliff.toml
-          args: -vv --latest --strip header
-        env:
-          OUTPUT: CHANGES.md
-          GITHUB_REPO: ${{ github.repository }}
+      - name: Generate simple changelog from commits
+        id: generate-changelog
+        run: |
+          # 查找上一个发布标签（排除ci标签）
+          PREV_TAG=$(git tag --list "v*" --sort=-version:refname | grep -v ci | head -n 1)
+          
+          echo "## What's Changed" > changelog.md
+          
+          if [[ -n "$PREV_TAG" ]]; then
+            # 获取两个标签之间的提交
+            git log --oneline --format="- %s by @%an" ${PREV_TAG}..HEAD >> changelog.md
+          else
+            # 首次发布，获取所有提交
+            git log --oneline --format="- %s by @%an" --all >> changelog.md
+          fi
+          
+          # 输出内容
+          content=$(cat changelog.md)
+          echo "content<<EOF" >> $GITHUB_OUTPUT
+          echo "$content" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
 
   release:
     if: ${{ needs.meta.outputs.is_release == 'true' }}
