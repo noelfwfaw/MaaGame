@@ -1,11 +1,11 @@
 {
     "interface_version": 2,
-    "name": "MaaGame",
+    "name": "MMGS",
     "description": "基于MaaFramework的多游戏混合脚本",
     "license": "MIT",
-    "welcome": "欢迎使用 MaaGame!",
+    "welcome": "欢迎使用 MMGS!",
     "github": "https://github.com/noelfwfaw/MMGS",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "controller": [
         {
             "name": "安卓端",
