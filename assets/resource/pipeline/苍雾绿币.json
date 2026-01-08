@@ -48,12 +48,7 @@
     "action": {
       "type": "Click",
       "param": {
-        "target": [
-          179,
-          438,
-          85,
-          79
-        ]
+        "target": [94,470,23,19]
       }
     },
     "post_wait_freezes": 2000,

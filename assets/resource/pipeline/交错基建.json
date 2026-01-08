@@ -676,6 +676,143 @@
       "type": "DirectHit"
     }
   },
+  "判断资源短缺":{
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+          "roi" : [284,91,902,595],
+          "template" : "InfrastructureS/资源短缺1.png",
+          "green_mask":true,
+          "threshold":0.9
+          }
+    },
+    "action":{
+      "type":"DoNothing"
+    },
+    "next":[
+      "点击黑匣"
+    ]
+  },
+  "点击黑匣":{
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+          "roi" : [0,309,187,181],
+          "template" : "InfrastructureS/稀有黑匣.png"
+          }
+    },
+    "action":{
+      "type":"Click"
+    },
+    "next":[
+      "合成压电石英"
+    ]
+  },
+  "合成压电石英":{
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+          "roi" : [219,122,243,226],
+          "template" : "InfrastructureS/压电石英.png"
+          }
+    },
+    "action":{
+      "type":"Click"
+    },
+    "post_delay":1000,
+    "next":[
+      "[JumpBack]合成份数max",
+      "点击合成压电石英"
+    ]
+  },
+  "点击合成压电石英":{
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected" : "确定",
+          "roi" : [986,554,161,138]
+          }
+    },
+    "repeat":4,
+    "repeat_delay":1000,
+    "action":{
+      "type":"Click"
+    },
+    "post_delay":1000,
+    "next":[
+      "[JumpBack]子任务_点击确认",
+      "合成熔融石英",
+      "[JumpBack]子任务_点击返回"
+    ]
+  },
+  "合成熔融石英":{
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+          "roi" : [713,122,239,219],
+          "template" : "InfrastructureS/熔融石英.png"
+          }
+    },
+    "action":{
+      "type":"Click"
+    },
+    "post_delay":1000,
+    "next":[
+      "[JumpBack]合成份数max",
+      "点击合成熔融石英"
+    ]
+  },
+  "点击合成熔融石英":{
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected" : "确定",
+          "roi" : [986,554,161,138]
+          }
+    },
+    "repeat":4,
+    "repeat_delay":1000,
+    "action":{
+      "type":"Click"
+    },
+    "post_delay":1000,
+    "next":[
+      "[JumpBack]子任务_点击确认",
+      "Infr_制作素材_材料充足2",
+      "[JumpBack]子任务_点击返回"
+    ]
+  },
+  "回到订单库":{
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected" : "制作素材",
+          "roi" : [0,49,206,134]
+          }
+    },
+    "repeat":4,
+    "repeat_delay":1000,
+    "action":{
+      "type":"DoNothing"
+    }
+  },
+  "合成份数max":{
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected" : "1",
+          "roi" : [975,148,181,179]
+          }
+    },
+    "action":{
+      "type":"Click",
+      "param":{
+        "target" : [1174,345,39,27]
+      }
+    },
+    "post_delay":1000,
+    "next":[]
+  },
   "Infr_Dealothers": {
     "$__mpe_code": {
       "position": {
@@ -689,6 +826,10 @@
     },
     "next": [
       "Infr_DealNextFriends_End",
+      {
+        "jump_back": true,
+        "name": "判断资源短缺"
+      },
       {
         "jump_back": true,
         "name": "Infr_DealSelf1"
@@ -1713,7 +1854,7 @@
     },
     "focus": "[color:green]制作素材[/color]",
     "next": [
-      "Infr_制作素材",
+      "Infr_制作素材2",
       "Infr_制作素材_材料不足",
       "Infr_制作素材_材料充足"
     ],
@@ -2380,6 +2521,329 @@
     "recognition": {
       "param": {},
       "type": "DirectHit"
+    }
+  },
+  "Infr_制作素材2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9300,
+        "y": 1562
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          53,
+          358,
+          79,
+          73
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]制作素材[/color]",
+    "next": [
+      "Infr_制作素材2",
+      "Infr_制作素材_材料不足2",
+      "Infr_制作素材_材料充足2"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "制作素材"
+        ],
+        "roi": [
+          42,
+          99,
+          108,
+          34
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Infr_制作素材_合成_返回2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 10800,
+        "y": 1554
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          44,
+          29,
+          120,
+          39
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]返回[/color]",
+    "next": [
+      {
+        "jump_back": true,
+        "name": "子任务_获得物品"
+      },
+      "Infr_制作素材_返回2",
+      "Infr_制作素材_合成_返回2"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "roi": [
+          274,
+          97,
+          88,
+          27
+        ],
+        "template": [
+          "合成菜单.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Infr_制作素材_材料不足2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 10800,
+        "y": 4446
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:green][/color]",
+    "next": [
+      "Infr_制作素材_返回2"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "lower": [
+          33,
+          20,
+          33
+        ],
+        "roi": [
+          461,
+          520,
+          85,
+          28
+        ],
+        "upper": [
+          57,
+          32,
+          49
+        ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "Infr_制作素材_材料充足2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9600,
+        "y": 1539
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          272,
+          525,
+          145,
+          140
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]材料充足[/color]",
+    "next": [
+      "Infr_制作素材_材料充足_合成2",
+      "Infr_制作素材_材料充足2"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "lower": [
+          59,
+          65,
+          74
+        ],
+        "roi": [
+          461,
+          520,
+          85,
+          28
+        ],
+        "upper": [
+          99,
+          97,
+          107
+        ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "Infr_制作素材_材料充足_合成2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9900,
+        "y": 1555
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1159,
+          342,
+          67,
+          33
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]合成[/color]",
+    "next": [
+      "Infr_制作素材_材料充足_最大2",
+      "Infr_制作素材_材料充足_合成2"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "合成份数"
+        ],
+        "roi": [
+          901,
+          95,
+          106,
+          33
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Infr_制作素材_材料充足_最大2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 10200,
+        "y": 1556
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": "[color:green]最大[/color]",
+    "next": [
+      "Infr_制作素材_材料充足_确定2"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "lower": [
+          33,
+          20,
+          33
+        ],
+        "roi": [
+          414,
+          308,
+          405,
+          107
+        ],
+        "upper": [
+          57,
+          32,
+          49
+        ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "Infr_制作素材_材料充足_确定2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 10500,
+        "y": 1555
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1020,
+          603,
+          90,
+          39
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]确定[/color]",
+    "next": [
+      {
+        "jump_back": true,
+        "name": "子任务_获得物品"
+      },
+      "Infr_制作素材_合成_返回2"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "合成份数"
+        ],
+        "roi": [
+          896,
+          94,
+          111,
+          35
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Infr_制作素材_返回2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 11100,
+        "y": 1783
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          44,
+          29,
+          120,
+          39
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": "[color:green]返回[/color]",
+    "next": [
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "roi": [
+          1,
+          458,
+          235,
+          104
+        ],
+        "template": [
+          "InfrastructureS/Infr_JDSC.png"
+        ]
+      },
+      "type": "TemplateMatch"
     }
   }
 }
