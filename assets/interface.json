@@ -1741,7 +1741,7 @@
                         "E9选择模拟": {
                             "recognition": {
                                 "param": {
-                                    "expected": "战"
+                                    "expected": "戰"
                                 }
                             },
                             "next": [
@@ -1756,7 +1756,7 @@
                         "E9选择模拟": {
                             "recognition": {
                                 "param": {
-                                    "expected": "伙"
+                                    "expected": "夥伴"
                                 }
                             },
                             "next": [
@@ -1771,7 +1771,7 @@
                         "E9选择模拟": {
                             "recognition": {
                                 "param": {
-                                    "expected": "潜"
+                                    "expected": "力"
                                 }
                             },
                             "next": [
@@ -1786,12 +1786,344 @@
                         "E9选择模拟": {
                             "recognition": {
                                 "param": {
-                                    "expected": "记"
+                                    "expected": "碎片"
                                 }
                             },
                             "next": [
                                 "E9记忆碎片"
                             ]
+                        }
+                    }
+                }
+            ]
+        },
+        "成长": {
+            "cases": [
+                {
+                    "name": "单元币",
+                    "pipeline_override": {
+                        "E9成长": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "單"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "战斗员升级材料",
+                    "pipeline_override": {
+                        "E9成长": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "戰"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "伙伴升级材料",
+                    "pipeline_override": {
+                        "E9成长": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "夥"
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "战斗员": {
+            "cases": [
+                {
+                    "name": "決鬥家",
+                    "pipeline_override": {
+                        "E9战斗员": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "決鬥家"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "先鋒",
+                    "pipeline_override": {
+                        "E9战斗员": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "先鋒"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "遊俠",
+                    "pipeline_override": {
+                        "E9战斗员": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "遊俠"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "獵人",
+                    "pipeline_override": {
+                        "E9战斗员": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "獵人"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "心靈術士",
+                    "pipeline_override": {
+                        "E9战斗员": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "心靈術士"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "控制師",
+                    "pipeline_override": {
+                        "E9战斗员": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "控制師"
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "伙伴": {
+            "cases": [
+                {
+                    "name": "決鬥家",
+                    "pipeline_override": {
+                        "E9伙伴": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "決鬥家"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "先鋒",
+                    "pipeline_override": {
+                        "E9伙伴": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "先鋒"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "遊俠",
+                    "pipeline_override": {
+                        "E9伙伴": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "遊俠"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "獵人",
+                    "pipeline_override": {
+                        "E9伙伴": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "獵人"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "心靈術士",
+                    "pipeline_override": {
+                        "E9伙伴": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "心靈術士"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "控制師",
+                    "pipeline_override": {
+                        "E9伙伴": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "控制師"
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "潜力": {
+            "cases": [
+                {
+                    "name": "熱情",
+                    "pipeline_override": {
+                        "E9潜力": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "熱情"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "秩序",
+                    "pipeline_override": {
+                        "E9潜力": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "秩序"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "本能",
+                    "pipeline_override": {
+                        "E9潜力": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "本能"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "虛無",
+                    "pipeline_override": {
+                        "E9潜力": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "虛無"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "正義",
+                    "pipeline_override": {
+                        "E9潜力": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "正義"
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "记忆碎片": {
+            "cases": [
+                {
+                    "name": "火焰",
+                    "pipeline_override": {
+                        "E9记忆碎片": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "火焰"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "地位",
+                    "pipeline_override": {
+                        "E9记忆碎片": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "地位"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "榮譽",
+                    "pipeline_override": {
+                        "E9记忆碎片": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "榮譽"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "命運",
+                    "pipeline_override": {
+                        "E9记忆碎片": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "命運"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "約定",
+                    "pipeline_override": {
+                        "E9记忆碎片": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "約定"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "工具",
+                    "pipeline_override": {
+                        "E9记忆碎片": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "工具"
+                                }
+                            }
                         }
                     }
                 }
