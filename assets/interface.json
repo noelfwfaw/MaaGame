@@ -5,7 +5,7 @@
     "license": "MIT",
     "welcome": "欢迎使用 MMGS!",
     "github": "https://github.com/noelfwfaw/MMGS",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "controller": [
         {
             "name": "安卓端",
