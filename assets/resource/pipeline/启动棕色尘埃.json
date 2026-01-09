@@ -1,407 +1,299 @@
 {
-  "$__mpe_config_新建Pipeline1": {
-    "$__mpe_code": {
-      "prefix": "",
-      "savedViewport": {
-        "x": 456,
-        "y": 262,
-        "zoom": 0.29
-      },
-      "filename": "新建Pipeline1",
-      "version": "v0.14.2"
+    "启动棕色尘埃": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "focus": "[color:green]启动棕色尘埃[/color]",
+        "next": [
+            "棕色尘埃主页面2",
+            "启动棕色尘埃2",
+            {
+                "name": "一键关闭后台",
+                "jump_back": true
+            }
+        ]
+    },
+    "启动棕色尘埃2": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "StartApp",
+            "param": {
+                "package": "com.qeeyou.app.accelerator"
+            }
+        },
+        "post_wait_freezes": 10000,
+        "focus": "[color:green]启动棕色尘埃2[/color]",
+        "next": [
+            "棕色尘埃点击搜索框",
+            {
+                "name": "奇游更新",
+                "jump_back": true
+            }
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "棕色尘埃点击搜索框": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "点击搜索框.png",
+                "roi": [
+                    38,
+                    22,
+                    633,
+                    66
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]棕色尘埃点击搜索框[/color]",
+        "next": [
+            "输入棕色尘埃"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "输入棕色尘埃": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "InputText",
+            "param": {
+                "input_text": "棕色尘埃"
+            }
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]输入棕色尘埃[/color]",
+        "next": [
+            "加速棕色尘埃"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "加速棕色尘埃": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "加速.png",
+                "roi": [
+                    572,
+                    101,
+                    133,
+                    298
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_delay": 3000,
+        "focus": "[color:green]加速棕色尘埃[/color]",
+        "next": [
+            "棕色尘埃主页面等待"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "棕色尘埃主页面等待": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "post_delay": 5000,
+        "focus": "[color:blue]棕色尘埃主页面等待[/color]",
+        "next": [
+            "棕色尘埃进入主页面",
+            "棕色尘埃主页面等待"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "棕色尘埃进入主页面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "棕色尘埃进入主页面.png",
+                "roi": [
+                    822,
+                    460,
+                    320,
+                    62
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 10000,
+        "focus": "[color:green]棕色尘埃进入主页面[/color]",
+        "next": [
+            "棕色尘埃主页面"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "棕色尘埃主页面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "棕色尘埃主页面.png",
+                "roi": [
+                    1153,
+                    21,
+                    59,
+                    47
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]棕色尘埃主页面[/color]",
+        "next": [
+            "棕色尘埃签到",
+            "棕色尘埃主页面2",
+            "棕色尘埃跳过广告"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "棕色尘埃签到": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "棕色尘埃签到.png",
+                "roi": [
+                    1010,
+                    150,
+                    49,
+                    44
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]棕色尘埃签到[/color]",
+        "next": [
+            "棕色尘埃签到",
+            "棕色尘埃主页面2",
+            "棕色尘埃跳过广告"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "棕色尘埃公告": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "棕色尘埃公告.png",
+                "roi": [
+                    613,
+                    92,
+                    55,
+                    62
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    923,
+                    138,
+                    16,
+                    18
+                ]
+            }
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]棕色尘埃公告[/color]",
+        "next": [
+            "棕色尘埃跳过广告"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "棕色尘埃跳过广告": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    551,
+                    628,
+                    114,
+                    26
+                ]
+            }
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]棕色尘埃跳过广告[/color]",
+        "next": [
+            "棕色尘埃主页面2",
+            "棕色尘埃跳过广告"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "棕色尘埃主页面2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "棕色尘埃主页面2.png",
+                "roi": [
+                    99,
+                    86,
+                    244,
+                    91
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "focus": "[color:green]棕色尘埃主页面2[/color]",
+        "on_error": [
+            "error"
+        ]
     }
-  },
-  "启动棕色尘埃": {
-    "recognition": {
-      "type": "DirectHit",
-      "param": {}
-    },
-    "action": {
-      "type": "DoNothing",
-      "param": {}
-    },
-    "focus": "[color:green]启动棕色尘埃[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    "next": [
-      "棕色尘埃主页面2",
-      "启动棕色尘埃2",
-      {
-        "name": "一键关闭后台",
-        "jump_back": true
-      }
-    ]
-  },
-  "启动棕色尘埃2": {
-    "recognition": {
-      "type": "DirectHit",
-      "param": {}
-    },
-    "action": {
-      "type": "StartApp",
-      "param": {
-        "package": "com.qeeyou.app.accelerator"
-      }
-    },
-    "post_wait_freezes": 10000,
-    "focus": "[color:green]启动棕色尘埃2[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 478
-      }
-    },
-    "next": [
-      "棕色尘埃点击搜索框",
-      {
-        "name": "奇游更新",
-        "jump_back": true
-      }
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "棕色尘埃点击搜索框": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "点击搜索框.png",
-        "roi": [
-          38,
-          22,
-          633,
-          66
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]棕色尘埃点击搜索框[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 460
-      }
-    },
-    "next": [
-      "输入棕色尘埃"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "输入棕色尘埃": {
-    "recognition": {
-      "type": "DirectHit",
-      "param": {}
-    },
-    "action": {
-      "type": "InputText",
-      "param": {
-        "input_text": "棕色尘埃"
-      }
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]输入棕色尘埃[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 900,
-        "y": 478
-      }
-    },
-    "next": [
-      "加速棕色尘埃"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "加速棕色尘埃": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "加速.png",
-        "roi": [
-          572,
-          101,
-          133,
-          298
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_delay": 3000,
-    "focus": "[color:green]加速棕色尘埃[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1200,
-        "y": 460
-      }
-    },
-    "next": [
-      "棕色尘埃主页面等待"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "棕色尘埃主页面等待": {
-    "recognition": {
-      "type": "DirectHit",
-      "param": {}
-    },
-    "action": {
-      "type": "DoNothing",
-      "param": {}
-    },
-    "post_delay": 5000,
-    "focus": "[color:blue]棕色尘埃主页面等待[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 494
-      }
-    },
-    "next": [
-      "棕色尘埃进入主页面",
-      "棕色尘埃主页面等待"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "棕色尘埃进入主页面": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "棕色尘埃进入主页面.png",
-        "roi": [
-          822,
-          460,
-          320,
-          62
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 10000,
-    "focus": "[color:green]棕色尘埃进入主页面[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1800,
-        "y": 460
-      }
-    },
-    "next": [
-      "棕色尘埃主页面"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "棕色尘埃主页面": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "棕色尘埃主页面.png",
-        "roi": [
-          1153,
-          21,
-          59,
-          47
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]棕色尘埃主页面[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 2100,
-        "y": 460
-      }
-    },
-    "next": [
-      "棕色尘埃签到",
-      "棕色尘埃主页面2",
-      "棕色尘埃跳过广告"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "棕色尘埃签到": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "棕色尘埃签到.png",
-        "roi": [
-          1010,
-          150,
-          49,
-          44
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]棕色尘埃签到[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 2400,
-        "y": 460
-      }
-    },
-    "next": [
-      "棕色尘埃签到",
-      "棕色尘埃主页面2",
-      "棕色尘埃跳过广告"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "棕色尘埃公告": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "棕色尘埃公告.png",
-        "roi": [
-          613,
-          92,
-          55,
-          62
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          923,
-          138,
-          16,
-          18
-        ]
-      }
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]棕色尘埃公告[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 2400,
-        "y": 116
-      }
-    },
-    "next": [
-      "棕色尘埃跳过广告"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "棕色尘埃跳过广告": {
-    "recognition": {
-      "type": "DirectHit",
-      "param": {}
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          551,
-          628,
-          114,
-          26
-        ]
-      }
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]棕色尘埃跳过广告[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 2700,
-        "y": 626
-      }
-    },
-    "next": [
-      "棕色尘埃主页面2",
-      "棕色尘埃跳过广告"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "棕色尘埃主页面2": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "棕色尘埃主页面2.png",
-        "roi": [
-          99,
-          86,
-          244,
-          91
-        ]
-      }
-    },
-    "action": {
-      "type": "DoNothing",
-      "param": {}
-    },
-    "focus": "[color:green]棕色尘埃主页面2[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 3000,
-        "y": 478
-      }
-    },
-    "on_error": [
-      "error"
-    ]
-  },
-  "$__mpe_external_一键关闭后台_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 305,
-        "y": 754
-      }
-    }
-  },
-  "$__mpe_external_奇游更新_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 605,
-        "y": 1005
-      }
-    }
-  },
-  "$__mpe_external_error_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 3300,
-        "y": 970
-      }
-    }
-  }
 }

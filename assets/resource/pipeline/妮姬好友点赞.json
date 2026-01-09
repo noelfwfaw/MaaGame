@@ -1,145 +1,101 @@
 {
-  "$__mpe_config_新建Pipeline1": {
-    "$__mpe_code": {
-      "prefix": "",
-      "savedViewport": {
-        "x": 682,
-        "y": 301,
-        "zoom": 0.5
-      },
-      "filename": "新建Pipeline1",
-      "version": "v0.14.2"
+    "妮姬好友点赞": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "好友",
+                "roi": [
+                    621,
+                    377,
+                    74,
+                    89
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "妮姬好友赠送"
+        ]
+    },
+    "妮姬好友赠送": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "赠送",
+                "roi": [
+                    475,
+                    1050,
+                    142,
+                    66
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            {
+                "name": "妮姬通知",
+                "jump_back": true
+            },
+            "妮姬关闭好友"
+        ]
+    },
+    "妮姬通知": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "通知",
+                "roi": [
+                    340,
+                    340,
+                    85,
+                    53
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    328,
+                    763,
+                    86,
+                    59
+                ]
+            }
+        }
+    },
+    "妮姬关闭好友": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "赠送",
+                "roi": [
+                    475,
+                    1050,
+                    142,
+                    66
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    623,
+                    138,
+                    31,
+                    45
+                ]
+            }
+        },
+        "next": [
+            "妮姬主页面"
+        ]
     }
-  },
-  "妮姬好友点赞": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "好友",
-        "roi": [
-          621,
-          377,
-          74,
-          89
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 14
-      }
-    },
-    "next": [
-      "妮姬好友赠送"
-    ]
-  },
-  "妮姬好友赠送": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "赠送",
-        "roi": [
-          475,
-          1050,
-          142,
-          66
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 14
-      }
-    },
-    "next": [
-      {
-        "name": "妮姬通知",
-        "jump_back": true
-      },
-      "妮姬关闭好友"
-    ]
-  },
-  "妮姬通知": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "通知",
-        "roi": [
-          340,
-          340,
-          85,
-          53
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          328,
-          763,
-          86,
-          59
-        ]
-      }
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 0
-      }
-    }
-  },
-  "妮姬关闭好友": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "赠送",
-        "roi": [
-          475,
-          1050,
-          142,
-          66
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          623,
-          138,
-          31,
-          45
-        ]
-      }
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 252
-      }
-    },
-    "next": [
-      "妮姬主页面"
-    ]
-  },
-  "$__mpe_external_妮姬主页面_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 900,
-        "y": 323
-      }
-    }
-  }
 }

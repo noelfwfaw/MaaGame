@@ -1,124 +1,161 @@
 {
-  "E9模拟":{
-    "next":[
-      "E9打开模拟",
-      "[JumpBack]E9返回",
-      "[JumpBack]E9模拟返回",
-      "[JumpBack]E9激活主页面"
-    ]
-  },
-  "E9打开模拟":{
-    "recognition":{
-      "type":"OCR",
-      "param":{
-        "expected" : "模",
-        "roi" : [1073,122,155,135]
-      }
+    "E9模拟": {
+        "next": [
+            "E9打开模拟",
+            "[JumpBack]E9返回",
+            "[JumpBack]E9模拟返回",
+            "[JumpBack]E9激活主页面"
+        ]
     },
-    "action":{
-      "type":"Click"
+    "E9打开模拟": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "模",
+                "roi": [
+                    1073,
+                    122,
+                    155,
+                    135
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "E9选择模拟",
+            "E9打开模拟"
+        ]
     },
-    "next":[
-      "E9选择模拟",
-      "E9打开模拟"
-    ]
-  },
-  "E9选择模拟":{
-    "recognition":{
-      "type":"OCR",
-      "param":{
-        "expected":"成",
-        "roi" : [74,442,944,119]
-      }
+    "E9选择模拟": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "成",
+                "roi": [
+                    74,
+                    442,
+                    944,
+                    119
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "E9成长"
+        ]
     },
-    "action":{
-      "type":"Click"
+    "E9成长": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "單元",
+                "roi": [
+                    789,
+                    82,
+                    245,
+                    637
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "[JumpBack]E9配置队伍",
+            "[JumpBack]E9返回",
+            "E9主页面"
+        ]
     },
-    "next":["E9成长"]
-  },
-  "E9成长":{
-    "recognition":{
-      "type":"OCR",
-      "param":{
-        "expected" : "單元",
-        "roi" : [789,82,245,637]
-      }
+    "E9战斗员": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "單元",
+                "roi": [
+                    789,
+                    82,
+                    245,
+                    637
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "[JumpBack]E9配置队伍",
+            "[JumpBack]E9返回",
+            "E9主页面"
+        ]
     },
-    "action":{
-      "type":"Click"
+    "E9伙伴": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "單元",
+                "roi": [
+                    789,
+                    82,
+                    245,
+                    637
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "[JumpBack]E9配置队伍",
+            "[JumpBack]E9返回",
+            "E9主页面"
+        ]
     },
-    "next":[
-      "[JumpBack]E9配置队伍",
-      "[JumpBack]E9返回",
-      "E9主页面"
-    ]
-  },
-  "E9战斗员":{
-    "recognition":{
-      "type":"OCR",
-      "param":{
-        "expected" : "單元",
-        "roi" : [789,82,245,637]
-      }
+    "E9潜力": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "單元",
+                "roi": [
+                    789,
+                    82,
+                    245,
+                    637
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "[JumpBack]E9配置队伍",
+            "[JumpBack]E9返回",
+            "E9主页面"
+        ]
     },
-    "action":{
-      "type":"Click"
-    },
-    "next":[
-      "[JumpBack]E9配置队伍",
-      "[JumpBack]E9返回",
-      "E9主页面"
-    ]
-  },
-  "E9伙伴":{
-    "recognition":{
-      "type":"OCR",
-      "param":{
-        "expected" : "單元",
-        "roi" : [789,82,245,637]
-      }
-    },
-    "action":{
-      "type":"Click"
-    },
-    "next":[
-      "[JumpBack]E9配置队伍",
-      "[JumpBack]E9返回",
-      "E9主页面"
-    ]
-  },
-  "E9潜力":{
-    "recognition":{
-      "type":"OCR",
-      "param":{
-        "expected" : "單元",
-        "roi" : [789,82,245,637]
-      }
-    },
-    "action":{
-      "type":"Click"
-    },
-    "next":[
-      "[JumpBack]E9配置队伍",
-      "[JumpBack]E9返回",
-      "E9主页面"
-    ]
-  },
-  "E9记忆碎片":{
-    "recognition":{
-      "type":"OCR",
-      "param":{
-        "expected" : "單元",
-        "roi" : [789,82,245,637]
-      }
-    },
-    "action":{
-      "type":"Click"
-    },
-    "next":[
-      "[JumpBack]E9配置队伍",
-      "[JumpBack]E9返回",
-      "E9主页面"
-    ]
-  }
+    "E9记忆碎片": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "單元",
+                "roi": [
+                    789,
+                    82,
+                    245,
+                    637
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "[JumpBack]E9配置队伍",
+            "[JumpBack]E9返回",
+            "E9主页面"
+        ]
+    }
 }

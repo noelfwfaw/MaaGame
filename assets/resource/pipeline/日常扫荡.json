@@ -1,572 +1,442 @@
 {
-  "$__mpe_config_新建Pipeline1": {
-    "$__mpe_code": {
-      "prefix": "",
-      "savedViewport": {
-        "x": 284,
-        "y": 291,
-        "zoom": 0.29
-      },
-      "filename": "新建Pipeline1",
-      "version": "v0.14.2"
+    "日常扫荡": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "返回地图.png",
+                "roi": [
+                    5,
+                    10,
+                    150,
+                    61
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]日常扫荡[/color]",
+        "next": [
+            "地图收集",
+            "打开地图"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "地图收集": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "0/4",
+                "roi": [
+                    940,
+                    533,
+                    72,
+                    69
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 3000,
+        "focus": "[color:green]地图收集[/color]",
+        "next": [
+            "打开地图"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "打开地图": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "打开地图.png"
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]打开地图[/color]",
+        "next": [
+            "史莱姆"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "史莱姆": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "史莱姆.png",
+                "roi": [
+                    118,
+                    256,
+                    41,
+                    39
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]史莱姆[/color]",
+        "next": [
+            "快速狩猎"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "快速狩猎": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "快速狩猎.png",
+                "roi": [
+                    1015,
+                    627,
+                    106,
+                    42
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]快速狩猎[/color]",
+        "next": [
+            "快速狩猎MAX",
+            "史莱姆"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "快速狩猎MAX": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "快速狩猎MAX.png",
+                "roi": [
+                    772,
+                    374,
+                    67,
+                    38
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]快速狩猎MAX[/color]",
+        "next": [
+            "快速狩猎确认"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "快速狩猎确认": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "狩猎",
+                "roi": [
+                    367,
+                    420,
+                    559,
+                    264
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 5000,
+        "focus": "[color:green]快速狩猎确认[/color]",
+        "next": [
+            "快速狩猎奖励",
+            "狩猎取消"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "狩猎取消": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "取消",
+                "roi": [
+                    437,
+                    501,
+                    148,
+                    93
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]快速狩猎奖励[/color]",
+        "next": [
+            "圣石"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "快速狩猎奖励": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "快速战斗奖励.png",
+                "roi": [
+                    558,
+                    628,
+                    144,
+                    35
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]快速狩猎奖励[/color]",
+        "next": [
+            "圣石"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "快速狩猎返回": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "抽抽乐返回2.png",
+                "roi": [
+                    0,
+                    10,
+                    164,
+                    63
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]快速狩猎返回[/color]",
+        "next": [
+            "棕色尘埃主页面"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "圣石": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "圣石.png",
+                "roi": [
+                    112,
+                    332,
+                    58,
+                    40
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]圣石[/color]",
+        "next": [
+            "选择属性"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "选择属性": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "水之洞穴",
+                "roi": [
+                    179,
+                    99,
+                    101,
+                    261
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]选择属性[/color]",
+        "next": [
+            "快速狩猎2"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "快速狩猎2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "快速狩猎.png",
+                "roi": [
+                    1015,
+                    627,
+                    106,
+                    42
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]快速狩猎[/color]",
+        "next": [
+            "快速狩猎MAX2"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "快速狩猎MAX2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "快速狩猎MAX.png",
+                "roi": [
+                    772,
+                    374,
+                    67,
+                    38
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]快速狩猎MAX[/color]",
+        "next": [
+            "快速狩猎确认2"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "快速狩猎确认2": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "狩猎",
+                "roi": [
+                    367,
+                    420,
+                    559,
+                    264
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 5000,
+        "focus": "[color:green]快速狩猎确认[/color]",
+        "next": [
+            "快速狩猎奖励2",
+            "狩猎取消2"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "狩猎取消2": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "取消",
+                "roi": [
+                    437,
+                    501,
+                    148,
+                    93
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]快速狩猎奖励[/color]",
+        "next": [
+            "快速狩猎返回"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "快速狩猎奖励2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "快速战斗奖励.png",
+                "roi": [
+                    558,
+                    628,
+                    144,
+                    35
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]快速狩猎奖励[/color]",
+        "next": [
+            "快速狩猎返回"
+        ],
+        "on_error": [
+            "error"
+        ]
     }
-  },
-  "日常扫荡": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "返回地图.png",
-        "roi": [
-          5,
-          10,
-          150,
-          61
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]日常扫荡[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    "next": [
-      "地图收集",
-      "打开地图"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "地图收集": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "0/4",
-        "roi": [
-          940,
-          533,
-          72,
-          69
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 3000,
-    "focus": "[color:green]地图收集[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 1
-      }
-    },
-    "next": [
-      "打开地图"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "打开地图": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "打开地图.png"
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]打开地图[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 16
-      }
-    },
-    "next": [
-      "史莱姆"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "史莱姆": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "史莱姆.png",
-        "roi": [
-          118,
-          256,
-          41,
-          39
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]史莱姆[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 900,
-        "y": 0
-      }
-    },
-    "next": [
-      "快速狩猎"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "快速狩猎": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "快速狩猎.png",
-        "roi": [
-          1015,
-          627,
-          106,
-          42
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]快速狩猎[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1200,
-        "y": 0
-      }
-    },
-    "next": [
-      "快速狩猎MAX",
-      "史莱姆"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "快速狩猎MAX": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "快速狩猎MAX.png",
-        "roi": [
-          772,
-          374,
-          67,
-          38
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]快速狩猎MAX[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 0
-      }
-    },
-    "next": [
-      "快速狩猎确认"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "快速狩猎确认": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "狩猎",
-        "roi": [
-          367,
-          420,
-          559,
-          264
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 5000,
-    "focus": "[color:green]快速狩猎确认[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1800,
-        "y": 1
-      }
-    },
-    "next": [
-      "快速狩猎奖励",
-      "狩猎取消"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "狩猎取消": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "取消",
-        "roi": [
-          437,
-          501,
-          148,
-          93
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]快速狩猎奖励[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 2100,
-        "y": 598
-      }
-    },
-    "next": [
-      "圣石"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "快速狩猎奖励": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "快速战斗奖励.png",
-        "roi": [
-          558,
-          628,
-          144,
-          35
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]快速狩猎奖励[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 2100,
-        "y": 0
-      }
-    },
-    "next": [
-      "圣石"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "快速狩猎返回": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "抽抽乐返回2.png",
-        "roi": [
-          0,
-          10,
-          164,
-          63
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]快速狩猎返回[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 4200,
-        "y": 0
-      }
-    },
-    "next": [
-      "棕色尘埃主页面"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "圣石": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "圣石.png",
-        "roi": [
-          112,
-          332,
-          58,
-          40
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]圣石[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 2400,
-        "y": 0
-      }
-    },
-    "next": [
-      "选择属性"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "选择属性": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "水之洞穴",
-        "roi": [
-          179,
-          99,
-          101,
-          261
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]选择属性[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 2700,
-        "y": 1
-      }
-    },
-    "next": [
-      "快速狩猎2"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "快速狩猎2": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "快速狩猎.png",
-        "roi": [
-          1015,
-          627,
-          106,
-          42
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]快速狩猎[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 3000,
-        "y": 0
-      }
-    },
-    "next": [
-      "快速狩猎MAX2"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "快速狩猎MAX2": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "快速狩猎MAX.png",
-        "roi": [
-          772,
-          374,
-          67,
-          38
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]快速狩猎MAX[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 3300,
-        "y": 0
-      }
-    },
-    "next": [
-      "快速狩猎确认2"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "快速狩猎确认2": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "狩猎",
-        "roi": [
-          367,
-          420,
-          559,
-          264
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 5000,
-    "focus": "[color:green]快速狩猎确认[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 3600,
-        "y": 1
-      }
-    },
-    "next": [
-      "快速狩猎奖励2",
-      "狩猎取消2"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "狩猎取消2": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "取消",
-        "roi": [
-          437,
-          501,
-          148,
-          93
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]快速狩猎奖励[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 3900,
-        "y": 312
-      }
-    },
-    "next": [
-      "快速狩猎返回"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "快速狩猎奖励2": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "快速战斗奖励.png",
-        "roi": [
-          558,
-          628,
-          144,
-          35
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]快速狩猎奖励[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 3900,
-        "y": 0
-      }
-    },
-    "next": [
-      "快速狩猎返回"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "$__mpe_external_error_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 4500,
-        "y": 678
-      }
-    }
-  },
-  "$__mpe_external_棕色尘埃主页面_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 4500,
-        "y": 101
-      }
-    }
-  }
 }

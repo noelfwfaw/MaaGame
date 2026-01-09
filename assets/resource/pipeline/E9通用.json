@@ -1,112 +1,154 @@
 {
-    "E9返回":{
-        "recognition":{
-            "type":"TemplateMatch",
-            "param":{
-                "template" : "Chaos/E9返回.png",
-                "roi" : [0,0,165,137]
+    "E9返回": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "Chaos/E9返回.png",
+                "roi": [
+                    0,
+                    0,
+                    165,
+                    137
+                ]
             }
         },
-        "action":{
-            "type":"Click"
+        "action": {
+            "type": "Click"
         }
     },
-    "E9配置队伍":{
-        "recognition":{
-            "type":"OCR",
-            "param":{
-                "expected" : "配置",
-                "roi" : [51,0,217,143]
+    "E9配置队伍": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "配置",
+                "roi": [
+                    51,
+                    0,
+                    217,
+                    143
+                ]
             }
         },
-        "action":{
-            "type":"Click",
-            "param":{
-                "target":[1219,579,42,39]
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1219,
+                    579,
+                    42,
+                    39
+                ]
             }
         },
-        "repeat":3,
-        "repeat_delay":500,
-        "next":[
+        "repeat": 3,
+        "repeat_delay": 500,
+        "next": [
             "E9进入战斗"
         ]
     },
-    "E9进入战斗":{
-        "recognition":{
-            "type":"DirectHit"
+    "E9进入战斗": {
+        "recognition": {
+            "type": "DirectHit"
         },
-        "action":{
-            "type":"Click",
-            "param":{
-                "target" : [891,638,63,35]
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    891,
+                    638,
+                    63,
+                    35
+                ]
             }
         },
-        "post_delay":3000,
-        "next":[
+        "post_delay": 3000,
+        "next": [
             "[JumpBack]E9确认准备",
             "E9战斗中"
-        ]        
+        ]
     },
-    "E9战斗中":{
-        "post_delay":5000,
-        "next":[
+    "E9战斗中": {
+        "post_delay": 5000,
+        "next": [
             "E9战斗结束",
             "E9无体力",
             "E9配置队伍",
             "E9战斗中"
         ]
     },
-    "E9战斗结束":{
-        "recognition":{
-            "type":"OCR",
-            "param":{
-                "expected" : "確",
-                "roi" : [1011,587,231,133]
+    "E9战斗结束": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "確",
+                "roi": [
+                    1011,
+                    587,
+                    231,
+                    133
+                ]
             }
         },
-        "action":{
-            "type":"Click"
+        "action": {
+            "type": "Click"
         },
-        "next":[
+        "next": [
             "E9配置队伍"
         ]
     },
-    "E9确认准备":{
-        "recognition":{
-            "type":"OCR",
-            "param":{
-                "expected" : "進入",
-                "roi" : [763,528,173,139]
+    "E9确认准备": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "進入",
+                "roi": [
+                    763,
+                    528,
+                    173,
+                    139
+                ]
             }
         },
-        "action":{
-            "type":"Click"
+        "action": {
+            "type": "Click"
         }
     },
-    "E9无体力":{
-        "recognition":{
-            "type":"OCR",
-            "param":{
-                "expected" : "取消",
-                "roi" : [341,468,215,152]
+    "E9无体力": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "取消",
+                "roi": [
+                    341,
+                    468,
+                    215,
+                    152
+                ]
             }
         },
-        "action":{
-            "type":"Click"
+        "action": {
+            "type": "Click"
         },
-        "next":["E9模拟返回"]
+        "next": [
+            "E9模拟返回"
+        ]
     },
-    "E9模拟返回":{
-        "recognition":{
-            "type":"TemplateMatch",
-            "param":{
-                "template" : "Chaos/E9模拟返回.png",
-                "roi" : [0,0,147,137]
+    "E9模拟返回": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "Chaos/E9模拟返回.png",
+                "roi": [
+                    0,
+                    0,
+                    147,
+                    137
+                ]
             }
         },
-        "post_delay":3000,
-        "action":{
-            "type":"Click"
+        "post_delay": 3000,
+        "action": {
+            "type": "Click"
         }
     }
 }

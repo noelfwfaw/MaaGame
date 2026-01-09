@@ -1,990 +1,782 @@
 {
-  "$__mpe_config_新建Pipeline1": {
-    "$__mpe_code": {
-      "prefix": "",
-      "savedViewport": {
-        "x": 542,
-        "y": -97,
-        "zoom": 0.29
-      },
-      "filename": "新建Pipeline1",
-      "version": "v0.14.2"
+    "星期一刷核心": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "作战.png",
+                "roi": [
+                    1027,
+                    626,
+                    205,
+                    72
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": "[color:green]星期一刷核心[/color]",
+        "next": [
+            "星期一资源",
+            "星期一核心制造"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "星期二刷核心": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "作战.png",
+                "roi": [
+                    1027,
+                    626,
+                    205,
+                    72
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": "[color:green]星期二刷核心[/color]",
+        "next": [
+            "星期二资源",
+            "星期二核心制造"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "星期三刷核心": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "作战.png",
+                "roi": [
+                    1027,
+                    626,
+                    205,
+                    72
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": "[color:green]星期三刷核心[/color]",
+        "next": [
+            "星期三资源",
+            "星期三核心制造"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "星期四刷核心": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "作战.png",
+                "roi": [
+                    1027,
+                    626,
+                    205,
+                    72
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": "[color:green]星期四刷核心[/color]",
+        "next": [
+            "星期四资源",
+            "星期四核心制造"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "星期五刷核心": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "作战.png",
+                "roi": [
+                    1027,
+                    626,
+                    205,
+                    72
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": "[color:green]星期五刷核心[/color]",
+        "next": [
+            "星期五资源",
+            "星期五核心制造"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "星期六刷核心": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "作战.png",
+                "roi": [
+                    1027,
+                    626,
+                    205,
+                    72
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": "[color:green]刷核心[/color]",
+        "next": [
+            "星期六资源",
+            "星期六核心制造"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "星期日刷核心": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "作战.png",
+                "roi": [
+                    1027,
+                    626,
+                    205,
+                    72
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": "[color:green]星期日刷核心[/color]",
+        "next": [
+            "星期日资源",
+            "星期日核心制造"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "星期一资源": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "资源.png",
+                "roi": [
+                    460,
+                    87,
+                    130,
+                    124
+                ],
+                "threshold": 0.7
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": "[color:green]资源[/color]",
+        "next": [
+            "星期一核心制造"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "星期二资源": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "资源.png",
+                "roi": [
+                    460,
+                    87,
+                    130,
+                    124
+                ],
+                "threshold": 0.7
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": "[color:green]资源[/color]",
+        "next": [
+            "星期二核心制造"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "星期三资源": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "资源.png",
+                "roi": [
+                    460,
+                    87,
+                    130,
+                    124
+                ],
+                "threshold": 0.7
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": "[color:green]资源[/color]",
+        "next": [
+            "星期三核心制造"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "星期四资源": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "资源.png",
+                "roi": [
+                    460,
+                    87,
+                    130,
+                    124
+                ],
+                "threshold": 0.7
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": "[color:green]资源[/color]",
+        "next": [
+            "星期四核心制造"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "星期五资源": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "资源.png",
+                "roi": [
+                    460,
+                    87,
+                    130,
+                    124
+                ],
+                "threshold": 0.7
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": "[color:green]资源[/color]",
+        "next": [
+            "星期五核心制造"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "星期六资源": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "资源.png",
+                "roi": [
+                    460,
+                    87,
+                    130,
+                    124
+                ],
+                "threshold": 0.7
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": "[color:green]资源[/color]",
+        "next": [
+            "星期六核心制造"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "星期日资源": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "资源.png",
+                "roi": [
+                    460,
+                    87,
+                    130,
+                    124
+                ],
+                "threshold": 0.7
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": "[color:green]资源[/color]",
+        "next": [
+            "星期日核心制造"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "星期一核心制造": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "核心制作.png",
+                "roi": [
+                    418,
+                    501,
+                    200,
+                    50
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": "[color:green]核心制造[/color]",
+        "next": [
+            "生命核心"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "星期二核心制造": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "核心制作.png",
+                "roi": [
+                    418,
+                    501,
+                    200,
+                    50
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": "[color:green]核心制造[/color]",
+        "next": [
+            "生命核心"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "星期三核心制造": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "核心制作.png",
+                "roi": [
+                    418,
+                    501,
+                    200,
+                    50
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": "[color:green]核心制造[/color]",
+        "next": [
+            "生命核心"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "星期四核心制造": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "核心制作.png",
+                "roi": [
+                    418,
+                    501,
+                    200,
+                    50
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": "[color:green]核心制造[/color]",
+        "next": [
+            "生命核心"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "星期五核心制造": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "核心制作.png",
+                "roi": [
+                    418,
+                    501,
+                    200,
+                    50
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": "[color:green]核心制造[/color]",
+        "next": [
+            "生命核心"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "星期六核心制造": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "核心制作.png",
+                "roi": [
+                    418,
+                    501,
+                    200,
+                    50
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": "[color:green]核心制造[/color]",
+        "next": [
+            "生命核心"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "星期日核心制造": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "核心制作.png",
+                "roi": [
+                    418,
+                    501,
+                    200,
+                    50
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": "[color:green]核心制造[/color]",
+        "next": [
+            "生命核心"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "攻击核心": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "攻击核心.png",
+                "roi": [
+                    5,
+                    221,
+                    111,
+                    77
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": "[color:green]攻击核心[/color]",
+        "next": [
+            "核心扫荡"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "生命核心": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "生命核心.png",
+                "roi": [
+                    11,
+                    106,
+                    104,
+                    75
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": "[color:green]生命核心[/color]",
+        "next": [
+            "核心扫荡"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "核心扫荡": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "核心扫荡.png",
+                "roi": [
+                    848,
+                    634,
+                    77,
+                    49
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]核心扫荡[/color]",
+        "next": [
+            "核心扫荡max",
+            {
+                "name": "联合讨伐取消",
+                "jump_back": true
+            }
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "核心扫荡max": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "扫荡MAX.png",
+                "roi": [
+                    676,
+                    189,
+                    172,
+                    88
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]核心扫荡max[/color]",
+        "next": [
+            "核心开始扫荡",
+            {
+                "name": "联合讨伐取消",
+                "jump_back": true
+            }
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "核心开始扫荡": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "开始扫荡.png"
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 40000,
+        "focus": "[color:green]核心开始扫荡[/color]",
+        "recommended roi": [
+            505,
+            514,
+            248,
+            53
+        ],
+        "next": [
+            "核心扫荡确认",
+            "初始状态",
+            {
+                "name": "联合讨伐取消",
+                "jump_back": true
+            },
+            {
+                "name": "核心返回主页",
+                "jump_back": true
+            },
+            {
+                "name": "单击",
+                "jump_back": true
+            }
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "核心扫荡确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "扫荡完成确认.png",
+                "roi": [
+                    508,
+                    580,
+                    246,
+                    60
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": "[color:green]核心扫荡确认[/color]",
+        "next": [
+            "核心扫荡",
+            "核心扫荡确认",
+            {
+                "name": "联合讨伐取消",
+                "jump_back": true
+            }
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "单击": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": "[color:green]单击[/color]"
+    },
+    "联合讨伐取消": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "联合讨伐",
+                "roi": [
+                    574,
+                    124,
+                    128,
+                    42
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    455,
+                    526,
+                    82,
+                    43
+                ]
+            }
+        },
+        "focus": "[color:green]联合讨伐取消[/color]",
+        "on_error": [
+            "error"
+        ]
+    },
+    "核心返回主页": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "核心返回主页.png",
+                "roi": [
+                    134,
+                    17,
+                    75,
+                    49
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": "[color:green]核心返回主页[/color]",
+        "on_error": [
+            "error"
+        ]
     }
-  },
-  "星期一刷核心": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "作战.png",
-        "roi": [
-          1027,
-          626,
-          205,
-          72
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": "[color:green]星期一刷核心[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 16
-      }
-    },
-    "next": [
-      "星期一资源",
-      "星期一核心制造"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "星期二刷核心": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "作战.png",
-        "roi": [
-          1027,
-          626,
-          205,
-          72
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": "[color:green]星期二刷核心[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 542
-      }
-    },
-    "next": [
-      "星期二资源",
-      "星期二核心制造"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "星期三刷核心": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "作战.png",
-        "roi": [
-          1027,
-          626,
-          205,
-          72
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": "[color:green]星期三刷核心[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 1875
-      }
-    },
-    "next": [
-      "星期三资源",
-      "星期三核心制造"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "星期四刷核心": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "作战.png",
-        "roi": [
-          1027,
-          626,
-          205,
-          72
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": "[color:green]星期四刷核心[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 2231
-      }
-    },
-    "next": [
-      "星期四资源",
-      "星期四核心制造"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "星期五刷核心": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "作战.png",
-        "roi": [
-          1027,
-          626,
-          205,
-          72
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": "[color:green]星期五刷核心[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 2607
-      }
-    },
-    "next": [
-      "星期五资源",
-      "星期五核心制造"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "星期六刷核心": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "作战.png",
-        "roi": [
-          1027,
-          626,
-          205,
-          72
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": "[color:green]刷核心[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 2963
-      }
-    },
-    "next": [
-      "星期六资源",
-      "星期六核心制造"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "星期日刷核心": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "作战.png",
-        "roi": [
-          1027,
-          626,
-          205,
-          72
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": "[color:green]星期日刷核心[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 3319
-      }
-    },
-    "next": [
-      "星期日资源",
-      "星期日核心制造"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "星期一资源": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "资源.png",
-        "roi": [
-          460,
-          87,
-          130,
-          124
-        ],
-        "threshold": 0.7
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": "[color:green]资源[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 0
-      }
-    },
-    "next": [
-      "星期一核心制造"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "星期二资源": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "资源.png",
-        "roi": [
-          460,
-          87,
-          130,
-          124
-        ],
-        "threshold": 0.7
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": "[color:green]资源[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 526
-      }
-    },
-    "next": [
-      "星期二核心制造"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "星期三资源": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "资源.png",
-        "roi": [
-          460,
-          87,
-          130,
-          124
-        ],
-        "threshold": 0.7
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": "[color:green]资源[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 1859
-      }
-    },
-    "next": [
-      "星期三核心制造"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "星期四资源": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "资源.png",
-        "roi": [
-          460,
-          87,
-          130,
-          124
-        ],
-        "threshold": 0.7
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": "[color:green]资源[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 2215
-      }
-    },
-    "next": [
-      "星期四核心制造"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "星期五资源": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "资源.png",
-        "roi": [
-          460,
-          87,
-          130,
-          124
-        ],
-        "threshold": 0.7
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": "[color:green]资源[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 2591
-      }
-    },
-    "next": [
-      "星期五核心制造"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "星期六资源": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "资源.png",
-        "roi": [
-          460,
-          87,
-          130,
-          124
-        ],
-        "threshold": 0.7
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": "[color:green]资源[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 2947
-      }
-    },
-    "next": [
-      "星期六核心制造"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "星期日资源": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "资源.png",
-        "roi": [
-          460,
-          87,
-          130,
-          124
-        ],
-        "threshold": 0.7
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": "[color:green]资源[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 3303
-      }
-    },
-    "next": [
-      "星期日核心制造"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "星期一核心制造": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "核心制作.png",
-        "roi": [
-          418,
-          501,
-          200,
-          50
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": "[color:green]核心制造[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 16
-      }
-    },
-    "next": [
-      "生命核心"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "星期二核心制造": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "核心制作.png",
-        "roi": [
-          418,
-          501,
-          200,
-          50
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": "[color:green]核心制造[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 542
-      }
-    },
-    "next": [
-      "生命核心"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "星期三核心制造": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "核心制作.png",
-        "roi": [
-          418,
-          501,
-          200,
-          50
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": "[color:green]核心制造[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 1875
-      }
-    },
-    "next": [
-      "生命核心"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "星期四核心制造": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "核心制作.png",
-        "roi": [
-          418,
-          501,
-          200,
-          50
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": "[color:green]核心制造[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 2231
-      }
-    },
-    "next": [
-      "生命核心"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "星期五核心制造": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "核心制作.png",
-        "roi": [
-          418,
-          501,
-          200,
-          50
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": "[color:green]核心制造[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 2607
-      }
-    },
-    "next": [
-      "生命核心"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "星期六核心制造": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "核心制作.png",
-        "roi": [
-          418,
-          501,
-          200,
-          50
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": "[color:green]核心制造[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 2963
-      }
-    },
-    "next": [
-      "生命核心"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "星期日核心制造": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "核心制作.png",
-        "roi": [
-          418,
-          501,
-          200,
-          50
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": "[color:green]核心制造[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 3319
-      }
-    },
-    "next": [
-      "生命核心"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "攻击核心": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "攻击核心.png",
-        "roi": [
-          5,
-          221,
-          111,
-          77
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": "[color:green]攻击核心[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 900,
-        "y": 186
-      }
-    },
-    "next": [
-      "核心扫荡"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "生命核心": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "生命核心.png",
-        "roi": [
-          11,
-          106,
-          104,
-          75
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": "[color:green]生命核心[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 900,
-        "y": 2231
-      }
-    },
-    "next": [
-      "核心扫荡"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "核心扫荡": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "核心扫荡.png",
-        "roi": [
-          848,
-          634,
-          77,
-          49
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]核心扫荡[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1200,
-        "y": 712
-      }
-    },
-    "next": [
-      "核心扫荡max",
-      {
-        "name": "联合讨伐取消",
-        "jump_back": true
-      }
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "核心扫荡max": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "扫荡MAX.png",
-        "roi": [
-      676,
-      189,
-      172,
-      88
-    ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]核心扫荡max[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 712
-      }
-    },
-    "next": [
-      "核心开始扫荡",
-      {
-        "name": "联合讨伐取消",
-        "jump_back": true
-      }
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "核心开始扫荡": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "开始扫荡.png"
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 40000,
-    "focus": "[color:green]核心开始扫荡[/color]",
-    "recommended roi": [
-      505,
-      514,
-      248,
-      53
-    ],
-    "$__mpe_code": {
-      "position": {
-        "x": 1800,
-        "y": 712
-      }
-    },
-    "next": [
-      "核心扫荡确认",
-      "初始状态",
-      {
-        "name": "联合讨伐取消",
-        "jump_back": true
-      },
-      {
-        "name": "核心返回主页",
-        "jump_back": true
-      },
-      {
-        "name": "单击",
-        "jump_back": true
-      }
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "核心扫荡确认": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "扫荡完成确认.png",
-        "roi": [
-          508,
-          580,
-          246,
-          60
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": "[color:green]核心扫荡确认[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 2100,
-        "y": 1198
-      }
-    },
-    "next": [
-      "核心扫荡",
-      "核心扫荡确认",
-      {
-        "name": "联合讨伐取消",
-        "jump_back": true
-      }
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "单击": {
-    "recognition": {
-      "type": "DirectHit",
-      "param": {}
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": "[color:green]单击[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 2100,
-        "y": 983
-      }
-    }
-  },
-  "联合讨伐取消": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "联合讨伐",
-        "roi": [
-          574,
-          124,
-          128,
-          42
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          455,
-          526,
-          82,
-          43
-        ]
-      }
-    },
-    "focus": "[color:green]联合讨伐取消[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 2400,
-        "y": 1368
-      }
-    },
-    "on_error": [
-      "error"
-    ]
-  },
-  "核心返回主页": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "核心返回主页.png",
-        "roi": [
-          134,
-          17,
-          75,
-          49
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": "[color:green]核心返回主页[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 2400,
-        "y": 833
-      }
-    },
-    "on_error": [
-      "error"
-    ]
-  },
-  "$__mpe_external_error_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 2700,
-        "y": 2110
-      }
-    }
-  },
-  "$__mpe_external_初始状态_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 2105,
-        "y": 833
-      }
-    }
-  }
 }

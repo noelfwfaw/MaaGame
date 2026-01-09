@@ -1,332 +1,246 @@
 {
-  "$__mpe_config_新建Pipeline1": {
-    "$__mpe_code": {
-      "prefix": "",
-      "savedViewport": {
-        "x": 584,
-        "y": 337,
-        "zoom": 0.29
-      },
-      "filename": "新建Pipeline1",
-      "version": "v0.14.2"
+    "启动大眼": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "大眼主页面",
+            "启动大眼app"
+        ]
+    },
+    "启动大眼app": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "StartApp",
+            "param": {
+                "package": "com.yongshi.tenojo.bilibili"
+            }
+        },
+        "post_delay": 2000,
+        "focus": "[color:green]启动大眼app[/color]",
+        "next": [
+            "大眼主页面等待"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "大眼主页面等待": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "post_delay": 5000,
+        "next": [
+            "大眼登陆",
+            "大眼主页面等待"
+        ]
+    },
+    "大眼主页面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "修正者",
+                "roi": [
+                    496,
+                    664,
+                    80,
+                    35
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        }
+    },
+    "大眼登陆": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "蒂卡拉",
+                "roi": [
+                    603,
+                    544,
+                    75,
+                    43
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    543,
+                    609,
+                    195,
+                    28
+                ]
+            }
+        },
+        "post_delay": 10000,
+        "next": [
+            "大眼获得物品",
+            "大眼主页面"
+        ]
+    },
+    "大眼获得物品": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "获得物品",
+                "roi": [
+                    589,
+                    165,
+                    101,
+                    41
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "大眼获得物品",
+            "大眼每日签到"
+        ]
+    },
+    "大眼每日签到": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "每日签到",
+                "roi": [
+                    124,
+                    94,
+                    108,
+                    56
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    536,
+                    657,
+                    72,
+                    30
+                ]
+            }
+        },
+        "next": [
+            "大眼跳过广告"
+        ]
+    },
+    "大眼跳过广告": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "今日登录不再提示",
+                "roi": [
+                    904,
+                    583,
+                    162,
+                    40
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    556,
+                    646,
+                    171,
+                    57
+                ]
+            }
+        },
+        "next": [
+            "大眼跳过广告",
+            "大眼主页面",
+            "大眼抽卡返回"
+        ]
+    },
+    "大眼抽卡返回": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "探测一次",
+                "roi": [
+                    888,
+                    652,
+                    110,
+                    45
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    29,
+                    15,
+                    48,
+                    41
+                ]
+            }
+        },
+        "next": [
+            "大眼抽卡返回",
+            "大眼主页面"
+        ]
+    },
+    "大眼唤醒待机页面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "大眼待机页面.png",
+                "roi": [
+                    927,
+                    637,
+                    54,
+                    30
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "大眼待机页面返回"
+        ]
+    },
+    "大眼待机页面返回": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    34,
+                    17,
+                    31,
+                    38
+                ]
+            }
+        }
     }
-  },
-  "启动大眼": {
-    "recognition": {
-      "type": "DirectHit",
-      "param": {}
-    },
-    "action": {
-      "type": "DoNothing",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    "next": [
-      "大眼主页面",
-      "启动大眼app"
-    ]
-  },
-  "启动大眼app": {
-    "recognition": {
-      "type": "DirectHit",
-      "param": {}
-    },
-    "action": {
-      "type": "StartApp",
-      "param": {
-        "package": "com.yongshi.tenojo.bilibili"
-      }
-    },
-    "post_delay": 2000,
-    "focus": "[color:green]启动大眼app[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 106
-      }
-    },
-    "next": [
-      "大眼主页面等待"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "大眼主页面等待": {
-    "recognition": {
-      "type": "DirectHit",
-      "param": {}
-    },
-    "action": {
-      "type": "DoNothing",
-      "param": {}
-    },
-    "post_delay": 5000,
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 138
-      }
-    },
-    "next": [
-      "大眼登陆",
-      "大眼主页面等待"
-    ]
-  },
-  "大眼主页面": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "修正者",
-        "roi": [
-          496,
-          664,
-          80,
-          35
-        ]
-      }
-    },
-    "action": {
-      "type": "DoNothing",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 2400,
-        "y": 134
-      }
-    }
-  },
-  "大眼登陆": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "蒂卡拉",
-        "roi": [
-          603,
-          544,
-          75,
-          43
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          543,
-          609,
-          195,
-          28
-        ]
-      }
-    },
-    "post_delay": 10000,
-    "$__mpe_code": {
-      "position": {
-        "x": 900,
-        "y": 89
-      }
-    },
-    "next": [
-      "大眼获得物品",
-      "大眼主页面"
-    ]
-  },
-  "大眼获得物品": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "获得物品",
-        "roi": [
-          589,
-          165,
-          101,
-          41
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 1200,
-        "y": 132
-      }
-    },
-    "next": [
-      "大眼获得物品",
-      "大眼每日签到"
-    ]
-  },
-  "大眼每日签到": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "每日签到",
-        "roi": [
-          124,
-          94,
-          108,
-          56
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          536,
-          657,
-          72,
-          30
-        ]
-      }
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 118
-      }
-    },
-    "next": [
-      "大眼跳过广告"
-    ]
-  },
-  "大眼跳过广告": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "今日登录不再提示",
-        "roi": [
-          904,
-          583,
-          162,
-          40
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          556,
-          646,
-          171,
-          57
-        ]
-      }
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 1800,
-        "y": 118
-      }
-    },
-    "next": [
-      "大眼跳过广告",
-      "大眼主页面",
-      "大眼抽卡返回"
-    ]
-  },
-  "大眼抽卡返回": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "探测一次",
-        "roi": [
-          888,
-          652,
-          110,
-          45
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          29,
-          15,
-          48,
-          41
-        ]
-      }
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 2100,
-        "y": 254
-      }
-    },
-    "next": [
-      "大眼抽卡返回",
-      "大眼主页面"
-    ]
-  },
-  "大眼唤醒待机页面": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "大眼待机页面.png",
-        "roi": [
-          927,
-          637,
-          54,
-          30
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 364
-      }
-    },
-    "next": [
-      "大眼待机页面返回"
-    ]
-  },
-  "大眼待机页面返回": {
-    "recognition": {
-      "type": "DirectHit",
-      "param": {}
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          34,
-          17,
-          31,
-          38
-        ]
-      }
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 382
-      }
-    }
-  },
-  "$__mpe_external_error_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 605,
-        "y": 380
-      }
-    }
-  }
 }

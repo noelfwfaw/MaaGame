@@ -1,223 +1,147 @@
 {
-  "$__mpe_config_交错战线": {
-    "$__mpe_code": {
-      "filePath": "C:\\Users\\Administrator\\Documents\\GitHub\\MaaGame\\assets\\resource\\pipeline\\交错限时贸易.json",
-      "filename": "交错战线",
-      "lastSyncTime": 1767770047360,
-      "prefix": "",
-      "savedViewport": {
-        "x": 547,
-        "y": 333,
-        "zoom": 0.57
-      },
-      "version": "v0.14.2"
-    }
-  },
-  "$__mpe_external_子任务_关闭公告_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 305,
-        "y": 325
-      }
-    }
-  },
-  "$__mpe_external_子任务_获得物品_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 101
-      }
-    }
-  },
-  "$__mpe_external_子任务_进入首页_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 305,
-        "y": 435
-      }
-    }
-  },
-  "$__mpe_external_进入首页_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 316
-      }
-    }
-  },
-  "Buy_something": {
-    "$__mpe_code": {
-      "position": {
-        "x": 900,
-        "y": 16
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]选中商品[/color]",
-    "next": [
-      "Buyit",
-      "进入首页",
-      "Buy_something"
-    ],
-    "post_delay": 1000,
-    "recognition": {
-      "param": {
-        "expected": [
-          "亚金合金",
-          "亚金电池",
-          "亚金组件",
-          "亚金半导体",
-          "涅槃剂",
-          "晶片",
-          "幻金能源",
-          "幻金碳",
-          "荧晶精华瓶",
-          "荧晶单元",
-          "亚金外壳",
-          "亚金蓄能器",
-          "亚金装置",
-          "亚金二极管",
-          "凝胶",
-          "结晶体",
-          "幻金聚变器",
-          "幻金刚石",
-          "荧晶培养罐",
-          "荧晶密钥",
-          "武装技能训练",
-          "稀有模块"
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "Buyit": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1200,
-        "y": 0
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]购买[/color]",
-    "next": [
-      {
-        "jump_back": true,
-        "name": "子任务_获得物品"
-      },
-      "Buy_something",
-      "Buyit",
-      "进入首页"
-    ],
-    "post_delay": 1000,
-    "recognition": {
-      "param": {
-        "expected": [
-          "购买"
+    "Buy_something": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]选中商品[/color]",
+        "next": [
+            "Buyit",
+            "进入首页",
+            "Buy_something"
         ],
-        "roi": [
-          758,
-          513,
-          191,
-          75
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "Shop1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 16
-      }
+        "post_delay": 1000,
+        "recognition": {
+            "param": {
+                "expected": [
+                    "亚金合金",
+                    "亚金电池",
+                    "亚金组件",
+                    "亚金半导体",
+                    "涅槃剂",
+                    "晶片",
+                    "幻金能源",
+                    "幻金碳",
+                    "荧晶精华瓶",
+                    "荧晶单元",
+                    "亚金外壳",
+                    "亚金蓄能器",
+                    "亚金装置",
+                    "亚金二极管",
+                    "凝胶",
+                    "结晶体",
+                    "幻金聚变器",
+                    "幻金刚石",
+                    "荧晶培养罐",
+                    "荧晶密钥",
+                    "武装技能训练",
+                    "稀有模块"
+                ]
+            },
+            "type": "OCR"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:orange]补给站[/color]",
-    "next": [
-      "time_limited",
-      "Shop1"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "补给站"
+    "Buyit": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]购买[/color]",
+        "next": [
+            {
+                "jump_back": true,
+                "name": "子任务_获得物品"
+            },
+            "Buy_something",
+            "Buyit",
+            "进入首页"
         ],
-        "roi": [
-          1005,
-          421,
-          112,
-          289
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "Time-limited Shopping": {
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 70
-      }
+        "post_delay": 1000,
+        "recognition": {
+            "param": {
+                "expected": [
+                    "购买"
+                ],
+                "roi": [
+                    758,
+                    513,
+                    191,
+                    75
+                ]
+            },
+            "type": "OCR"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "DoNothing"
-    },
-    "next": [
-      {
-        "jump_back": true,
-        "name": "子任务_关闭公告"
-      },
-      "Shop1",
-      {
-        "jump_back": true,
-        "name": "子任务_进入首页"
-      }
-    ],
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    }
-  },
-  "time_limited": {
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 0
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]限时贸易所[/color]",
-    "next": [
-      "Buy_something",
-      "进入首页"
-    ],
-    "post_delay": 2000,
-    "recognition": {
-      "param": {
-        "expected": [
-          "限时贸易所"
+    "Shop1": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:orange]补给站[/color]",
+        "next": [
+            "time_limited",
+            "Shop1"
         ],
-        "roi": [
-          513,
-          59,
-          231,
-          99
-        ]
-      },
-      "type": "OCR"
+        "recognition": {
+            "param": {
+                "expected": [
+                    "补给站"
+                ],
+                "roi": [
+                    1005,
+                    421,
+                    112,
+                    289
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "Time-limited Shopping": {
+        "action": {
+            "param": {},
+            "type": "DoNothing"
+        },
+        "next": [
+            {
+                "jump_back": true,
+                "name": "子任务_关闭公告"
+            },
+            "Shop1",
+            {
+                "jump_back": true,
+                "name": "子任务_进入首页"
+            }
+        ],
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        }
+    },
+    "time_limited": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]限时贸易所[/color]",
+        "next": [
+            "Buy_something",
+            "进入首页"
+        ],
+        "post_delay": 2000,
+        "recognition": {
+            "param": {
+                "expected": [
+                    "限时贸易所"
+                ],
+                "roi": [
+                    513,
+                    59,
+                    231,
+                    99
+                ]
+            },
+            "type": "OCR"
+        }
     }
-  }
 }

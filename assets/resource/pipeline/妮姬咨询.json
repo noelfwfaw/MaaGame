@@ -1,828 +1,658 @@
 {
-  "$__mpe_config_新建Pipeline1": {
-    "$__mpe_code": {
-      "prefix": "",
-      "savedViewport": {
-        "x": 153,
-        "y": 162,
-        "zoom": 0.29
-      },
-      "filename": "新建Pipeline1",
-      "version": "v0.14.2"
+    "妮姬咨询": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "妮姬",
+                "roi": [
+                    59,
+                    1199,
+                    96,
+                    64
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "点击咨询"
+        ]
+    },
+    "点击咨询": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "咨询",
+                "roi": [
+                    565,
+                    124,
+                    108,
+                    62
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "一号咨询",
+            {
+                "name": "咨询滑动",
+                "jump_back": true
+            }
+        ]
+    },
+    "咨询滑动": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    354,
+                    626,
+                    1,
+                    1
+                ],
+                "end": [
+                    [
+                        352,
+                        405,
+                        1,
+                        1
+                    ]
+                ]
+            }
+        },
+        "post_wait_freezes": 1000
+    },
+    "一号咨询": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "爱丽丝",
+                "roi": [
+                    35,
+                    338,
+                    219,
+                    818
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "next": [
+            {
+                "name": "已咨询",
+                "jump_back": true
+            },
+            {
+                "name": "进行咨询",
+                "jump_back": true
+            },
+            "切换二号咨询",
+            {
+                "name": "好感提升",
+                "jump_back": true
+            }
+        ]
+    },
+    "二号咨询": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "红莲",
+                "roi": [
+                    35,
+                    338,
+                    219,
+                    818
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "next": [
+            {
+                "name": "已咨询",
+                "jump_back": true
+            },
+            {
+                "name": "进行咨询",
+                "jump_back": true
+            },
+            "切换三号咨询",
+            {
+                "name": "好感提升",
+                "jump_back": true
+            }
+        ]
+    },
+    "三号咨询": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "神罚",
+                "roi": [
+                    35,
+                    338,
+                    219,
+                    818
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "next": [
+            {
+                "name": "已咨询",
+                "jump_back": true
+            },
+            {
+                "name": "进行咨询",
+                "jump_back": true
+            },
+            "切换四号咨询",
+            {
+                "name": "好感提升",
+                "jump_back": true
+            }
+        ]
+    },
+    "四号咨询": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "桃乐丝",
+                "roi": [
+                    35,
+                    338,
+                    219,
+                    818
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "next": [
+            {
+                "name": "已咨询",
+                "jump_back": true
+            },
+            {
+                "name": "进行咨询",
+                "jump_back": true
+            },
+            "切换五号咨询",
+            {
+                "name": "好感提升",
+                "jump_back": true
+            }
+        ]
+    },
+    "五号咨询": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "普丽瓦蒂",
+                "roi": [
+                    35,
+                    338,
+                    219,
+                    818
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "next": [
+            {
+                "name": "已咨询",
+                "jump_back": true
+            },
+            {
+                "name": "进行咨询",
+                "jump_back": true
+            },
+            "切换六号咨询",
+            {
+                "name": "好感提升",
+                "jump_back": true
+            }
+        ]
+    },
+    "六号咨询": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "艾德米",
+                "roi": [
+                    35,
+                    338,
+                    219,
+                    818
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "next": [
+            {
+                "name": "已咨询",
+                "jump_back": true
+            },
+            {
+                "name": "进行咨询",
+                "jump_back": true
+            },
+            "切换七号咨询",
+            {
+                "name": "好感提升",
+                "jump_back": true
+            }
+        ]
+    },
+    "七号咨询": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "2B",
+                "roi": [
+                    35,
+                    338,
+                    219,
+                    818
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "next": [
+            {
+                "name": "已咨询",
+                "jump_back": true
+            },
+            {
+                "name": "进行咨询",
+                "jump_back": true
+            },
+            "咨询返回主页",
+            {
+                "name": "好感提升",
+                "jump_back": true
+            }
+        ]
+    },
+    "咨询返回主页": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "咨询返回主页.png",
+                "roi": [
+                    170,
+                    1176,
+                    59,
+                    60
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "妮姬主页面"
+        ]
+    },
+    "切换二号咨询": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "咨询",
+                "roi": [
+                    333,
+                    98,
+                    76,
+                    52
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "二号咨询",
+            {
+                "name": "咨询滑动",
+                "jump_back": true
+            }
+        ]
+    },
+    "切换三号咨询": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "咨询",
+                "roi": [
+                    333,
+                    98,
+                    76,
+                    52
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "三号咨询",
+            {
+                "name": "咨询滑动",
+                "jump_back": true
+            }
+        ]
+    },
+    "切换四号咨询": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "咨询",
+                "roi": [
+                    333,
+                    98,
+                    76,
+                    52
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "四号咨询",
+            {
+                "name": "咨询滑动",
+                "jump_back": true
+            }
+        ]
+    },
+    "切换五号咨询": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "咨询",
+                "roi": [
+                    333,
+                    98,
+                    76,
+                    52
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "五号咨询",
+            {
+                "name": "咨询滑动",
+                "jump_back": true
+            }
+        ]
+    },
+    "切换六号咨询": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "咨询",
+                "roi": [
+                    333,
+                    98,
+                    76,
+                    52
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "六号咨询",
+            {
+                "name": "咨询滑动",
+                "jump_back": true
+            }
+        ]
+    },
+    "切换七号咨询": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "咨询",
+                "roi": [
+                    333,
+                    98,
+                    76,
+                    52
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "七号咨询",
+            {
+                "name": "咨询滑动",
+                "jump_back": true
+            }
+        ]
+    },
+    "已咨询": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "已咨询.png",
+                "roi": [
+                    419,
+                    943,
+                    190,
+                    124
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    72,
+                    1194,
+                    61,
+                    29
+                ]
+            }
+        },
+        "next": [
+            "咨询返回"
+        ]
+    },
+    "咨询返回": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "返回",
+                "roi": [
+                    70,
+                    1185,
+                    67,
+                    53
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "点回咨询",
+            "咨询返回"
+        ]
+    },
+    "点回咨询": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "咨询",
+                "roi": [
+                    565,
+                    124,
+                    108,
+                    62
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        }
+    },
+    "好感提升": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "点击进行下一步",
+                "roi": [
+                    274,
+                    1062,
+                    176,
+                    50
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        }
+    },
+    "进行咨询": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "咨询",
+                "roi": [
+                    453,
+                    1017,
+                    115,
+                    52
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "咨询确认"
+        ]
+    },
+    "咨询确认": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "确认",
+                "roi": [
+                    488,
+                    765,
+                    85,
+                    59
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "点击自动"
+        ]
+    },
+    "点击自动": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "自动",
+                "roi": [
+                    349,
+                    7,
+                    78,
+                    45
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "timeout": 30000,
+        "next": [
+            "对话选项"
+        ]
+    },
+    "对话选项": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "对话选项.png",
+                "roi": [
+                    614,
+                    931,
+                    46,
+                    50
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    265,
+                    835,
+                    184,
+                    49
+                ]
+            }
+        }
     }
-  },
-  "妮姬咨询": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "妮姬",
-        "roi": [
-          59,
-          1199,
-          96,
-          64
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 28
-      }
-    },
-    "next": [
-      "点击咨询"
-    ]
-  },
-  "点击咨询": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "咨询",
-        "roi": [
-          565,
-          124,
-          108,
-          62
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 28
-      }
-    },
-    "next": [
-      "一号咨询",
-      {
-        "name": "咨询滑动",
-        "jump_back": true
-      }
-    ]
-  },
-  "咨询滑动": {
-    "recognition": {
-      "type": "DirectHit",
-      "param": {}
-    },
-    "action": {
-      "type": "Swipe",
-      "param": {
-        "begin": [
-          354,
-          626,
-          1,
-          1
-        ],
-        "end": [
-          [
-            352,
-            405,
-            1,
-            1
-          ]
-        ]
-      }
-    },
-    "post_wait_freezes": 1000,
-    "$__mpe_code": {
-      "position": {
-        "x": 4200,
-        "y": 1665
-      }
-    }
-  },
-  "一号咨询": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "爱丽丝",
-        "roi": [
-          35,
-          338,
-          219,
-          818
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 0
-      }
-    },
-    "next": [
-      {
-        "name": "已咨询",
-        "jump_back": true
-      },
-      {
-        "name": "进行咨询",
-        "jump_back": true
-      },
-      "切换二号咨询",
-      {
-        "name": "好感提升",
-        "jump_back": true
-      }
-    ]
-  },
-  "二号咨询": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "红莲",
-        "roi": [
-          35,
-          338,
-          219,
-          818
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "$__mpe_code": {
-      "position": {
-        "x": 1200,
-        "y": 170
-      }
-    },
-    "next": [
-      {
-        "name": "已咨询",
-        "jump_back": true
-      },
-      {
-        "name": "进行咨询",
-        "jump_back": true
-      },
-      "切换三号咨询",
-      {
-        "name": "好感提升",
-        "jump_back": true
-      }
-    ]
-  },
-  "三号咨询": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "神罚",
-        "roi": [
-          35,
-          338,
-          219,
-          818
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "$__mpe_code": {
-      "position": {
-        "x": 1800,
-        "y": 339
-      }
-    },
-    "next": [
-      {
-        "name": "已咨询",
-        "jump_back": true
-      },
-      {
-        "name": "进行咨询",
-        "jump_back": true
-      },
-      "切换四号咨询",
-      {
-        "name": "好感提升",
-        "jump_back": true
-      }
-    ]
-  },
-  "四号咨询": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "桃乐丝",
-        "roi": [
-          35,
-          338,
-          219,
-          818
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "$__mpe_code": {
-      "position": {
-        "x": 2400,
-        "y": 509
-      }
-    },
-    "next": [
-      {
-        "name": "已咨询",
-        "jump_back": true
-      },
-      {
-        "name": "进行咨询",
-        "jump_back": true
-      },
-      "切换五号咨询",
-      {
-        "name": "好感提升",
-        "jump_back": true
-      }
-    ]
-  },
-  "五号咨询": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "普丽瓦蒂",
-        "roi": [
-          35,
-          338,
-          219,
-          818
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "$__mpe_code": {
-      "position": {
-        "x": 3000,
-        "y": 912
-      }
-    },
-    "next": [
-      {
-        "name": "已咨询",
-        "jump_back": true
-      },
-      {
-        "name": "进行咨询",
-        "jump_back": true
-      },
-      "切换六号咨询",
-      {
-        "name": "好感提升",
-        "jump_back": true
-      }
-    ]
-  },
-  "六号咨询": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "艾德米",
-        "roi": [
-          35,
-          338,
-          219,
-          818
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "$__mpe_code": {
-      "position": {
-        "x": 3600,
-        "y": 1082
-      }
-    },
-    "next": [
-      {
-        "name": "已咨询",
-        "jump_back": true
-      },
-      {
-        "name": "进行咨询",
-        "jump_back": true
-      },
-      "切换七号咨询",
-      {
-        "name": "好感提升",
-        "jump_back": true
-      }
-    ]
-  },
-  "七号咨询": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "2B",
-        "roi": [
-          35,
-          338,
-          219,
-          818
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "$__mpe_code": {
-      "position": {
-        "x": 4200,
-        "y": 1251
-      }
-    },
-    "next": [
-      {
-        "name": "已咨询",
-        "jump_back": true
-      },
-      {
-        "name": "进行咨询",
-        "jump_back": true
-      },
-      "咨询返回主页",
-      {
-        "name": "好感提升",
-        "jump_back": true
-      }
-    ]
-  },
-  "咨询返回主页": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "咨询返回主页.png",
-        "roi": [
-          170,
-          1176,
-          59,
-          60
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 4500,
-        "y": 1318
-      }
-    },
-    "next": [
-      "妮姬主页面"
-    ]
-  },
-  "切换二号咨询": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "咨询",
-        "roi": [
-          333,
-          98,
-          76,
-          52
-        ]
-      }
-    },
-    "action": {
-      "type": "DoNothing",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 900,
-        "y": 199
-      }
-    },
-    "next": [
-      "二号咨询",
-      {
-        "name": "咨询滑动",
-        "jump_back": true
-      }
-    ]
-  },
-  "切换三号咨询": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "咨询",
-        "roi": [
-          333,
-          98,
-          76,
-          52
-        ]
-      }
-    },
-    "action": {
-      "type": "DoNothing",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 368
-      }
-    },
-    "next": [
-      "三号咨询",
-      {
-        "name": "咨询滑动",
-        "jump_back": true
-      }
-    ]
-  },
-  "切换四号咨询": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "咨询",
-        "roi": [
-          333,
-          98,
-          76,
-          52
-        ]
-      }
-    },
-    "action": {
-      "type": "DoNothing",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 2100,
-        "y": 538
-      }
-    },
-    "next": [
-      "四号咨询",
-      {
-        "name": "咨询滑动",
-        "jump_back": true
-      }
-    ]
-  },
-  "切换五号咨询": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "咨询",
-        "roi": [
-          333,
-          98,
-          76,
-          52
-        ]
-      }
-    },
-    "action": {
-      "type": "DoNothing",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 2700,
-        "y": 941
-      }
-    },
-    "next": [
-      "五号咨询",
-      {
-        "name": "咨询滑动",
-        "jump_back": true
-      }
-    ]
-  },
-  "切换六号咨询": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "咨询",
-        "roi": [
-          333,
-          98,
-          76,
-          52
-        ]
-      }
-    },
-    "action": {
-      "type": "DoNothing",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 3300,
-        "y": 1111
-      }
-    },
-    "next": [
-      "六号咨询",
-      {
-        "name": "咨询滑动",
-        "jump_back": true
-      }
-    ]
-  },
-  "切换七号咨询": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "咨询",
-        "roi": [
-          333,
-          98,
-          76,
-          52
-        ]
-      }
-    },
-    "action": {
-      "type": "DoNothing",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 3900,
-        "y": 1280
-      }
-    },
-    "next": [
-      "七号咨询",
-      {
-        "name": "咨询滑动",
-        "jump_back": true
-      }
-    ]
-  },
-  "已咨询": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "已咨询.png",
-        "roi": [
-          419,
-          943,
-          190,
-          124
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          72,
-          1194,
-          61,
-          29
-        ]
-      }
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 4500,
-        "y": 522
-      }
-    },
-    "next": [
-      "咨询返回"
-    ]
-  },
-  "咨询返回": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "返回",
-        "roi": [
-          70,
-          1185,
-          67,
-          53
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 4800,
-        "y": 536
-      }
-    },
-    "next": [
-      "点回咨询",
-      "咨询返回"
-    ]
-  },
-  "点回咨询": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "咨询",
-        "roi": [
-          565,
-          124,
-          108,
-          62
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 5100,
-        "y": 536
-      }
-    }
-  },
-  "好感提升": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "点击进行下一步",
-        "roi": [
-          274,
-          1062,
-          176,
-          50
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 4500,
-        "y": 1543
-      }
-    }
-  },
-  "进行咨询": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "咨询",
-        "roi": [
-          453,
-          1017,
-          115,
-          52
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 4500,
-        "y": 790
-      }
-    },
-    "next": [
-      "咨询确认"
-    ]
-  },
-  "咨询确认": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "确认",
-        "roi": [
-          488,
-          765,
-          85,
-          59
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 4800,
-        "y": 790
-      }
-    },
-    "next": [
-      "点击自动"
-    ]
-  },
-  "点击自动": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "自动",
-        "roi": [
-          349,
-          7,
-          78,
-          45
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "timeout": 30000,
-    "$__mpe_code": {
-      "position": {
-        "x": 5100,
-        "y": 763
-      }
-    },
-    "next": [
-      "对话选项"
-    ]
-  },
-  "对话选项": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "对话选项.png",
-        "roi": [
-          614,
-          931,
-          46,
-          50
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          265,
-          835,
-          184,
-          49
-        ]
-      }
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 5400,
-        "y": 776
-      }
-    }
-  },
-  "$__mpe_external_妮姬主页面_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 4805,
-        "y": 1376
-      }
-    }
-  }
 }

@@ -1,761 +1,593 @@
 {
-  "$__mpe_config_交错战线": {
-    "$__mpe_code": {
-      "filePath": "C:\\Users\\Administrator\\Documents\\GitHub\\MaaGame\\assets\\resource\\pipeline\\交错活动-浪潮回响.json",
-      "filename": "交错战线",
-      "lastSyncTime": 1767768503507,
-      "prefix": "",
-      "savedViewport": {
-        "x": -443,
-        "y": 244,
-        "zoom": 0.5
-      },
-      "version": "v0.14.2"
-    }
-  },
-  "$__mpe_external_子任务_进入首页_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 305,
-        "y": 326
-      }
-    }
-  },
-  "$__mpe_external_通用-返回主页_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 5700,
-        "y": 288
-      }
-    }
-  },
-  "交错活动": {
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 50
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "DoNothing"
-    },
-    "focus": "[color:orange]活动[/color]",
-    "next": [
-      "活动_入口",
-      {
-        "jump_back": true,
-        "name": "子任务_进入首页"
-      }
-    ],
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    }
-  },
-  "活动_任务奖励_奖励弹框": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1200,
-        "y": 10
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]活动_任务奖励_奖励弹框[/color]",
-    "next": [
-      "活动_任务奖励_领取完成",
-      "活动_任务奖励_奖励弹框"
-    ],
-    "recognition": {
-      "param": {
-        "expected": "获得物品",
-        "roi": [
-          527,
-          160,
-          214,
-          68
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "活动_任务奖励_返回": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1800,
-        "y": 187
-      }
-    },
-    "action": {
-      "param": {
-        "target": [
-          44,
-          34,
-          120,
-          32
-        ]
-      },
-      "type": "Click"
-    },
-    "focus": "[color:green]活动_任务奖励_返回[/color]",
-    "next": [
-      "活动_进入关卡",
-      "活动_任务奖励_返回"
-    ],
-    "recognition": {
-      "param": {
-        "roi": [
-          1014,
-          75,
-          180,
-          74
+    "交错活动": {
+        "action": {
+            "param": {},
+            "type": "DoNothing"
+        },
+        "focus": "[color:orange]活动[/color]",
+        "next": [
+            "活动_入口",
+            {
+                "jump_back": true,
+                "name": "子任务_进入首页"
+            }
         ],
-        "template": "StartUp/lingqujieshu.png"
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "活动_任务奖励_领取完成": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 164
-      }
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]活动_任务奖励_领取完成[/color]",
-    "next": [
-      "活动_任务奖励_返回",
-      "活动_任务奖励_领取完成"
-    ],
-    "recognition": {
-      "param": {
-        "lower": [
-          8,
-          4,
-          8
+    "活动_任务奖励_奖励弹框": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]活动_任务奖励_奖励弹框[/color]",
+        "next": [
+            "活动_任务奖励_领取完成",
+            "活动_任务奖励_奖励弹框"
         ],
-        "method": 4,
-        "roi": [
-          1026,
-          88,
-          150,
-          52
+        "recognition": {
+            "param": {
+                "expected": "获得物品",
+                "roi": [
+                    527,
+                    160,
+                    214,
+                    68
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "活动_任务奖励_返回": {
+        "action": {
+            "param": {
+                "target": [
+                    44,
+                    34,
+                    120,
+                    32
+                ]
+            },
+            "type": "Click"
+        },
+        "focus": "[color:green]活动_任务奖励_返回[/color]",
+        "next": [
+            "活动_进入关卡",
+            "活动_任务奖励_返回"
         ],
-        "upper": [
-          90,
-          77,
-          58
-        ]
-      },
-      "type": "ColorMatch"
-    }
-  },
-  "活动_任务奖励入口": {
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 0
-      }
+        "recognition": {
+            "param": {
+                "roi": [
+                    1014,
+                    75,
+                    180,
+                    74
+                ],
+                "template": "StartUp/lingqujieshu.png"
+            },
+            "type": "TemplateMatch"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]活动_任务奖励入口[/color]",
-    "next": [
-      "活动_任务奖励_领取完成"
-    ],
-    "post_delay": 1000,
-    "recognition": {
-      "param": {
-        "roi": [
-          167,
-          510,
-          292,
-          195
+    "活动_任务奖励_领取完成": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]活动_任务奖励_领取完成[/color]",
+        "next": [
+            "活动_任务奖励_返回",
+            "活动_任务奖励_领取完成"
         ],
-        "template": "StartUp/浪潮回响.png"
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "活动_入口": {
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 17
-      }
+        "recognition": {
+            "param": {
+                "lower": [
+                    8,
+                    4,
+                    8
+                ],
+                "method": 4,
+                "roi": [
+                    1026,
+                    88,
+                    150,
+                    52
+                ],
+                "upper": [
+                    90,
+                    77,
+                    58
+                ]
+            },
+            "type": "ColorMatch"
+        }
     },
-    "action": {
-      "param": {
-        "target": [
-          1115,
-          465,
-          132,
-          45
-        ]
-      },
-      "type": "Click"
-    },
-    "focus": "[color:green]活动_入口[/color]",
-    "next": [
-      "活动_任务奖励入口",
-      "活动_入口"
-    ],
-    "post_delay": 2000,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    }
-  },
-  "活动_关卡_选择关卡1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 2700,
-        "y": 173
-      }
-    },
-    "action": {
-      "param": {
-        "begin": [
-          1095,
-          625,
-          10,
-          10
+    "活动_任务奖励入口": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]活动_任务奖励入口[/color]",
+        "next": [
+            "活动_任务奖励_领取完成"
         ],
-        "end": [
-          [
-            39,
-            625,
-            10,
-            10
-          ]
-        ]
-      },
-      "type": "Swipe"
+        "post_delay": 1000,
+        "recognition": {
+            "param": {
+                "roi": [
+                    167,
+                    510,
+                    292,
+                    195
+                ],
+                "template": "StartUp/浪潮回响.png"
+            },
+            "type": "TemplateMatch"
+        }
     },
-    "focus": "[color:green]活动_关卡_选择关卡1[/color]",
-    "next": [
-      "活动_关卡_选择关卡2"
-    ],
-    "recognition": {
-      "param": {
-        "expected": "漆黑",
-        "roi": [
-          996,
-          605,
-          94,
-          39
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "活动_关卡_选择关卡2": {
-    "$__mpe_code": {
-      "position": {
-        "x": 3000,
-        "y": 219
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]活动_关卡_选择关卡2[/color]",
-    "next": [
-      "活动_扫荡"
-    ],
-    "recognition": {
-      "param": {
-        "expected": "幻海之主"
-      },
-      "type": "OCR"
-    }
-  },
-  "活动_关卡_难度选择": {
-    "$__mpe_code": {
-      "position": {
-        "x": 2400,
-        "y": 203
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]活动_关卡_难度选择[/color]",
-    "next": [
-      "活动_关卡_选择关卡1",
-      "活动_关卡_难度选择"
-    ],
-    "recognition": {
-      "param": {
-        "expected": "模式",
-        "roi": [
-          4,
-          198,
-          118,
-          51
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "活动_扫荡": {
-    "$__mpe_code": {
-      "position": {
-        "x": 3300,
-        "y": 203
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]活动_扫荡[/color]",
-    "next": [
-      "活动_扫荡开始"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "扫荡"
+    "活动_入口": {
+        "action": {
+            "param": {
+                "target": [
+                    1115,
+                    465,
+                    132,
+                    45
+                ]
+            },
+            "type": "Click"
+        },
+        "focus": "[color:green]活动_入口[/color]",
+        "next": [
+            "活动_任务奖励入口",
+            "活动_入口"
         ],
-        "roi": [
-          794,
-          546,
-          92,
-          84
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "活动_扫荡升级": {
-    "$__mpe_code": {
-      "position": {
-        "x": 4200,
-        "y": 990
-      }
+        "post_delay": 2000,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]活动_扫荡升级[/color]",
-    "recognition": {
-      "param": {
-        "roi": [
-          540,
-          242,
-          207,
-          91
+    "活动_关卡_选择关卡1": {
+        "action": {
+            "param": {
+                "begin": [
+                    1095,
+                    625,
+                    10,
+                    10
+                ],
+                "end": [
+                    [
+                        39,
+                        625,
+                        10,
+                        10
+                    ]
+                ]
+            },
+            "type": "Swipe"
+        },
+        "focus": "[color:green]活动_关卡_选择关卡1[/color]",
+        "next": [
+            "活动_关卡_选择关卡2"
         ],
-        "template": "Combat/DailyExplore_LevelUp.png"
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "活动_扫荡双倍标记": {
-    "$__mpe_code": {
-      "position": {
-        "x": 3900,
-        "y": 696
-      }
+        "recognition": {
+            "param": {
+                "expected": "漆黑",
+                "roi": [
+                    996,
+                    605,
+                    94,
+                    39
+                ]
+            },
+            "type": "OCR"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]活动_扫荡双倍标记[/color]",
-    "recognition": {
-      "param": {
-        "expected": [
-          "开启"
+    "活动_关卡_选择关卡2": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]活动_关卡_选择关卡2[/color]",
+        "next": [
+            "活动_扫荡"
         ],
-        "roi": [
-          702,
-          398,
-          252,
-          100
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "活动_扫荡奖励": {
-    "$__mpe_code": {
-      "position": {
-        "x": 3900,
-        "y": 975
-      }
+        "recognition": {
+            "param": {
+                "expected": "幻海之主"
+            },
+            "type": "OCR"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]活动_扫荡奖励[/color]",
-    "next": [
-      {
-        "jump_back": true,
-        "name": "活动_扫荡升级"
-      },
-      "活动_扫荡",
-      "活动_扫荡奖励"
-    ],
-    "pre_delay": 200,
-    "recognition": {
-      "param": {
-        "expected": [
-          "扫荡成功"
+    "活动_关卡_难度选择": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]活动_关卡_难度选择[/color]",
+        "next": [
+            "活动_关卡_选择关卡1",
+            "活动_关卡_难度选择"
         ],
-        "roi": [
-          7,
-          9,
-          482,
-          153
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "活动_扫荡开始": {
-    "$__mpe_code": {
-      "position": {
-        "x": 3600,
-        "y": 187
-      }
+        "recognition": {
+            "param": {
+                "expected": "模式",
+                "roi": [
+                    4,
+                    198,
+                    118,
+                    51
+                ]
+            },
+            "type": "OCR"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]活动_扫荡开始[/color]",
-    "next": [
-      "活动_无票券1",
-      "活动_无票券2",
-      {
-        "jump_back": true,
-        "name": "活动_扫荡双倍标记"
-      },
-      "活动_扫荡奖励"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "开始战斗"
+    "活动_扫荡": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]活动_扫荡[/color]",
+        "next": [
+            "活动_扫荡开始"
         ],
-        "roi": [
-          811,
-          535,
-          260,
-          48
-        ]
-      },
-      "type": "OCR"
+        "recognition": {
+            "param": {
+                "expected": [
+                    "扫荡"
+                ],
+                "roi": [
+                    794,
+                    546,
+                    92,
+                    84
+                ]
+            },
+            "type": "OCR"
+        }
     },
-    "timeout": 3000
-  },
-  "活动_无票券1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 3900,
-        "y": 219
-      }
+    "活动_扫荡升级": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]活动_扫荡升级[/color]",
+        "recognition": {
+            "param": {
+                "roi": [
+                    540,
+                    242,
+                    207,
+                    91
+                ],
+                "template": "Combat/DailyExplore_LevelUp.png"
+            },
+            "type": "TemplateMatch"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "Click"
+    "活动_扫荡双倍标记": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]活动_扫荡双倍标记[/color]",
+        "recognition": {
+            "param": {
+                "expected": [
+                    "开启"
+                ],
+                "roi": [
+                    702,
+                    398,
+                    252,
+                    100
+                ]
+            },
+            "type": "OCR"
+        }
     },
-    "focus": "[color:green]活动_无票券1[/color]",
-    "next": [
-      "活动_无票券1.1"
-    ],
-    "recognition": {
-      "param": {
-        "expected": "取消"
-      },
-      "type": "OCR"
+    "活动_扫荡奖励": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]活动_扫荡奖励[/color]",
+        "next": [
+            {
+                "jump_back": true,
+                "name": "活动_扫荡升级"
+            },
+            "活动_扫荡",
+            "活动_扫荡奖励"
+        ],
+        "pre_delay": 200,
+        "recognition": {
+            "param": {
+                "expected": [
+                    "扫荡成功"
+                ],
+                "roi": [
+                    7,
+                    9,
+                    482,
+                    153
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "活动_扫荡开始": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]活动_扫荡开始[/color]",
+        "next": [
+            "活动_无票券1",
+            "活动_无票券2",
+            {
+                "jump_back": true,
+                "name": "活动_扫荡双倍标记"
+            },
+            "活动_扫荡奖励"
+        ],
+        "recognition": {
+            "param": {
+                "expected": [
+                    "开始战斗"
+                ],
+                "roi": [
+                    811,
+                    535,
+                    260,
+                    48
+                ]
+            },
+            "type": "OCR"
+        },
+        "timeout": 3000
+    },
+    "活动_无票券1": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]活动_无票券1[/color]",
+        "next": [
+            "活动_无票券1.1"
+        ],
+        "recognition": {
+            "param": {
+                "expected": "取消"
+            },
+            "type": "OCR"
+        }
+    },
+    "活动_无票券1.1": {
+        "action": {
+            "param": {
+                "target": [
+                    46,
+                    30,
+                    117,
+                    38
+                ]
+            },
+            "type": "Click"
+        },
+        "focus": "[color:green]活动_无票券1.1[/color]",
+        "next": [
+            "活动_无票券2.1"
+        ],
+        "pre_wait_freezes": 500,
+        "recognition": {
+            "param": {
+                "expected": "扫荡",
+                "roi": [
+                    174,
+                    105,
+                    102,
+                    53
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "活动_无票券2": {
+        "action": {
+            "param": {
+                "target": [
+                    43,
+                    29,
+                    118,
+                    36
+                ]
+            },
+            "type": "Click"
+        },
+        "focus": "[color:green]活动_无票券2[/color]",
+        "next": [
+            "活动_无票券2.1"
+        ],
+        "pre_wait_freezes": 500,
+        "recognition": {
+            "param": {
+                "expected": "兑换",
+                "roi": [
+                    10,
+                    81,
+                    157,
+                    68
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "活动_无票券2.1": {
+        "action": {
+            "param": {
+                "target": [
+                    25,
+                    20,
+                    150,
+                    59
+                ]
+            },
+            "type": "Click"
+        },
+        "focus": "[color:green]活动_无票券2.1[/color]",
+        "next": [
+            "活动_无票券2.2"
+        ],
+        "pre_wait_freezes": 500,
+        "recognition": {
+            "param": {
+                "expected": "扫荡",
+                "roi": [
+                    794,
+                    546,
+                    92,
+                    84
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "活动_无票券2.2": {
+        "action": {
+            "param": {
+                "target": [
+                    25,
+                    20,
+                    150,
+                    59
+                ]
+            },
+            "type": "Click"
+        },
+        "focus": "[color:green]活动_无票券2.2[/color]",
+        "next": [
+            "活动_领取奖励"
+        ],
+        "pre_wait_freezes": 500,
+        "recognition": {
+            "param": {
+                "expected": "幻海之主",
+                "roi": [
+                    742,
+                    588,
+                    224,
+                    101
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "活动_进入关卡": {
+        "action": {
+            "param": {
+                "target": [
+                    1016,
+                    570,
+                    101,
+                    101
+                ]
+            },
+            "type": "Click"
+        },
+        "focus": "[color:green]活动_进入关卡[/color]",
+        "next": [
+            "活动_关卡_难度选择",
+            "活动_进入关卡"
+        ],
+        "recognition": {
+            "param": {
+                "expected": "海滨",
+                "roi": [
+                    914,
+                    543,
+                    337,
+                    171
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "活动_领取奖励": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]活动_领取奖励[/color]",
+        "next": [
+            "活动_领取奖励1",
+            "活动_领取奖励2"
+        ],
+        "recognition": {
+            "param": {
+                "expected": "碧波",
+                "roi": [
+                    74,
+                    429,
+                    224,
+                    128
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "活动_领取奖励1": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]活动_领取奖励1[/color]",
+        "next": [
+            "通用-返回主页"
+        ],
+        "recognition": {
+            "param": {
+                "expected": "领取",
+                "roi": [
+                    1027,
+                    249,
+                    241,
+                    85
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "活动_领取奖励2": {
+        "action": {
+            "param": {
+                "target": [
+                    46,
+                    30,
+                    117,
+                    38
+                ]
+            },
+            "type": "DoNothing"
+        },
+        "focus": "[color:green]活动_领取奖励2[/color]",
+        "next": [
+            "通用-返回主页"
+        ],
+        "recognition": {
+            "param": {
+                "expected": "获取",
+                "roi": [
+                    1027,
+                    249,
+                    241,
+                    85
+                ]
+            },
+            "type": "OCR"
+        }
     }
-  },
-  "活动_无票券1.1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 4200,
-        "y": 171
-      }
-    },
-    "action": {
-      "param": {
-        "target": [
-          46,
-          30,
-          117,
-          38
-        ]
-      },
-      "type": "Click"
-    },
-    "focus": "[color:green]活动_无票券1.1[/color]",
-    "next": [
-      "活动_无票券2.1"
-    ],
-    "pre_wait_freezes": 500,
-    "recognition": {
-      "param": {
-        "expected": "扫荡",
-        "roi": [
-          174,
-          105,
-          102,
-          53
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "活动_无票券2": {
-    "$__mpe_code": {
-      "position": {
-        "x": 4200,
-        "y": 514
-      }
-    },
-    "action": {
-      "param": {
-        "target": [
-          43,
-          29,
-          118,
-          36
-        ]
-      },
-      "type": "Click"
-    },
-    "focus": "[color:green]活动_无票券2[/color]",
-    "next": [
-      "活动_无票券2.1"
-    ],
-    "pre_wait_freezes": 500,
-    "recognition": {
-      "param": {
-        "expected": "兑换",
-        "roi": [
-          10,
-          81,
-          157,
-          68
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "活动_无票券2.1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 4500,
-        "y": 171
-      }
-    },
-    "action": {
-      "param": {
-        "target": [
-          25,
-          20,
-          150,
-          59
-        ]
-      },
-      "type": "Click"
-    },
-    "focus": "[color:green]活动_无票券2.1[/color]",
-    "next": [
-      "活动_无票券2.2"
-    ],
-    "pre_wait_freezes": 500,
-    "recognition": {
-      "param": {
-        "expected": "扫荡",
-        "roi": [
-          794,
-          546,
-          92,
-          84
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "活动_无票券2.2": {
-    "$__mpe_code": {
-      "position": {
-        "x": 4800,
-        "y": 171
-      }
-    },
-    "action": {
-      "param": {
-        "target": [
-          25,
-          20,
-          150,
-          59
-        ]
-      },
-      "type": "Click"
-    },
-    "focus": "[color:green]活动_无票券2.2[/color]",
-    "next": [
-      "活动_领取奖励"
-    ],
-    "pre_wait_freezes": 500,
-    "recognition": {
-      "param": {
-        "expected": "幻海之主",
-        "roi": [
-          742,
-          588,
-          224,
-          101
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "活动_进入关卡": {
-    "$__mpe_code": {
-      "position": {
-        "x": 2100,
-        "y": 187
-      }
-    },
-    "action": {
-      "param": {
-        "target": [
-          1016,
-          570,
-          101,
-          101
-        ]
-      },
-      "type": "Click"
-    },
-    "focus": "[color:green]活动_进入关卡[/color]",
-    "next": [
-      "活动_关卡_难度选择",
-      "活动_进入关卡"
-    ],
-    "recognition": {
-      "param": {
-        "expected": "海滨",
-        "roi": [
-          914,
-          543,
-          337,
-          171
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "活动_领取奖励": {
-    "$__mpe_code": {
-      "position": {
-        "x": 5100,
-        "y": 203
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]活动_领取奖励[/color]",
-    "next": [
-      "活动_领取奖励1",
-      "活动_领取奖励2"
-    ],
-    "recognition": {
-      "param": {
-        "expected": "碧波",
-        "roi": [
-          74,
-          429,
-          224,
-          128
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "活动_领取奖励1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 5400,
-        "y": 203
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]活动_领取奖励1[/color]",
-    "next": [
-      "通用-返回主页"
-    ],
-    "recognition": {
-      "param": {
-        "expected": "领取",
-        "roi": [
-          1027,
-          249,
-          241,
-          85
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "活动_领取奖励2": {
-    "$__mpe_code": {
-      "position": {
-        "x": 5400,
-        "y": 482
-      }
-    },
-    "action": {
-      "param": {
-        "target": [
-          46,
-          30,
-          117,
-          38
-        ]
-      },
-      "type": "DoNothing"
-    },
-    "focus": "[color:green]活动_领取奖励2[/color]",
-    "next": [
-      "通用-返回主页"
-    ],
-    "recognition": {
-      "param": {
-        "expected": "获取",
-        "roi": [
-          1027,
-          249,
-          241,
-          85
-        ]
-      },
-      "type": "OCR"
-    }
-  }
 }

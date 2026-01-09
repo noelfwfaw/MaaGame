@@ -1,451 +1,333 @@
 {
-  "$__mpe_config_新建Pipeline1": {
-    "$__mpe_code": {
-      "prefix": "",
-      "savedViewport": {
-        "x": 5,
-        "y": 289,
-        "zoom": 0.5
-      },
-      "filename": "新建Pipeline1",
-      "version": "v0.14.2"
+    "大眼清空体力": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "大眼领取体力",
+            {
+                "name": "大眼唤醒待机页面",
+                "jump_back": true
+            }
+        ]
+    },
+    "大眼领取体力": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "大眼体力领取.png",
+                "roi": [
+                    625,
+                    17,
+                    46,
+                    38
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    749,
+                    17,
+                    29,
+                    29
+                ]
+            }
+        },
+        "post_wait_freezes": 1000,
+        "next": [
+            "大眼体力已领取",
+            "大眼领取体力1"
+        ]
+    },
+    "大眼体力已领取": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "吨吨值"
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "大眼领取体力返回"
+        ]
+    },
+    "大眼领取体力1": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    681,
+                    339,
+                    69,
+                    59
+                ]
+            }
+        },
+        "next": [
+            "大眼领取体力2"
+        ]
+    },
+    "大眼领取体力2": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    928,
+                    349,
+                    72,
+                    65
+                ]
+            }
+        },
+        "next": [
+            "大眼领取体力返回"
+        ]
+    },
+    "大眼领取体力返回": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    600,
+                    598,
+                    64,
+                    41
+                ]
+            }
+        },
+        "next": [
+            "大眼前往作战"
+        ]
+    },
+    "大眼前往作战": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "前往作战.png"
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "rroi": [
+            1097,
+            614,
+            141,
+            84
+        ],
+        "next": [
+            "刻印"
+        ]
+    },
+    "刻印": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "刻印",
+                "roi": [
+                    844,
+                    639,
+                    58,
+                    42
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "联合特勤"
+        ]
+    },
+    "联合特勤": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "联合特勤"
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "联合特勤",
+            "联合特勤关卡"
+        ]
+    },
+    "联合特勤关卡": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "难度",
+                "roi": [
+                    126,
+                    641,
+                    89,
+                    44
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    177,
+                    351,
+                    65,
+                    45
+                ]
+            }
+        },
+        "next": [
+            "联合特勤扫荡"
+        ]
+    },
+    "联合特勤扫荡": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "大眼扫荡.png",
+                "roi": [
+                    1209,
+                    549,
+                    42,
+                    42
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "联合特勤扫荡1"
+        ]
+    },
+    "联合特勤扫荡1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "扫荡",
+                "roi": [
+                    967,
+                    649,
+                    66,
+                    46
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "next": [
+            "大眼返回主页面",
+            {
+                "name": "大眼扫荡确认",
+                "jump_back": true
+            }
+        ]
+    },
+    "大眼扫荡确认": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "快速扫荡",
+                "roi": [
+                    585,
+                    156,
+                    112,
+                    36
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    865,
+                    596,
+                    52,
+                    28
+                ]
+            }
+        },
+        "next": [
+            "大眼扫荡完成"
+        ]
+    },
+    "大眼扫荡完成": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "扫荡完成",
+                "roi": [
+                    29,
+                    0,
+                    187,
+                    63
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1129,
+                    650,
+                    84,
+                    32
+                ]
+            }
+        }
+    },
+    "大眼返回主页面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "大眼返回.png",
+                "roi": [
+                    27,
+                    17,
+                    52,
+                    42
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "大眼主页面",
+            "大眼返回主页面"
+        ]
     }
-  },
-  "大眼清空体力": {
-    "recognition": {
-      "type": "DirectHit",
-      "param": {}
-    },
-    "action": {
-      "type": "DoNothing",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 78
-      }
-    },
-    "next": [
-      "大眼领取体力",
-      {
-        "name": "大眼唤醒待机页面",
-        "jump_back": true
-      }
-    ]
-  },
-  "大眼领取体力": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "大眼体力领取.png",
-        "roi": [
-          625,
-          17,
-          46,
-          38
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          749,
-          17,
-          29,
-          29
-        ]
-      }
-    },
-    "post_wait_freezes": 1000,
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 0
-      }
-    },
-    "next": [
-      "大眼体力已领取",
-      "大眼领取体力1"
-    ]
-  },
-  "大眼体力已领取": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "吨吨值"
-      }
-    },
-    "action": {
-      "type": "DoNothing",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 900,
-        "y": 62
-      }
-    },
-    "next": [
-      "大眼领取体力返回"
-    ]
-  },
-  "大眼领取体力1": {
-    "recognition": {
-      "type": "DirectHit",
-      "param": {}
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          681,
-          339,
-          69,
-          59
-        ]
-      }
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 251
-      }
-    },
-    "next": [
-      "大眼领取体力2"
-    ]
-  },
-  "大眼领取体力2": {
-    "recognition": {
-      "type": "DirectHit",
-      "param": {}
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          928,
-          349,
-          72,
-          65
-        ]
-      }
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 900,
-        "y": 251
-      }
-    },
-    "next": [
-      "大眼领取体力返回"
-    ]
-  },
-  "大眼领取体力返回": {
-    "recognition": {
-      "type": "DirectHit",
-      "param": {}
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          600,
-          598,
-          64,
-          41
-        ]
-      }
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 1200,
-        "y": 62
-      }
-    },
-    "next": [
-      "大眼前往作战"
-    ]
-  },
-  "大眼前往作战": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "前往作战.png"
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "rroi": [
-      1097,
-      614,
-      141,
-      84
-    ],
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 16
-      }
-    },
-    "next": [
-      "刻印"
-    ]
-  },
-  "刻印": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "刻印",
-        "roi": [
-          844,
-          639,
-          58,
-          42
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 1800,
-        "y": 44
-      }
-    },
-    "next": [
-      "联合特勤"
-    ]
-  },
-  "联合特勤": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "联合特勤"
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 2100,
-        "y": 60
-      }
-    },
-    "next": [
-      "联合特勤",
-      "联合特勤关卡"
-    ]
-  },
-  "联合特勤关卡": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "难度",
-        "roi": [
-          126,
-          641,
-          89,
-          44
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          177,
-          351,
-          65,
-          45
-        ]
-      }
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 2400,
-        "y": 30
-      }
-    },
-    "next": [
-      "联合特勤扫荡"
-    ]
-  },
-  "联合特勤扫荡": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "大眼扫荡.png",
-        "roi": [
-          1209,
-          549,
-          42,
-          42
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 2700,
-        "y": 44
-      }
-    },
-    "next": [
-      "联合特勤扫荡1"
-    ]
-  },
-  "联合特勤扫荡1": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "扫荡",
-        "roi": [
-          967,
-          649,
-          66,
-          46
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "$__mpe_code": {
-      "position": {
-        "x": 3000,
-        "y": 17
-      }
-    },
-    "next": [
-      "大眼返回主页面",
-      {
-        "name": "大眼扫荡确认",
-        "jump_back": true
-      }
-    ]
-  },
-  "大眼扫荡确认": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "快速扫荡",
-        "roi": [
-          585,
-          156,
-          112,
-          36
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          865,
-          596,
-          52,
-          28
-        ]
-      }
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 3300,
-        "y": 299
-      }
-    },
-    "next": [
-      "大眼扫荡完成"
-    ]
-  },
-  "大眼扫荡完成": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "扫荡完成",
-        "roi": [
-          29,
-          0,
-          187,
-          63
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          1129,
-          650,
-          84,
-          32
-        ]
-      }
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 3600,
-        "y": 299
-      }
-    }
-  },
-  "大眼返回主页面": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "大眼返回.png",
-        "roi": [
-          27,
-          17,
-          52,
-          42
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 3300,
-        "y": 44
-      }
-    },
-    "next": [
-      "大眼主页面",
-      "大眼返回主页面"
-    ]
-  },
-  "$__mpe_external_大眼唤醒待机页面_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 305,
-        "y": 312
-      }
-    }
-  },
-  "$__mpe_external_大眼主页面_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 3605,
-        "y": 101
-      }
-    }
-  }
 }

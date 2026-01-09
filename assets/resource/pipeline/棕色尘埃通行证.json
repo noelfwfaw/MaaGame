@@ -1,246 +1,182 @@
 {
-  "$__mpe_config_新建Pipeline1": {
-    "$__mpe_code": {
-      "prefix": "",
-      "savedViewport": {
-        "x": 671,
-        "y": 297,
-        "zoom": 0.29
-      },
-      "filename": "新建Pipeline1",
-      "version": "v0.14.2"
-    }
-  },
-  "棕色尘埃通行证": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "通行证红点.png",
-        "roi": [
-          1157,
-          206,
-          26,
-          28
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          1133,
-          228,
-          31,
-          30
-        ]
-      }
-    },
-    "post_wait_freezes": 1000,
-    "timeout": 5000,
-    "focus": "[color:green]棕色尘埃通行证[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    "next": [
-      "通行证查找红点",
-      "通行证返回"
-    ],
-    "on_error": [
-      "棕色尘埃主页面2"
-    ]
-  },
-  "通行证查找红点": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "通行证红点2.png",
-        "roi": [
-          260,
-          119,
-          48,
-          516
+    "棕色尘埃通行证": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "通行证红点.png",
+                "roi": [
+                    1157,
+                    206,
+                    26,
+                    28
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1133,
+                    228,
+                    31,
+                    30
+                ]
+            }
+        },
+        "post_wait_freezes": 1000,
+        "timeout": 5000,
+        "focus": "[color:green]棕色尘埃通行证[/color]",
+        "next": [
+            "通行证查找红点",
+            "通行证返回"
         ],
-        "threshold": 0.1,
-        "green_mask": true
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target_offset": [
-          -72,
-          33,
-          -9,
-          -14
+        "on_error": [
+            "棕色尘埃主页面2"
         ]
-      }
     },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]通行证查找红点[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 258
-      }
-    },
-    "next": [
-      "通行证查找红点2"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "通行证查找红点2": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "通行证红点2.png",
-        "roi": [
-          1105,
-          142,
-          86,
-          490
+    "通行证查找红点": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "通行证红点2.png",
+                "roi": [
+                    260,
+                    119,
+                    48,
+                    516
+                ],
+                "threshold": 0.1,
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -72,
+                    33,
+                    -9,
+                    -14
+                ]
+            }
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]通行证查找红点[/color]",
+        "next": [
+            "通行证查找红点2"
         ],
-        "threshold": 0.5,
-        "green_mask": true
-      }
+        "on_error": [
+            "error"
+        ]
     },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]通行证查找红点2[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 274
-      }
-    },
-    "next": [
-      "全部获取"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "全部获取": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "全部获取.png",
-        "roi": [
-          931,
-          553,
-          151,
-          54
+    "通行证查找红点2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "通行证红点2.png",
+                "roi": [
+                    1105,
+                    142,
+                    86,
+                    490
+                ],
+                "threshold": 0.5,
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]通行证查找红点2[/color]",
+        "next": [
+            "全部获取"
         ],
-        "threshold": 0.9
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 5000,
-    "focus": "[color:green]全部获取[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 900,
-        "y": 290
-      }
-    },
-    "next": [
-      "全部获取确认"
-    ],
-    "on_error": [
-      "通行证返回"
-    ]
-  },
-  "全部获取确认": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "快速战斗奖励.png",
-        "roi": [
-          558,
-          628,
-          144,
-          35
+        "on_error": [
+            "error"
         ]
-      }
     },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]全部获取确认[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1200,
-        "y": 488
-      }
-    },
-    "next": [
-      "通行证查找红点2",
-      "通行证查找红点",
-      "通行证返回"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "通行证返回": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "抽抽乐返回2.png",
-        "roi": [
-          0,
-          10,
-          164,
-          63
+    "全部获取": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "全部获取.png",
+                "roi": [
+                    931,
+                    553,
+                    151,
+                    54
+                ],
+                "threshold": 0.9
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 5000,
+        "focus": "[color:green]全部获取[/color]",
+        "next": [
+            "全部获取确认"
+        ],
+        "on_error": [
+            "通行证返回"
         ]
-      }
     },
-    "action": {
-      "type": "Click",
-      "param": {}
+    "全部获取确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "快速战斗奖励.png",
+                "roi": [
+                    558,
+                    628,
+                    144,
+                    35
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]全部获取确认[/color]",
+        "next": [
+            "通行证查找红点2",
+            "通行证查找红点",
+            "通行证返回"
+        ],
+        "on_error": [
+            "error"
+        ]
     },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]通行证返回[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 306
-      }
-    },
-    "next": [
-      "棕色尘埃主页面2",
-      "通行证返回"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "$__mpe_external_棕色尘埃主页面2_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1800,
-        "y": 133
-      }
+    "通行证返回": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "抽抽乐返回2.png",
+                "roi": [
+                    0,
+                    10,
+                    164,
+                    63
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]通行证返回[/color]",
+        "next": [
+            "棕色尘埃主页面2",
+            "通行证返回"
+        ],
+        "on_error": [
+            "error"
+        ]
     }
-  },
-  "$__mpe_external_error_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1800,
-        "y": 755
-      }
-    }
-  }
 }

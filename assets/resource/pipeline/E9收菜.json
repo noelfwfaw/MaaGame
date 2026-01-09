@@ -1,119 +1,164 @@
 {
-  "E9收菜":{
-    "next":[
-      "E9方舟都市",
-      "[JumpBack]E9返回",
-      "[JumpBack]E9激活主页面"
-    ]
-  },
-  "E9激活主页面":{
-    "recognition":{
-      "type":"DirectHit"
+    "E9收菜": {
+        "next": [
+            "E9方舟都市",
+            "[JumpBack]E9返回",
+            "[JumpBack]E9激活主页面"
+        ]
     },
-    "action":{
-      "type":"Click"
+    "E9激活主页面": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "action": {
+            "type": "Click"
+        }
+    },
+    "E9方舟都市": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "方舟都市",
+                "roi": [
+                    1032,
+                    249,
+                    197,
+                    128
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "E9政策室",
+            "E9方舟都市"
+        ]
+    },
+    "E9政策室": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "政策室",
+                "roi": [
+                    198,
+                    603,
+                    165,
+                    117
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 3000,
+        "next": [
+            "E9无政策",
+            "[JumpBack]E9讨论政策"
+        ]
+    },
+    "E9无政策": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "新增政策",
+                "roi": [
+                    887,
+                    351,
+                    218,
+                    137
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    38,
+                    18,
+                    36,
+                    30
+                ]
+            }
+        },
+        "next": [
+            "E9咖啡厅"
+        ]
+    },
+    "E9讨论政策": {
+        "action": {
+            "param": {
+                "roi": [
+                    886,
+                    344,
+                    55,
+                    49
+                ]
+            }
+        },
+        "post_delay": 3000,
+        "next": [
+            "E9盖章"
+        ]
+    },
+    "E9盖章": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    930,
+                    594,
+                    1,
+                    1
+                ],
+                "end": [
+                    1081,
+                    340,
+                    1,
+                    1
+                ]
+            }
+        }
+    },
+    "E9咖啡厅": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "庭院咖啡廳",
+                "roi": [
+                    466,
+                    601,
+                    208,
+                    119
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "点餐"
+        ]
+    },
+    "点餐": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "點餐",
+                "roi": [
+                    904,
+                    585,
+                    173,
+                    135
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "E9主页面",
+            "[JumpBack]E9返回"
+        ]
     }
-  },
-  "E9方舟都市":{
-    "recognition":{
-      "type":"OCR",
-      "param":{
-        "expected" : "方舟都市",
-        "roi" : [1032,249,197,128]
-      }
-    },
-    "action":{
-      "type":"Click"
-    },
-    "next":[
-      "E9政策室",
-      "E9方舟都市"
-    ]
-  },
-  "E9政策室":{
-    "recognition":{
-      "type":"OCR",
-      "param":{
-        "expected" : "政策室",
-        "roi" : [198,603,165,117]
-      }
-    },
-    "action":{
-      "type":"Click"
-    },
-    "post_delay":3000,
-    "next":[
-      "E9无政策",
-      "[JumpBack]E9讨论政策"
-    ]
-  },
-  "E9无政策":{
-    "recognition":{
-      "type":"OCR",
-      "param":{
-        "expected" : "新增政策",
-        "roi" : [887,351,218,137]
-      }
-    },
-    "action":{
-      "type":"Click",
-      "param":{
-        "target" : [38,18,36,30]
-      }
-    },
-    "next":[
-      "E9咖啡厅"
-    ]
-  },
-  "E9讨论政策":{
-    "action":{
-      "param":{
-        "roi" : [886,344,55,49]
-      }
-    },
-    "post_delay":3000,
-    "next":[
-      "E9盖章"
-    ]
-  },
-  "E9盖章":{
-    "action":{
-      "type":"Swipe",
-      "param":{
-        "begin" : [930,594,1,1],
-        "end" : [1081,340,1,1]
-      }
-    }
-  },
-  "E9咖啡厅":{
-    "recognition":{
-      "type":"OCR",
-      "param":{
-        "expected" : "庭院咖啡廳",
-        "roi" : [466,601,208,119]
-      }
-    },
-    "action":{
-      "type":"Click"
-    },
-    "next":[
-      "点餐"
-    ]
-  },
-  "点餐":{
-    "recognition":{
-      "type":"OCR",
-      "param":{
-        "expected" : "點餐",
-        "roi" : [904,585,173,135]
-      }
-    },
-    "action":{
-      "type":"Click"
-    },
-    "next":[
-      "E9主页面",
-      "[JumpBack]E9返回"
-    ]
-  }
 }

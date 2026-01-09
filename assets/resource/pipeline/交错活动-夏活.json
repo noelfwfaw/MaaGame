@@ -1,681 +1,517 @@
 {
-  "$__mpe_config_交错战线": {
-    "$__mpe_code": {
-      "filePath": "C:\\Users\\Administrator\\Documents\\GitHub\\MaaGame\\assets\\resource\\pipeline\\交错活动-夏活.json",
-      "filename": "交错战线",
-      "lastSyncTime": 1767772932749,
-      "prefix": "",
-      "savedViewport": {
-        "x": -271,
-        "y": 242,
-        "zoom": 0.35
-      },
-      "version": "v0.14.2"
-    }
-  },
-  "$__mpe_external_子任务_点击返回_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 4205,
-        "y": 745
-      }
-    }
-  },
-  "$__mpe_external_子任务_获得物品_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 5105,
-        "y": 549
-      }
-    }
-  },
-  "$__mpe_external_子任务_进入首页_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 305,
-        "y": 268
-      }
-    }
-  },
-  "夏活": {
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 48
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "DoNothing"
-    },
-    "focus": "[color:orange]夏活[/color]",
-    "next": [
-      "夏活_入口",
-      {
-        "jump_back": true,
-        "name": "子任务_进入首页"
-      }
-    ],
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    }
-  },
-  "夏活_任务奖励_奖励弹框": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1200,
-        "y": 136
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]奖励弹框[/color]",
-    "next": [
-      "夏活_任务奖励_领取完成",
-      "夏活_任务奖励_奖励弹框"
-    ],
-    "recognition": {
-      "param": {
-        "expected": "获得物品",
-        "roi": [
-          527,
-          160,
-          214,
-          68
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "夏活_任务奖励_点击领取": {
-    "$__mpe_code": {
-      "position": {
-        "x": 900,
-        "y": 7
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]点击领取[/color]",
-    "next": [
-      "夏活_任务奖励_奖励弹框",
-      "夏活_任务奖励_领取完成",
-      "夏活_任务奖励_点击领取"
-    ],
-    "recognition": {
-      "param": {
-        "expected": "领取",
-        "roi": [
-          1029,
-          93,
-          145,
-          44
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "夏活_任务奖励_返回": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1800,
-        "y": 0
-      }
-    },
-    "action": {
-      "param": {
-        "target": [
-          44,
-          34,
-          120,
-          32
-        ]
-      },
-      "type": "Click"
-    },
-    "focus": "[color:green]返回[/color]",
-    "next": [
-      "夏活_进入关卡",
-      "夏活_任务奖励_返回"
-    ],
-    "recognition": {
-      "param": {
-        "expected": "任务奖励",
-        "roi": [
-          132,
-          90,
-          151,
-          52
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "夏活_任务奖励_领取完成": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 9
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "DoNothing"
-    },
-    "focus": "[color:green]领取完成[/color]",
-    "next": [
-      "夏活_任务奖励_返回"
-    ],
-    "recognition": {
-      "param": {
-        "expected": "已完成",
-        "roi": [
-          1051,
-          210,
-          105,
-          41
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "夏活_任务奖励入口": {
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 14
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]任务奖励入口[/color]",
-    "next": [
-      "夏活_任务奖励_点击领取"
-    ],
-    "recognition": {
-      "param": {
-        "expected": "海",
-        "roi": [
-          883,
-          129,
-          241,
-          117
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "夏活_入口": {
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 14
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]入口[/color]",
-    "next": [
-      "夏活_任务奖励入口",
-      "夏活_入口"
-    ],
-    "recognition": {
-      "param": {
-        "expected": "夏日",
-        "roi": [
-          848,
-          145,
-          66,
-          123
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "夏活_关卡_选择关卡": {
-    "$__mpe_code": {
-      "position": {
-        "x": 2700,
-        "y": 14
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]选择关卡[/color]",
-    "next": [
-      "夏活_扫荡",
-      "夏活_关卡_选择关卡"
-    ],
-    "recognition": {
-      "param": {
-        "expected": "海",
-        "roi": [
-          106,
-          599,
-          119,
-          33
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "夏活_关卡_难度选择": {
-    "$__mpe_code": {
-      "position": {
-        "x": 2400,
-        "y": 14
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]难度选择[/color]",
-    "next": [
-      "夏活_关卡_选择关卡",
-      "夏活_关卡_难度选择"
-    ],
-    "recognition": {
-      "param": {
-        "expected": "困难",
-        "roi": [
-          12,
-          193,
-          144,
-          34
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "夏活_扫荡": {
-    "$__mpe_code": {
-      "position": {
-        "x": 3000,
-        "y": 14
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]扫荡[/color]",
-    "next": [
-      "夏活_扫荡开始",
-      "夏活_扫荡"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "扫荡"
+    "夏活": {
+        "action": {
+            "param": {},
+            "type": "DoNothing"
+        },
+        "focus": "[color:orange]夏活[/color]",
+        "next": [
+            "夏活_入口",
+            {
+                "jump_back": true,
+                "name": "子任务_进入首页"
+            }
         ],
-        "roi": [
-          843,
-          559,
-          115,
-          91
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "夏活_扫荡升级": {
-    "$__mpe_code": {
-      "position": {
-        "x": 3900,
-        "y": 14
-      }
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]扫荡升级[/color]",
-    "recognition": {
-      "param": {
-        "roi": [
-          540,
-          242,
-          207,
-          91
+    "夏活_任务奖励_奖励弹框": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]奖励弹框[/color]",
+        "next": [
+            "夏活_任务奖励_领取完成",
+            "夏活_任务奖励_奖励弹框"
         ],
-        "template": "Combat/DailyExplore_LevelUp.png"
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "夏活_扫荡双倍标记": {
-    "$__mpe_code": {
-      "position": {
-        "x": 3600,
-        "y": 268
-      }
+        "recognition": {
+            "param": {
+                "expected": "获得物品",
+                "roi": [
+                    527,
+                    160,
+                    214,
+                    68
+                ]
+            },
+            "type": "OCR"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]扫荡双倍标记[/color]",
-    "recognition": {
-      "param": {
-        "expected": [
-          "开启"
+    "夏活_任务奖励_点击领取": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]点击领取[/color]",
+        "next": [
+            "夏活_任务奖励_奖励弹框",
+            "夏活_任务奖励_领取完成",
+            "夏活_任务奖励_点击领取"
         ],
-        "roi": [
-          702,
-          398,
-          252,
-          100
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "夏活_扫荡奖励": {
-    "$__mpe_code": {
-      "position": {
-        "x": 3600,
-        "y": 14
-      }
+        "recognition": {
+            "param": {
+                "expected": "领取",
+                "roi": [
+                    1029,
+                    93,
+                    145,
+                    44
+                ]
+            },
+            "type": "OCR"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]扫荡奖励[/color]",
-    "next": [
-      {
-        "jump_back": true,
-        "name": "夏活_扫荡升级"
-      },
-      "夏活_扫荡",
-      "夏活_扫荡奖励"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "扫荡奖励"
+    "夏活_任务奖励_返回": {
+        "action": {
+            "param": {
+                "target": [
+                    44,
+                    34,
+                    120,
+                    32
+                ]
+            },
+            "type": "Click"
+        },
+        "focus": "[color:green]返回[/color]",
+        "next": [
+            "夏活_进入关卡",
+            "夏活_任务奖励_返回"
         ],
-        "roi": [
-          569,
-          5,
-          181,
-          66
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "夏活_扫荡开始": {
-    "$__mpe_code": {
-      "position": {
-        "x": 3300,
-        "y": 136
-      }
+        "recognition": {
+            "param": {
+                "expected": "任务奖励",
+                "roi": [
+                    132,
+                    90,
+                    151,
+                    52
+                ]
+            },
+            "type": "OCR"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]扫荡开始[/color]",
-    "next": [
-      {
-        "jump_back": true,
-        "name": "夏活_扫荡双倍标记"
-      },
-      "夏活_扫荡",
-      "夏活_扫荡奖励",
-      "夏活_无票券",
-      "夏活_扫荡开始"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "开始战斗"
+    "夏活_任务奖励_领取完成": {
+        "action": {
+            "param": {},
+            "type": "DoNothing"
+        },
+        "focus": "[color:green]领取完成[/color]",
+        "next": [
+            "夏活_任务奖励_返回"
         ],
-        "roi": [
-          943,
-          521,
-          159,
-          85
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "夏活_无票券": {
-    "$__mpe_code": {
-      "position": {
-        "x": 3600,
-        "y": 492
-      }
+        "recognition": {
+            "param": {
+                "expected": "已完成",
+                "roi": [
+                    1051,
+                    210,
+                    105,
+                    41
+                ]
+            },
+            "type": "OCR"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]无票券[/color]",
-    "next": [
-      "夏活_返回首页",
-      "夏活_无票券"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "取消"
+    "夏活_任务奖励入口": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]任务奖励入口[/color]",
+        "next": [
+            "夏活_任务奖励_点击领取"
         ],
-        "roi": [
-          422,
-          431,
-          107,
-          35
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "夏活_活动奖励": {
-    "$__mpe_code": {
-      "position": {
-        "x": 4500,
-        "y": 478
-      }
+        "recognition": {
+            "param": {
+                "expected": "海",
+                "roi": [
+                    883,
+                    129,
+                    241,
+                    117
+                ]
+            },
+            "type": "OCR"
+        }
     },
-    "action": {
-      "param": {
-        "target": [
-          952,
-          303,
-          260,
-          92
-        ]
-      },
-      "type": "Click"
-    },
-    "focus": "[color:green]活动奖励[/color]",
-    "next": [
-      "夏活_活动奖励_点击领取",
-      "夏活_活动奖励_领取完成",
-      "夏活_活动奖励"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "夏日"
+    "夏活_入口": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]入口[/color]",
+        "next": [
+            "夏活_任务奖励入口",
+            "夏活_入口"
         ],
-        "roi": [
-          272,
-          186,
-          189,
-          68
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "夏活_活动奖励_点击领取": {
-    "$__mpe_code": {
-      "position": {
-        "x": 4800,
-        "y": 485
-      }
+        "recognition": {
+            "param": {
+                "expected": "夏日",
+                "roi": [
+                    848,
+                    145,
+                    66,
+                    123
+                ]
+            },
+            "type": "OCR"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]点击领取[/color]",
-    "next": [
-      {
-        "jump_back": true,
-        "name": "子任务_获得物品"
-      },
-      "夏活_活动奖励_领取完成",
-      "夏活_活动奖励_点击领取"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "领取"
+    "夏活_关卡_选择关卡": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]选择关卡[/color]",
+        "next": [
+            "夏活_扫荡",
+            "夏活_关卡_选择关卡"
         ],
-        "roi": [
-          1090,
-          280,
-          115,
-          33
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "夏活_活动奖励_领取完成": {
-    "$__mpe_code": {
-      "position": {
-        "x": 5100,
-        "y": 659
-      }
+        "recognition": {
+            "param": {
+                "expected": "海",
+                "roi": [
+                    106,
+                    599,
+                    119,
+                    33
+                ]
+            },
+            "type": "OCR"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "DoNothing"
-    },
-    "focus": "[color:green]领取完成[/color]",
-    "recognition": {
-      "param": {
-        "expected": [
-          "获取"
+    "夏活_关卡_难度选择": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]难度选择[/color]",
+        "next": [
+            "夏活_关卡_选择关卡",
+            "夏活_关卡_难度选择"
         ],
-        "roi": [
-          1094,
-          282,
-          105,
-          32
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "夏活_返回首页": {
-    "$__mpe_code": {
-      "position": {
-        "x": 3900,
-        "y": 526
-      }
+        "recognition": {
+            "param": {
+                "expected": "困难",
+                "roi": [
+                    12,
+                    193,
+                    144,
+                    34
+                ]
+            },
+            "type": "OCR"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "DoNothing"
-    },
-    "focus": "[color:green]返回首页[/color]",
-    "next": [
-      "夏活_首页标识",
-      {
-        "jump_back": true,
-        "name": "子任务_点击返回"
-      },
-      "夏活_返回首页"
-    ],
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    }
-  },
-  "夏活_进入关卡": {
-    "$__mpe_code": {
-      "position": {
-        "x": 2100,
-        "y": 0
-      }
-    },
-    "action": {
-      "param": {
-        "target": [
-          905,
-          504,
-          198,
-          104
-        ]
-      },
-      "type": "Click"
-    },
-    "focus": "[color:green]进入关卡[/color]",
-    "next": [
-      "夏活_关卡_难度选择",
-      "夏活_进入关卡"
-    ],
-    "recognition": {
-      "param": {
-        "expected": "夏日",
-        "roi": [
-          268,
-          191,
-          199,
-          65
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "夏活_首页标识": {
-    "$__mpe_code": {
-      "position": {
-        "x": 4200,
-        "y": 494
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "DoNothing"
-    },
-    "focus": "[color:green]返回[/color]",
-    "next": [
-      "夏活_活动奖励",
-      "夏活_首页标识"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "夏日"
+    "夏活_扫荡": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]扫荡[/color]",
+        "next": [
+            "夏活_扫荡开始",
+            "夏活_扫荡"
         ],
-        "roi": [
-          272,
-          186,
-          189,
-          68
-        ]
-      },
-      "type": "OCR"
+        "recognition": {
+            "param": {
+                "expected": [
+                    "扫荡"
+                ],
+                "roi": [
+                    843,
+                    559,
+                    115,
+                    91
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "夏活_扫荡升级": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]扫荡升级[/color]",
+        "recognition": {
+            "param": {
+                "roi": [
+                    540,
+                    242,
+                    207,
+                    91
+                ],
+                "template": "Combat/DailyExplore_LevelUp.png"
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "夏活_扫荡双倍标记": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]扫荡双倍标记[/color]",
+        "recognition": {
+            "param": {
+                "expected": [
+                    "开启"
+                ],
+                "roi": [
+                    702,
+                    398,
+                    252,
+                    100
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "夏活_扫荡奖励": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]扫荡奖励[/color]",
+        "next": [
+            {
+                "jump_back": true,
+                "name": "夏活_扫荡升级"
+            },
+            "夏活_扫荡",
+            "夏活_扫荡奖励"
+        ],
+        "recognition": {
+            "param": {
+                "expected": [
+                    "扫荡奖励"
+                ],
+                "roi": [
+                    569,
+                    5,
+                    181,
+                    66
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "夏活_扫荡开始": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]扫荡开始[/color]",
+        "next": [
+            {
+                "jump_back": true,
+                "name": "夏活_扫荡双倍标记"
+            },
+            "夏活_扫荡",
+            "夏活_扫荡奖励",
+            "夏活_无票券",
+            "夏活_扫荡开始"
+        ],
+        "recognition": {
+            "param": {
+                "expected": [
+                    "开始战斗"
+                ],
+                "roi": [
+                    943,
+                    521,
+                    159,
+                    85
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "夏活_无票券": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]无票券[/color]",
+        "next": [
+            "夏活_返回首页",
+            "夏活_无票券"
+        ],
+        "recognition": {
+            "param": {
+                "expected": [
+                    "取消"
+                ],
+                "roi": [
+                    422,
+                    431,
+                    107,
+                    35
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "夏活_活动奖励": {
+        "action": {
+            "param": {
+                "target": [
+                    952,
+                    303,
+                    260,
+                    92
+                ]
+            },
+            "type": "Click"
+        },
+        "focus": "[color:green]活动奖励[/color]",
+        "next": [
+            "夏活_活动奖励_点击领取",
+            "夏活_活动奖励_领取完成",
+            "夏活_活动奖励"
+        ],
+        "recognition": {
+            "param": {
+                "expected": [
+                    "夏日"
+                ],
+                "roi": [
+                    272,
+                    186,
+                    189,
+                    68
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "夏活_活动奖励_点击领取": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]点击领取[/color]",
+        "next": [
+            {
+                "jump_back": true,
+                "name": "子任务_获得物品"
+            },
+            "夏活_活动奖励_领取完成",
+            "夏活_活动奖励_点击领取"
+        ],
+        "recognition": {
+            "param": {
+                "expected": [
+                    "领取"
+                ],
+                "roi": [
+                    1090,
+                    280,
+                    115,
+                    33
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "夏活_活动奖励_领取完成": {
+        "action": {
+            "param": {},
+            "type": "DoNothing"
+        },
+        "focus": "[color:green]领取完成[/color]",
+        "recognition": {
+            "param": {
+                "expected": [
+                    "获取"
+                ],
+                "roi": [
+                    1094,
+                    282,
+                    105,
+                    32
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "夏活_返回首页": {
+        "action": {
+            "param": {},
+            "type": "DoNothing"
+        },
+        "focus": "[color:green]返回首页[/color]",
+        "next": [
+            "夏活_首页标识",
+            {
+                "jump_back": true,
+                "name": "子任务_点击返回"
+            },
+            "夏活_返回首页"
+        ],
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        }
+    },
+    "夏活_进入关卡": {
+        "action": {
+            "param": {
+                "target": [
+                    905,
+                    504,
+                    198,
+                    104
+                ]
+            },
+            "type": "Click"
+        },
+        "focus": "[color:green]进入关卡[/color]",
+        "next": [
+            "夏活_关卡_难度选择",
+            "夏活_进入关卡"
+        ],
+        "recognition": {
+            "param": {
+                "expected": "夏日",
+                "roi": [
+                    268,
+                    191,
+                    199,
+                    65
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "夏活_首页标识": {
+        "action": {
+            "param": {},
+            "type": "DoNothing"
+        },
+        "focus": "[color:green]返回[/color]",
+        "next": [
+            "夏活_活动奖励",
+            "夏活_首页标识"
+        ],
+        "recognition": {
+            "param": {
+                "expected": [
+                    "夏日"
+                ],
+                "roi": [
+                    272,
+                    186,
+                    189,
+                    68
+                ]
+            },
+            "type": "OCR"
+        }
     }
-  }
 }

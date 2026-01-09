@@ -1,110 +1,72 @@
 {
-  "$__mpe_config_新建Pipeline1": {
-    "$__mpe_code": {
-      "prefix": "",
-      "savedViewport": {
-        "x": 65,
-        "y": 160,
-        "zoom": 1
-      },
-      "filename": "新建Pipeline1",
-      "version": "v0.14.2"
+    "好友点赞": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "好友.png",
+                "roi": [
+                    1184,
+                    353,
+                    57,
+                    81
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]好友点赞[/color]",
+        "next": [
+            "一键点赞"
+        ]
+    },
+    "一键点赞": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "一键点赞.png",
+                "roi": [
+                    57,
+                    623,
+                    188,
+                    47
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 2000,
+        "focus": "[color:green]一键点赞[/color]",
+        "next": [
+            "点赞确认",
+            "返回"
+        ]
+    },
+    "点赞确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "点击确认.png",
+                "roi": [
+                    544,
+                    521,
+                    198,
+                    27
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]点赞确认[/color]",
+        "next": [
+            "返回"
+        ]
     }
-  },
-  "好友点赞": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "好友.png",
-        "roi": [
-          1184,
-          353,
-          57,
-          81
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]好友点赞[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    "next": [
-      "一键点赞"
-    ]
-  },
-  "一键点赞": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "一键点赞.png",
-        "roi": [
-          57,
-          623,
-          188,
-          47
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 2000,
-    "focus": "[color:green]一键点赞[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 0
-      }
-    },
-    "next": [
-      "点赞确认",
-      "返回"
-    ]
-  },
-  "点赞确认": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "点击确认.png",
-        "roi": [
-          544,
-          521,
-          198,
-          27
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]点赞确认[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 0
-      }
-    },
-    "next": [
-      "返回"
-    ]
-  },
-  "$__mpe_external_返回_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 883,
-        "y": 475
-      }
-    }
-  }
 }

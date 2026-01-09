@@ -1734,6 +1734,66 @@
                             ]
                         }
                     }
+                },
+                {
+                    "name": "战斗员",
+                    "pipeline_override": {
+                        "E9选择模拟": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "战"
+                                }
+                            },
+                            "next": [
+                                "E9战斗员"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "伙伴",
+                    "pipeline_override": {
+                        "E9选择模拟": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "伙"
+                                }
+                            },
+                            "next": [
+                                "E9伙伴"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "潜力",
+                    "pipeline_override": {
+                        "E9选择模拟": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "潜"
+                                }
+                            },
+                            "next": [
+                                "E9潜力"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "记忆碎片",
+                    "pipeline_override": {
+                        "E9选择模拟": {
+                            "recognition": {
+                                "param": {
+                                    "expected": "记"
+                                }
+                            },
+                            "next": [
+                                "E9记忆碎片"
+                            ]
+                        }
+                    }
                 }
             ]
         }

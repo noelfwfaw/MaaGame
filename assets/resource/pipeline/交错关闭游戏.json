@@ -1,35 +1,15 @@
 {
-  "$__mpe_config_交错战线": {
-    "$__mpe_code": {
-      "filePath": "C:\\Users\\Administrator\\Documents\\GitHub\\MaaGame\\assets\\resource\\pipeline\\交错关闭游戏.json",
-      "filename": "交错战线",
-      "lastSyncTime": 1767768418420,
-      "prefix": "",
-      "savedViewport": {
-        "x": 877,
-        "y": 363,
-        "zoom": 0.76
-      },
-      "version": "v0.14.2"
+    "关闭游戏": {
+        "action": {
+            "param": {
+                "package": "com.megagame.crosscore"
+            },
+            "type": "StopApp"
+        },
+        "focus": "[color:red]关闭游戏[/color]",
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        }
     }
-  },
-  "关闭游戏": {
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    "action": {
-      "param": {
-        "package": "com.megagame.crosscore"
-      },
-      "type": "StopApp"
-    },
-    "focus": "[color:red]关闭游戏[/color]",
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    }
-  }
 }

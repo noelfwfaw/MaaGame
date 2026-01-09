@@ -1,436 +1,308 @@
 {
-  "$__mpe_config_交错战线": {
-    "$__mpe_code": {
-      "filePath": "C:\\Users\\Administrator\\Documents\\GitHub\\MaaGame\\assets\\resource\\pipeline\\交错模拟军演.json",
-      "filename": "交错战线",
-      "lastSyncTime": 1767767512496,
-      "prefix": "",
-      "savedViewport": {
-        "x": -2,
-        "y": 119,
-        "zoom": 0.57
-      },
-      "version": "v0.14.2"
-    }
-  },
-  "$__mpe_external_子任务_获得物品_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 2405,
-        "y": 632
-      }
-    }
-  },
-  "$__mpe_external_子任务_进入首页_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 305,
-        "y": 134
-      }
-    }
-  },
-  "$__mpe_external_战斗_启用二倍速_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 2105,
-        "y": 431
-      }
-    }
-  },
-  "$__mpe_external_战斗_自动战斗_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 2105,
-        "y": 228
-      }
-    }
-  },
-  "$__mpe_external_进入首页_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1805,
-        "y": 496
-      }
-    }
-  },
-  "$__mpe_external_首页_出击_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 305,
-        "y": 24
-      }
-    }
-  },
-  "模拟军演": {
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "DoNothing"
-    },
-    "focus": "[color:orange]模拟军演[/color]",
-    "next": [
-      "首页_出击",
-      {
-        "jump_back": true,
-        "name": "子任务_进入首页"
-      }
-    ],
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    }
-  },
-  "模拟军演_二级入口": {
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 244
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]模拟军演_二级入口[/color]",
-    "next": [
-      "模拟军演_刷新对手",
-      "模拟军演_选择对手",
-      "模拟军演_二级入口"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "竞技"
+    "模拟军演": {
+        "action": {
+            "param": {},
+            "type": "DoNothing"
+        },
+        "focus": "[color:orange]模拟军演[/color]",
+        "next": [
+            "首页_出击",
+            {
+                "jump_back": true,
+                "name": "子任务_进入首页"
+            }
         ],
-        "roi": [
-          356,
-          355,
-          301,
-          154
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "模拟军演_入口": {
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 244
-      }
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]模拟军演_入口[/color]",
-    "next": [
-      "模拟军演_二级入口",
-      "模拟军演_入口"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "模拟军演"
+    "模拟军演_二级入口": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]模拟军演_二级入口[/color]",
+        "next": [
+            "模拟军演_刷新对手",
+            "模拟军演_选择对手",
+            "模拟军演_二级入口"
         ],
-        "roi": [
-          185,
-          282,
-          280,
-          174
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "模拟军演_刷新上线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 900,
-        "y": 381
-      }
+        "recognition": {
+            "param": {
+                "expected": [
+                    "竞技"
+                ],
+                "roi": [
+                    356,
+                    355,
+                    301,
+                    154
+                ]
+            },
+            "type": "OCR"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "DoNothing"
-    },
-    "focus": "[color:green]模拟军演_刷新上线[/color]",
-    "next": [
-      "模拟军演_选择对手"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "操作"
+    "模拟军演_入口": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]模拟军演_入口[/color]",
+        "next": [
+            "模拟军演_二级入口",
+            "模拟军演_入口"
         ],
-        "roi": [
-          400,
-          250,
-          400,
-          200
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "模拟军演_刷新对手": {
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 366
-      }
+        "recognition": {
+            "param": {
+                "expected": [
+                    "模拟军演"
+                ],
+                "roi": [
+                    185,
+                    282,
+                    280,
+                    174
+                ]
+            },
+            "type": "OCR"
+        }
     },
-    "action": {
-      "param": {
-        "target": [
-          1200,
-          110,
-          10,
-          10
-        ]
-      },
-      "type": "Click"
-    },
-    "focus": "[color:green]模拟军演_刷新对手[/color]",
-    "next": [
-      "模拟军演_刷新上线",
-      "模拟军演_刷新对手",
-      "模拟军演_选择对手",
-      "模拟军演_开始挑战"
-    ],
-    "recognition": {
-      "param": {
-        "expected": "^[1-9]\\d{4}$",
-        "roi": [
-          964,
-          74,
-          160,
-          140
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "模拟军演_开始挑战": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 171
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]模拟军演_开始挑战[/color]",
-    "next": [
-      "模拟军演_战斗中",
-      "模拟军演_开始挑战"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "挑战"
+    "模拟军演_刷新上线": {
+        "action": {
+            "param": {},
+            "type": "DoNothing"
+        },
+        "focus": "[color:green]模拟军演_刷新上线[/color]",
+        "next": [
+            "模拟军演_选择对手"
         ],
-        "roi": [
-          600,
-          360,
-          600,
-          360
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "模拟军演_战斗中": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1793,
-        "y": 170
-      }
+        "recognition": {
+            "param": {
+                "expected": [
+                    "操作"
+                ],
+                "roi": [
+                    400,
+                    250,
+                    400,
+                    200
+                ]
+            },
+            "type": "OCR"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "DoNothing"
-    },
-    "focus": "[color:green]模拟军演_战斗中[/color]",
-    "next": [
-      {
-        "jump_back": true,
-        "name": "战斗_自动战斗"
-      },
-      {
-        "jump_back": true,
-        "name": "战斗_启用二倍速"
-      },
-      "模拟军演_战斗中_战斗结束",
-      "模拟军演_战斗中"
-    ],
-    "recognition": {
-      "param": {
-        "roi": [
-          1169,
-          27,
-          105,
-          59
+    "模拟军演_刷新对手": {
+        "action": {
+            "param": {
+                "target": [
+                    1200,
+                    110,
+                    10,
+                    10
+                ]
+            },
+            "type": "Click"
+        },
+        "focus": "[color:green]模拟军演_刷新对手[/color]",
+        "next": [
+            "模拟军演_刷新上线",
+            "模拟军演_刷新对手",
+            "模拟军演_选择对手",
+            "模拟军演_开始挑战"
         ],
-        "template": "Combat/Combat_Combating.png"
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "模拟军演_战斗中_战斗结束": {
-    "$__mpe_code": {
-      "position": {
-        "x": 2100,
-        "y": 541
-      }
+        "recognition": {
+            "param": {
+                "expected": "^[1-9]\\d{4}$",
+                "roi": [
+                    964,
+                    74,
+                    160,
+                    140
+                ]
+            },
+            "type": "OCR"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]模拟军演_战斗中_战斗结束[/color]",
-    "next": [
-      {
-        "jump_back": true,
-        "name": "子任务_获得物品"
-      },
-      {
-        "jump_back": true,
-        "name": "模拟军演_阶段提升"
-      },
-      "模拟军演_刷新对手",
-      "模拟军演_选择对手",
-      "模拟军演_战斗中_战斗结束"
-    ],
-    "post_delay": 3000,
-    "recognition": {
-      "param": {
-        "expected": [
-          "等级"
+    "模拟军演_开始挑战": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]模拟军演_开始挑战[/color]",
+        "next": [
+            "模拟军演_战斗中",
+            "模拟军演_开始挑战"
         ],
-        "roi": [
-          210,
-          481,
-          97,
-          82
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "模拟军演_无挑战次数": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 425
-      }
+        "recognition": {
+            "param": {
+                "expected": [
+                    "挑战"
+                ],
+                "roi": [
+                    600,
+                    360,
+                    600,
+                    360
+                ]
+            },
+            "type": "OCR"
+        }
     },
-    "action": {
-      "param": {
-        "target": [
-          228,
-          49,
-          10,
-          10
-        ]
-      },
-      "type": "Click"
-    },
-    "focus": "[color:green]模拟军演_无挑战次数[/color]",
-    "next": [
-      "进入首页"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "模拟次数购买"
+    "模拟军演_战斗中": {
+        "action": {
+            "param": {},
+            "type": "DoNothing"
+        },
+        "focus": "[color:green]模拟军演_战斗中[/color]",
+        "next": [
+            {
+                "jump_back": true,
+                "name": "战斗_自动战斗"
+            },
+            {
+                "jump_back": true,
+                "name": "战斗_启用二倍速"
+            },
+            "模拟军演_战斗中_战斗结束",
+            "模拟军演_战斗中"
         ],
-        "roi": [
-          207,
-          146,
-          233,
-          92
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "模拟军演_选择对手": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1200,
-        "y": 336
-      }
+        "recognition": {
+            "param": {
+                "roi": [
+                    1169,
+                    27,
+                    105,
+                    59
+                ],
+                "template": "Combat/Combat_Combating.png"
+            },
+            "type": "TemplateMatch"
+        }
     },
-    "action": {
-      "param": {
-        "target": [
-          956,
-          236,
-          200,
-          60
-        ]
-      },
-      "type": "Click"
-    },
-    "focus": "[color:green]模拟军演_选择对手[/color]",
-    "next": [
-      "模拟军演_开始挑战",
-      "模拟军演_无挑战次数",
-      "模拟军演_刷新对手",
-      "模拟军演_选择对手"
-    ],
-    "post_delay": 2000,
-    "recognition": {
-      "param": {
-        "expected": [
-          "积分"
+    "模拟军演_战斗中_战斗结束": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]模拟军演_战斗中_战斗结束[/color]",
+        "next": [
+            {
+                "jump_back": true,
+                "name": "子任务_获得物品"
+            },
+            {
+                "jump_back": true,
+                "name": "模拟军演_阶段提升"
+            },
+            "模拟军演_刷新对手",
+            "模拟军演_选择对手",
+            "模拟军演_战斗中_战斗结束"
         ],
-        "roi": [
-          0,
-          0,
-          0,
-          0
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "模拟军演_阶段提升": {
-    "$__mpe_code": {
-      "position": {
-        "x": 2400,
-        "y": 742
-      }
+        "post_delay": 3000,
+        "recognition": {
+            "param": {
+                "expected": [
+                    "等级"
+                ],
+                "roi": [
+                    210,
+                    481,
+                    97,
+                    82
+                ]
+            },
+            "type": "OCR"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]模拟军演_战斗中_战斗结束[/color]",
-    "post_delay": 2000,
-    "recognition": {
-      "param": {
-        "expected": [
-          "提升",
-          "新的",
-          "阶段"
+    "模拟军演_无挑战次数": {
+        "action": {
+            "param": {
+                "target": [
+                    228,
+                    49,
+                    10,
+                    10
+                ]
+            },
+            "type": "Click"
+        },
+        "focus": "[color:green]模拟军演_无挑战次数[/color]",
+        "next": [
+            "进入首页"
         ],
-        "roi": [
-          404,
-          110,
-          525,
-          124
-        ]
-      },
-      "type": "OCR"
+        "recognition": {
+            "param": {
+                "expected": [
+                    "模拟次数购买"
+                ],
+                "roi": [
+                    207,
+                    146,
+                    233,
+                    92
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "模拟军演_选择对手": {
+        "action": {
+            "param": {
+                "target": [
+                    956,
+                    236,
+                    200,
+                    60
+                ]
+            },
+            "type": "Click"
+        },
+        "focus": "[color:green]模拟军演_选择对手[/color]",
+        "next": [
+            "模拟军演_开始挑战",
+            "模拟军演_无挑战次数",
+            "模拟军演_刷新对手",
+            "模拟军演_选择对手"
+        ],
+        "post_delay": 2000,
+        "recognition": {
+            "param": {
+                "expected": [
+                    "积分"
+                ],
+                "roi": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "模拟军演_阶段提升": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]模拟军演_战斗中_战斗结束[/color]",
+        "post_delay": 2000,
+        "recognition": {
+            "param": {
+                "expected": [
+                    "提升",
+                    "新的",
+                    "阶段"
+                ],
+                "roi": [
+                    404,
+                    110,
+                    525,
+                    124
+                ]
+            },
+            "type": "OCR"
+        }
     }
-  }
 }

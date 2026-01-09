@@ -1,521 +1,403 @@
 {
-  "$__mpe_config_新建Pipeline1": {
-    "$__mpe_code": {
-      "prefix": "",
-      "savedViewport": {
-        "x": 327,
-        "y": 302,
-        "zoom": 0.29
-      },
-      "filename": "新建Pipeline1",
-      "version": "v0.14.2"
+    "失落之剑商店": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "失落之剑商店.png",
+                "roi": [
+                    992,
+                    4,
+                    58,
+                    62
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]失落之剑商店[/color]",
+        "next": [
+            "商品"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "商品": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "商品.png",
+                "roi": [
+                    366,
+                    67,
+                    108,
+                    62
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]商品[/color]",
+        "next": [
+            "每日免费礼包"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "每日免费礼包": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "每日免费礼包.png",
+                "roi": [
+                    315,
+                    146,
+                    250,
+                    268
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 2000,
+        "focus": "[color:green]每日免费礼包[/color]",
+        "next": [
+            "每日免费礼包确认",
+            "已购买"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "每日免费礼包确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "每日按免费礼包确认.png",
+                "roi": [
+                    594,
+                    591,
+                    90,
+                    38
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]每日免费礼包确认[/color]",
+        "next": [
+            "每日免费礼包确认2"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "每日免费礼包确认2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "获取宝藏确认.png",
+                "roi": [
+                    540,
+                    264,
+                    174,
+                    52
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]每日免费礼包确认2[/color]",
+        "next": [
+            "每周免费礼包"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "每周免费礼包": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "每周免费礼包.png",
+                "roi": [
+                    127,
+                    243,
+                    84,
+                    57
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 2000,
+        "focus": "[color:green]每周免费礼包[/color]",
+        "next": [
+            "每周免费礼包2"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "每周免费礼包2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "每日免费礼包.png",
+                "roi": [
+                    315,
+                    146,
+                    250,
+                    268
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]每周免费礼包2[/color]",
+        "next": [
+            "每周免费礼包确认",
+            "已购买"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "每周免费礼包确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "每日按免费礼包确认.png",
+                "roi": [
+                    594,
+                    591,
+                    90,
+                    38
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]每周免费礼包确认[/color]",
+        "next": [
+            "每周免费礼包确认2"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "每周免费礼包确认2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "获取宝藏确认.png",
+                "roi": [
+                    540,
+                    264,
+                    174,
+                    52
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]每周免费礼包确认2[/color]",
+        "next": [
+            "每月免费礼包"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "每月免费礼包": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "每月免费礼包.png",
+                "roi": [
+                    129,
+                    326,
+                    92,
+                    64
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 2000,
+        "focus": "[color:green]每月免费礼包[/color]",
+        "next": [
+            "每月免费礼包2"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "每月免费礼包2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "每日免费礼包.png",
+                "roi": [
+                    315,
+                    146,
+                    250,
+                    268
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]每月免费礼包2[/color]",
+        "next": [
+            "每月免费礼包确认",
+            "已购买"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "每月免费礼包确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "每日按免费礼包确认.png",
+                "roi": [
+                    594,
+                    591,
+                    90,
+                    38
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]每月免费礼包确认[/color]",
+        "next": [
+            "每月免费礼包确认2"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "每月免费礼包确认2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "获取宝藏确认.png",
+                "roi": [
+                    540,
+                    264,
+                    174,
+                    52
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]每月免费礼包确认2[/color]",
+        "next": [
+            "商店返回"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "已购买": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "已购买过该商品.png",
+                "roi": [
+                    542,
+                    586,
+                    170,
+                    49
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1122,
+                    210,
+                    36,
+                    29
+                ]
+            }
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]已购买[/color]",
+        "next": [
+            "商店返回"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "商店返回": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "商店返回.png",
+                "roi": [
+                    1216,
+                    12,
+                    39,
+                    42
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]商店返回[/color]",
+        "next": [
+            "失落之剑主页面确认",
+            "商店返回"
+        ],
+        "on_error": [
+            "error"
+        ]
     }
-  },
-  "失落之剑商店": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "失落之剑商店.png",
-        "roi": [
-          992,
-          4,
-          58,
-          62
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]失落之剑商店[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 212
-      }
-    },
-    "next": [
-      "商品"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "商品": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "商品.png",
-        "roi": [
-          366,
-          67,
-          108,
-          62
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]商品[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 212
-      }
-    },
-    "next": [
-      "每日免费礼包"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "每日免费礼包": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "每日免费礼包.png",
-        "roi": [
-          315,
-          146,
-          250,
-          268
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 2000,
-    "focus": "[color:green]每日免费礼包[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 212
-      }
-    },
-    "next": [
-      "每日免费礼包确认",
-      "已购买"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "每日免费礼包确认": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "每日按免费礼包确认.png",
-        "roi": [
-          594,
-          591,
-          90,
-          38
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]每日免费礼包确认[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 900,
-        "y": 378
-      }
-    },
-    "next": [
-      "每日免费礼包确认2"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "每日免费礼包确认2": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "获取宝藏确认.png",
-        "roi": [
-          540,
-          264,
-          174,
-          52
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]每日免费礼包确认2[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1200,
-        "y": 378
-      }
-    },
-    "next": [
-      "每周免费礼包"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "每周免费礼包": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "每周免费礼包.png",
-        "roi": [
-          127,
-          243,
-          84,
-          57
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 2000,
-    "focus": "[color:green]每周免费礼包[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 378
-      }
-    },
-    "next": [
-      "每周免费礼包2"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "每周免费礼包2": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "每日免费礼包.png",
-        "roi": [
-          315,
-          146,
-          250,
-          268
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]每周免费礼包2[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1800,
-        "y": 378
-      }
-    },
-    "next": [
-      "每周免费礼包确认",
-      "已购买"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "每周免费礼包确认": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "每日按免费礼包确认.png",
-        "roi": [
-          594,
-          591,
-          90,
-          38
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]每周免费礼包确认[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 2100,
-        "y": 378
-      }
-    },
-    "next": [
-      "每周免费礼包确认2"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "每周免费礼包确认2": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "获取宝藏确认.png",
-        "roi": [
-          540,
-          264,
-          174,
-          52
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]每周免费礼包确认2[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 2400,
-        "y": 378
-      }
-    },
-    "next": [
-      "每月免费礼包"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "每月免费礼包": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "每月免费礼包.png",
-        "roi": [
-          129,
-          326,
-          92,
-          64
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 2000,
-    "focus": "[color:green]每月免费礼包[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 2700,
-        "y": 378
-      }
-    },
-    "next": [
-      "每月免费礼包2"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "每月免费礼包2": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "每日免费礼包.png",
-        "roi": [
-          315,
-          146,
-          250,
-          268
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]每月免费礼包2[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 3000,
-        "y": 378
-      }
-    },
-    "next": [
-      "每月免费礼包确认",
-      "已购买"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "每月免费礼包确认": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "每日按免费礼包确认.png",
-        "roi": [
-          594,
-          591,
-          90,
-          38
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]每月免费礼包确认[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 3300,
-        "y": 378
-      }
-    },
-    "next": [
-      "每月免费礼包确认2"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "每月免费礼包确认2": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "获取宝藏确认.png",
-        "roi": [
-          540,
-          264,
-          174,
-          52
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]每月免费礼包确认2[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 3600,
-        "y": 378
-      }
-    },
-    "next": [
-      "商店返回"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "已购买": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "已购买过该商品.png",
-        "roi": [
-          542,
-          586,
-          170,
-          49
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          1122,
-          210,
-          36,
-          29
-        ]
-      }
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]已购买[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 3300,
-        "y": 0
-      }
-    },
-    "next": [
-      "商店返回"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "商店返回": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "商店返回.png",
-        "roi": [
-          1216,
-          12,
-          39,
-          42
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]商店返回[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 3900,
-        "y": 16
-      }
-    },
-    "next": [
-      "失落之剑主页面确认",
-      "商店返回"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "$__mpe_external_error_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 4200,
-        "y": 725
-      }
-    }
-  },
-  "$__mpe_external_失落之剑主页面确认_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 4200,
-        "y": 117
-      }
-    }
-  }
 }

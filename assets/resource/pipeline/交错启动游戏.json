@@ -1,388 +1,270 @@
 {
-  "$__mpe_config_交错战线": {
-    "$__mpe_code": {
-      "filePath": "C:\\Users\\Administrator\\Documents\\GitHub\\MaaGame\\assets\\resource\\pipeline\\交错启动游戏.json",
-      "filename": "交错战线",
-      "lastSyncTime": 1767772611738,
-      "prefix": "",
-      "savedViewport": {
-        "x": 268,
-        "y": -40,
-        "zoom": 0.53
-      },
-      "version": "v0.14.2"
-    }
-  },
-  "$__mpe_external_子任务_关闭公告_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1800,
-        "y": 1437
-      }
-    }
-  },
-  "$__mpe_external_子任务_关闭周年公告_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1800,
-        "y": 1547
-      }
-    }
-  },
-  "$__mpe_external_子任务_点击取消_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1800,
-        "y": 1327
-      }
-    }
-  },
-  "$__mpe_external_子任务_点击确认_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 305,
-        "y": 89
-      }
-    }
-  },
-  "$__mpe_external_子任务_点击返回_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1800,
-        "y": 515
-      }
-    }
-  },
-  "$__mpe_external_子任务_点击首页按钮_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1800,
-        "y": 24
-      }
-    }
-  },
-  "$__mpe_external_子任务_获得物品_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1800,
-        "y": 625
-      }
-    }
-  },
-  "NERI": {
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 980
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "DoNothing"
-    },
-    "focus": "[color:green]StartUp[/color]",
-    "next": [
-      "下载资源",
-      "开始游戏",
-      "NERI"
-    ],
-    "recognition": {
-      "param": {
-        "roi": [
-          325,
-          214,
-          662,
-          354
+    "NERI": {
+        "action": {
+            "param": {},
+            "type": "DoNothing"
+        },
+        "focus": "[color:green]StartUp[/color]",
+        "next": [
+            "下载资源",
+            "开始游戏",
+            "NERI"
         ],
-        "template": "StartUp/NERI.png"
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "下载资源": {
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 1101
-      }
+        "recognition": {
+            "param": {
+                "roi": [
+                    325,
+                    214,
+                    662,
+                    354
+                ],
+                "template": "StartUp/NERI.png"
+            },
+            "type": "TemplateMatch"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "DoNothing"
-    },
-    "focus": "[color:green]下载资源[/color]",
-    "next": [
-      "开始游戏",
-      "下载资源"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "下载"
+    "下载资源": {
+        "action": {
+            "param": {},
+            "type": "DoNothing"
+        },
+        "focus": "[color:green]下载资源[/color]",
+        "next": [
+            "开始游戏",
+            "下载资源"
         ],
-        "roi": [
-          859,
-          645,
-          78,
-          54
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "交错签到": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 690
-      }
+        "recognition": {
+            "param": {
+                "expected": [
+                    "下载"
+                ],
+                "roi": [
+                    859,
+                    645,
+                    78,
+                    54
+                ]
+            },
+            "type": "OCR"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]签到[/color]",
-    "next": [
-      "首页标志1",
-      {
-        "jump_back": true,
-        "name": "子任务_点击首页按钮"
-      },
-      {
-        "jump_back": true,
-        "name": "子任务_点击返回"
-      },
-      {
-        "jump_back": true,
-        "name": "子任务_获得物品"
-      },
-      {
-        "jump_back": true,
-        "name": "子任务_点击取消"
-      },
-      {
-        "jump_back": true,
-        "name": "子任务_关闭公告"
-      },
-      {
-        "jump_back": true,
-        "name": "子任务_关闭周年公告"
-      },
-      "交错签到"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "签到"
+    "交错签到": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]签到[/color]",
+        "next": [
+            "首页标志1",
+            {
+                "jump_back": true,
+                "name": "子任务_点击首页按钮"
+            },
+            {
+                "jump_back": true,
+                "name": "子任务_点击返回"
+            },
+            {
+                "jump_back": true,
+                "name": "子任务_获得物品"
+            },
+            {
+                "jump_back": true,
+                "name": "子任务_点击取消"
+            },
+            {
+                "jump_back": true,
+                "name": "子任务_关闭公告"
+            },
+            {
+                "jump_back": true,
+                "name": "子任务_关闭周年公告"
+            },
+            "交错签到"
         ],
-        "roi": [
-          1053,
-          554,
-          211,
-          105
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "启动游戏": {
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 199
-      }
+        "recognition": {
+            "param": {
+                "expected": [
+                    "签到"
+                ],
+                "roi": [
+                    1053,
+                    554,
+                    211,
+                    105
+                ]
+            },
+            "type": "OCR"
+        }
     },
-    "action": {
-      "param": {
-        "package": "com.megagame.crosscore"
-      },
-      "type": "StartApp"
+    "启动游戏": {
+        "action": {
+            "param": {
+                "package": "com.megagame.crosscore"
+            },
+            "type": "StartApp"
+        },
+        "focus": "[color:orange]启动游戏[/color]",
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        }
     },
-    "focus": "[color:orange]启动游戏[/color]",
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    }
-  },
-  "开始游戏": {
-    "$__mpe_code": {
-      "position": {
-        "x": 900,
-        "y": 1100
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]开始游戏[/color]",
-    "next": [
-      "首页标志1",
-      {
-        "jump_back": true,
-        "name": "子任务_关闭公告"
-      },
-      {
-        "jump_back": true,
-        "name": "子任务_关闭周年公告"
-      },
-      "交错签到",
-      "开始游戏"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "开始游戏"
+    "开始游戏": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]开始游戏[/color]",
+        "next": [
+            "首页标志1",
+            {
+                "jump_back": true,
+                "name": "子任务_关闭公告"
+            },
+            {
+                "jump_back": true,
+                "name": "子任务_关闭周年公告"
+            },
+            "交错签到",
+            "开始游戏"
         ],
-        "roi": [
-          580,
-          462,
-          121,
-          40
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "进入首页": {
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 0
-      }
+        "recognition": {
+            "param": {
+                "expected": [
+                    "开始游戏"
+                ],
+                "roi": [
+                    580,
+                    462,
+                    121,
+                    40
+                ]
+            },
+            "type": "OCR"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "DoNothing"
-    },
-    "focus": "[color:orange]进入首页[/color]",
-    "next": [
-      "首页标志2",
-      "首页标志1",
-      {
-        "jump_back": true,
-        "name": "子任务_点击首页按钮"
-      },
-      {
-        "jump_back": true,
-        "name": "子任务_点击返回"
-      },
-      {
-        "jump_back": true,
-        "name": "子任务_获得物品"
-      },
-      {
-        "jump_back": true,
-        "name": "子任务_点击取消"
-      },
-      {
-        "jump_back": true,
-        "name": "子任务_点击确认"
-      },
-      {
-        "jump_back": true,
-        "name": "子任务_关闭公告"
-      },
-      {
-        "jump_back": true,
-        "name": "子任务_关闭周年公告"
-      },
-      "交错签到",
-      "开始游戏",
-      "NERI",
-      {
-        "jump_back": true,
-        "name": "启动游戏"
-      }
-    ],
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    }
-  },
-  "首页标志1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1200,
-        "y": 812
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "DoNothing"
-    },
-    "focus": "[color:green]初始化[/color]",
-    "next": [
-      {
-        "jump_back": true,
-        "name": "子任务_点击首页按钮"
-      },
-      {
-        "jump_back": true,
-        "name": "子任务_点击返回"
-      },
-      {
-        "jump_back": true,
-        "name": "子任务_获得物品"
-      },
-      {
-        "jump_back": true,
-        "name": "子任务_点击取消"
-      },
-      {
-        "jump_back": true,
-        "name": "子任务_关闭公告"
-      },
-      "交错签到",
-      "首页标志2",
-      "首页标志1"
-    ],
-    "post_delay": 1000,
-    "recognition": {
-      "param": {
-        "expected": [
-          "补给站"
+    "进入首页": {
+        "action": {
+            "param": {},
+            "type": "DoNothing"
+        },
+        "focus": "[color:orange]进入首页[/color]",
+        "next": [
+            "首页标志2",
+            "首页标志1",
+            {
+                "jump_back": true,
+                "name": "子任务_点击首页按钮"
+            },
+            {
+                "jump_back": true,
+                "name": "子任务_点击返回"
+            },
+            {
+                "jump_back": true,
+                "name": "子任务_获得物品"
+            },
+            {
+                "jump_back": true,
+                "name": "子任务_点击取消"
+            },
+            {
+                "jump_back": true,
+                "name": "子任务_点击确认"
+            },
+            {
+                "jump_back": true,
+                "name": "子任务_关闭公告"
+            },
+            {
+                "jump_back": true,
+                "name": "子任务_关闭周年公告"
+            },
+            "交错签到",
+            "开始游戏",
+            "NERI",
+            {
+                "jump_back": true,
+                "name": "启动游戏"
+            }
         ],
-        "roi": [
-          934,
-          582,
-          176,
-          127
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "首页标志2": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 267
-      }
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        }
     },
-    "action": {
-      "param": {
-        "target": [
-          620,
-          350,
-          20,
-          20
-        ]
-      },
-      "type": "Click"
-    },
-    "focus": "[color:green]初始化[/color]",
-    "recognition": {
-      "param": {
-        "roi": [
-          118,
-          357,
-          82,
-          317
+    "首页标志1": {
+        "action": {
+            "param": {},
+            "type": "DoNothing"
+        },
+        "focus": "[color:green]初始化[/color]",
+        "next": [
+            {
+                "jump_back": true,
+                "name": "子任务_点击首页按钮"
+            },
+            {
+                "jump_back": true,
+                "name": "子任务_点击返回"
+            },
+            {
+                "jump_back": true,
+                "name": "子任务_获得物品"
+            },
+            {
+                "jump_back": true,
+                "name": "子任务_点击取消"
+            },
+            {
+                "jump_back": true,
+                "name": "子任务_关闭公告"
+            },
+            "交错签到",
+            "首页标志2",
+            "首页标志1"
         ],
-        "template": "StartUp/HomeFlag1.png"
-      },
-      "type": "TemplateMatch"
+        "post_delay": 1000,
+        "recognition": {
+            "param": {
+                "expected": [
+                    "补给站"
+                ],
+                "roi": [
+                    934,
+                    582,
+                    176,
+                    127
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "首页标志2": {
+        "action": {
+            "param": {
+                "target": [
+                    620,
+                    350,
+                    20,
+                    20
+                ]
+            },
+            "type": "Click"
+        },
+        "focus": "[color:green]初始化[/color]",
+        "recognition": {
+            "param": {
+                "roi": [
+                    118,
+                    357,
+                    82,
+                    317
+                ],
+                "template": "StartUp/HomeFlag1.png"
+            },
+            "type": "TemplateMatch"
+        }
     }
-  }
 }

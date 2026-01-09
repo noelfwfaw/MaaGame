@@ -1,269 +1,195 @@
 {
-  "$__mpe_config_新建Pipeline1": {
-    "$__mpe_code": {
-      "prefix": "",
-      "savedViewport": {
-        "x": 628,
-        "y": 327,
-        "zoom": 0.29
-      },
-      "filename": "新建Pipeline1",
-      "version": "v0.14.2"
+    "前哨防御": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "点开前哨防御"
+        ]
+    },
+    "点开前哨防御": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "前哨防御.png",
+                "roi": [
+                    35,
+                    1039,
+                    171,
+                    80
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "获得奖励"
+        ]
+    },
+    "获得奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "获得奖励",
+                "roi": [
+                    458,
+                    1062,
+                    138,
+                    62
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            {
+                "name": "点击领取奖励",
+                "jump_back": true
+            },
+            "再次点开"
+        ]
+    },
+    "再次点开": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "前哨防御.png",
+                "roi": [
+                    35,
+                    1039,
+                    171,
+                    80
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "一举歼灭"
+        ]
+    },
+    "点击领取奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "点击领取奖励",
+                "roi": [
+                    82,
+                    721,
+                    591,
+                    426
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        }
+    },
+    "一举歼灭": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "一举歼灭",
+                "roi": [
+                    160,
+                    1060,
+                    164,
+                    69
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "判断是否免费",
+            "进行歼灭"
+        ]
+    },
+    "判断是否免费": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "歼灭付费.png",
+                "roi": [
+                    288,
+                    938,
+                    180,
+                    80
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    124,
+                    962,
+                    79,
+                    40
+                ]
+            }
+        },
+        "post_delay": 1000,
+        "next": [
+            "歼灭返回"
+        ]
+    },
+    "歼灭返回": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    625,
+                    135,
+                    40,
+                    42
+                ]
+            }
+        },
+        "next": [
+            "妮姬主页面"
+        ]
+    },
+    "进行歼灭": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "进行歼灭",
+                "roi": [
+                    386,
+                    950,
+                    171,
+                    69
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            {
+                "name": "点击领取奖励",
+                "jump_back": true
+            }
+        ]
     }
-  },
-  "前哨防御": {
-    "recognition": {
-      "type": "DirectHit",
-      "param": {}
-    },
-    "action": {
-      "type": "DoNothing",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 34
-      }
-    },
-    "next": [
-      "点开前哨防御"
-    ]
-  },
-  "点开前哨防御": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "前哨防御.png",
-        "roi": [
-          35,
-          1039,
-          171,
-          80
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 0
-      }
-    },
-    "next": [
-      "获得奖励"
-    ]
-  },
-  "获得奖励": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "获得奖励",
-        "roi": [
-          458,
-          1062,
-          138,
-          62
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 1
-      }
-    },
-    "next": [
-      {
-        "name": "点击领取奖励",
-        "jump_back": true
-      },
-      "再次点开"
-    ]
-  },
-  "再次点开": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "前哨防御.png",
-        "roi": [
-          35,
-          1039,
-          171,
-          80
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 900,
-        "y": 123
-      }
-    },
-    "next": [
-      "一举歼灭"
-    ]
-  },
-  "点击领取奖励": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "点击领取奖励",
-        "roi": [
-          82,
-          721,
-          591,
-          426
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 1800,
-        "y": 1
-      }
-    }
-  },
-  "一举歼灭": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "一举歼灭",
-        "roi": [
-          160,
-          1060,
-          164,
-          69
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 1200,
-        "y": 123
-      }
-    },
-    "next": [
-      "判断是否免费",
-      "进行歼灭"
-    ]
-  },
-  "判断是否免费": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "歼灭付费.png",
-        "roi": [
-          288,
-          938,
-          180,
-          80
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          124,
-          962,
-          79,
-          40
-        ]
-      }
-    },
-    "post_delay": 1000,
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 347
-      }
-    },
-    "next": [
-      "歼灭返回"
-    ]
-  },
-  "歼灭返回": {
-    "recognition": {
-      "type": "DirectHit",
-      "param": {}
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          625,
-          135,
-          40,
-          42
-        ]
-      }
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 1800,
-        "y": 409
-      }
-    },
-    "next": [
-      "妮姬主页面"
-    ]
-  },
-  "进行歼灭": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "进行歼灭",
-        "roi": [
-          386,
-          950,
-          171,
-          69
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 123
-      }
-    },
-    "next": [
-      {
-        "name": "点击领取奖励",
-        "jump_back": true
-      }
-    ]
-  },
-  "$__mpe_external_妮姬主页面_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 2100,
-        "y": 448
-      }
-    }
-  }
 }

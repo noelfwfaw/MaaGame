@@ -1,635 +1,461 @@
 {
-  "$__mpe_config_交错战线": {
-    "$__mpe_code": {
-      "filePath": "C:\\Users\\Administrator\\Documents\\GitHub\\MaaGame\\assets\\resource\\pipeline\\交错通用.json",
-      "filename": "交错战线",
-      "lastSyncTime": 1767773200553,
-      "prefix": "",
-      "savedViewport": {
-        "x": 921,
-        "y": -379,
-        "zoom": 0.35
-      },
-      "version": "v0.14.2"
-    }
-  },
-  "$__mpe_external_NERI_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 305,
-        "y": 2232
-      }
-    }
-  },
-  "$__mpe_external_交错签到_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 305,
-        "y": 1902
-      }
-    }
-  },
-  "$__mpe_external_开始游戏_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 305,
-        "y": 2122
-      }
-    }
-  },
-  "$__mpe_external_首页标志1_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 305,
-        "y": 2012
-      }
-    }
-  },
-  "$__mpe_external_首页标志2_交错战线": {
-    "$__mpe_code": {
-      "position": {
-        "x": 305,
-        "y": 51
-      }
-    }
-  },
-  "子任务_关闭公告": {
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 1622
-      }
+    "子任务_关闭公告": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]关闭公告[/color]",
+        "recognition": {
+            "param": {
+                "roi": [
+                    900,
+                    55,
+                    362,
+                    200
+                ],
+                "template": "StartUp/CloseAnnouncement.png"
+            },
+            "type": "TemplateMatch"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "Click"
+    "子任务_关闭周年公告": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]关闭周年公告[/color]",
+        "recognition": {
+            "param": {
+                "roi": [
+                    900,
+                    55,
+                    362,
+                    200
+                ],
+                "template": "StartUp/ZNGG.png"
+            },
+            "type": "TemplateMatch"
+        }
     },
-    "focus": "[color:green]关闭公告[/color]",
-    "recognition": {
-      "param": {
-        "roi": [
-          900,
-          55,
-          362,
-          200
+    "子任务_点击取消": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]点击取消[/color]",
+        "recognition": {
+            "param": {
+                "expected": [
+                    "取消"
+                ],
+                "roi": [
+                    330,
+                    346,
+                    313,
+                    150
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "子任务_点击确认": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]点击确认[/color]",
+        "recognition": {
+            "param": {
+                "expected": [
+                    "确认"
+                ],
+                "roi": [
+                    665,
+                    364,
+                    331,
+                    152
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "子任务_点击返回": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]点击返回[/color]",
+        "recognition": {
+            "param": {
+                "roi": [
+                    14,
+                    10,
+                    126,
+                    72
+                ],
+                "template": "StartUp/BackButton.png"
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "子任务_点击首页按钮": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]点击首页按钮[/color]",
+        "post_delay": 5000,
+        "recognition": {
+            "param": {
+                "roi": [
+                    180,
+                    10,
+                    100,
+                    70
+                ],
+                "template": [
+                    "StartUp/HomeButton.png",
+                    "StartUp/HomeButton1.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "子任务_获得物品": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]获得物品[/color]",
+        "post_delay": 1000,
+        "recognition": {
+            "param": {
+                "expected": [
+                    "获得物品",
+                    "合成成功"
+                ],
+                "roi": [
+                    447,
+                    117,
+                    405,
+                    117
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "子任务_进入首页": {
+        "action": {
+            "param": {},
+            "type": "DoNothing"
+        },
+        "focus": "[color:green]进入首页[/color]",
+        "next": [
+            "首页标志2",
+            {
+                "jump_back": true,
+                "name": "子任务_点击首页按钮"
+            },
+            {
+                "jump_back": true,
+                "name": "子任务_点击返回"
+            },
+            {
+                "jump_back": true,
+                "name": "子任务_获得物品"
+            },
+            {
+                "jump_back": true,
+                "name": "子任务_点击取消"
+            },
+            {
+                "jump_back": true,
+                "name": "子任务_点击确认"
+            },
+            {
+                "jump_back": true,
+                "name": "子任务_关闭公告"
+            },
+            "交错签到",
+            "首页标志1",
+            "开始游戏",
+            "NERI"
         ],
-        "template": "StartUp/CloseAnnouncement.png"
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "子任务_关闭周年公告": {
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 2654
-      }
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "Click"
+    "战斗_启用二倍速": {
+        "action": {
+            "param": {
+                "target": [
+                    1012,
+                    52,
+                    10,
+                    10
+                ]
+            },
+            "type": "Click"
+        },
+        "focus": "[color:green]启用二倍速[/color]",
+        "recognition": {
+            "param": {
+                "roi": [
+                    973,
+                    30,
+                    95,
+                    57
+                ],
+                "template": "Combat/Combat_Doublespeed.png",
+                "threshold": 0.9
+            },
+            "type": "TemplateMatch"
+        }
     },
-    "focus": "[color:green]关闭周年公告[/color]",
-    "recognition": {
-      "param": {
-        "roi": [
-          900,
-          55,
-          362,
-          200
+    "战斗_自动战斗": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]自动战斗[/color]",
+        "recognition": {
+            "param": {
+                "roi": [
+                    1069,
+                    27,
+                    105,
+                    59
+                ],
+                "template": "Combat/Combat_Auto.png"
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "活动探索-右滑": {
+        "action": {
+            "param": {
+                "begin": [
+                    1116,
+                    376,
+                    37,
+                    47
+                ],
+                "duration": 1000,
+                "end": [
+                    [
+                        858,
+                        379,
+                        49,
+                        44
+                    ]
+                ]
+            },
+            "type": "Swipe"
+        },
+        "focus": "[color:green]右滑[/color]",
+        "post_wait_freezes": {
+            "threshold": 0.95,
+            "time": 1000
+        },
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        }
+    },
+    "活动探索-首页-出击": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]活动探索-首页-出击[/color]",
+        "next": [
+            "进入活动探索界面"
         ],
-        "template": "StartUp/ZNGG.png"
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "子任务_点击取消": {
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 1064
-      }
+        "post_wait_freezes": 200,
+        "recognition": {
+            "param": {
+                "roi": [
+                    1085,
+                    557,
+                    194,
+                    152
+                ],
+                "template": "StartUp/chuji.png"
+            },
+            "type": "TemplateMatch"
+        }
     },
-    "action": {
-      "param": {},
-      "type": "Click"
+    "活动选择": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]活动选择[/color]",
+        "post_wait_freezes": {
+            "threshold": 0.95,
+            "time": 1000
+        },
+        "recognition": {
+            "param": {
+                "expected": "活动选择",
+                "roi": [
+                    91,
+                    173,
+                    1139,
+                    422
+                ]
+            },
+            "type": "OCR"
+        }
     },
-    "focus": "[color:green]点击取消[/color]",
-    "recognition": {
-      "param": {
-        "expected": [
-          "取消"
+    "跳过boss演出动画": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]跳过boss演出动画[/color]",
+        "recognition": {
+            "param": {
+                "expected": "跳过",
+                "roi": [
+                    1119,
+                    30,
+                    87,
+                    44
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "进入活动探索界面": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]进入活动探索界面[/color]",
+        "next": [
+            "活动选择",
+            {
+                "jump_back": true,
+                "name": "活动探索-右滑"
+            }
         ],
-        "roi": [
-          330,
-          346,
-          313,
-          150
-        ]
-      },
-      "type": "OCR"
+        "post_wait_freezes": {
+            "threshold": 0.95,
+            "time": 1000
+        },
+        "recognition": {
+            "param": {
+                "expected": "活动探索",
+                "roi": [
+                    527,
+                    110,
+                    227,
+                    90
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "通用-啥也不做": {
+        "action": {
+            "param": {},
+            "type": "DoNothing"
+        },
+        "focus": "[color:green]结束任务[/color]",
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        }
+    },
+    "通用-确认获得物品": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]确认获得物品[/color]",
+        "pre_wait_freezes": {
+            "threshold": 0.95,
+            "time": 2000
+        },
+        "recognition": {
+            "param": {
+                "expected": "获得物品",
+                "roi": [
+                    511,
+                    154,
+                    276,
+                    116
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "通用-返回": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]返回[/color]",
+        "pre_wait_freezes": {
+            "threshold": 0.95,
+            "time": 1000
+        },
+        "recognition": {
+            "param": {
+                "roi": [
+                    11,
+                    8,
+                    426,
+                    102
+                ],
+                "template": "交错返回.png"
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "通用-返回主页": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]返回主页[/color]",
+        "pre_wait_freezes": {
+            "threshold": 0.95,
+            "time": 1000
+        },
+        "recognition": {
+            "param": {
+                "roi": [
+                    164,
+                    21,
+                    112,
+                    51
+                ],
+                "template": "交错返回主页.png"
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "首页_出击": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": "[color:green]首页_出击[/color]",
+        "next_doc": "Set in code.",
+        "recognition": {
+            "param": {
+                "roi": [
+                    1094,
+                    539,
+                    176,
+                    175
+                ],
+                "template": "StartUp/chuji.png"
+            },
+            "type": "TemplateMatch"
+        }
     }
-  },
-  "子任务_点击确认": {
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 1343
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]点击确认[/color]",
-    "recognition": {
-      "param": {
-        "expected": [
-          "确认"
-        ],
-        "roi": [
-          665,
-          364,
-          331,
-          152
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "子任务_点击返回": {
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 473
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]点击返回[/color]",
-    "recognition": {
-      "param": {
-        "roi": [
-          14,
-          10,
-          126,
-          72
-        ],
-        "template": "StartUp/BackButton.png"
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "子任务_点击首页按钮": {
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 161
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]点击首页按钮[/color]",
-    "post_delay": 5000,
-    "recognition": {
-      "param": {
-        "roi": [
-          180,
-          10,
-          100,
-          70
-        ],
-        "template": [
-          "StartUp/HomeButton.png",
-          "StartUp/HomeButton1.png"
-        ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "子任务_获得物品": {
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 753
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]获得物品[/color]",
-    "post_delay": 1000,
-    "recognition": {
-      "param": {
-        "expected": [
-          "获得物品",
-          "合成成功"
-        ],
-        "roi": [
-          447,
-          117,
-          405,
-          117
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "子任务_进入首页": {
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "DoNothing"
-    },
-    "focus": "[color:green]进入首页[/color]",
-    "next": [
-      "首页标志2",
-      {
-        "jump_back": true,
-        "name": "子任务_点击首页按钮"
-      },
-      {
-        "jump_back": true,
-        "name": "子任务_点击返回"
-      },
-      {
-        "jump_back": true,
-        "name": "子任务_获得物品"
-      },
-      {
-        "jump_back": true,
-        "name": "子任务_点击取消"
-      },
-      {
-        "jump_back": true,
-        "name": "子任务_点击确认"
-      },
-      {
-        "jump_back": true,
-        "name": "子任务_关闭公告"
-      },
-      "交错签到",
-      "首页标志1",
-      "开始游戏",
-      "NERI"
-    ],
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    }
-  },
-  "战斗_启用二倍速": {
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 2934
-      }
-    },
-    "action": {
-      "param": {
-        "target": [
-          1012,
-          52,
-          10,
-          10
-        ]
-      },
-      "type": "Click"
-    },
-    "focus": "[color:green]启用二倍速[/color]",
-    "recognition": {
-      "param": {
-        "roi": [
-          973,
-          30,
-          95,
-          57
-        ],
-        "template": "Combat/Combat_Doublespeed.png",
-        "threshold": 0.9
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "战斗_自动战斗": {
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 3278
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]自动战斗[/color]",
-    "recognition": {
-      "param": {
-        "roi": [
-          1069,
-          27,
-          105,
-          59
-        ],
-        "template": "Combat/Combat_Auto.png"
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "活动探索-右滑": {
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 2653
-      }
-    },
-    "action": {
-      "param": {
-        "begin": [
-          1116,
-          376,
-          37,
-          47
-        ],
-        "duration": 1000,
-        "end": [
-          [
-            858,
-            379,
-            49,
-            44
-          ]
-        ]
-      },
-      "type": "Swipe"
-    },
-    "focus": "[color:green]右滑[/color]",
-    "post_wait_freezes": {
-      "threshold": 0.95,
-      "time": 1000
-    },
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    }
-  },
-  "活动探索-首页-出击": {
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 2342
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]活动探索-首页-出击[/color]",
-    "next": [
-      "进入活动探索界面"
-    ],
-    "post_wait_freezes": 200,
-    "recognition": {
-      "param": {
-        "roi": [
-          1085,
-          557,
-          194,
-          152
-        ],
-        "template": "StartUp/chuji.png"
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "活动选择": {
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 2342
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]活动选择[/color]",
-    "post_wait_freezes": {
-      "threshold": 0.95,
-      "time": 1000
-    },
-    "recognition": {
-      "param": {
-        "expected": "活动选择",
-        "roi": [
-          91,
-          173,
-          1139,
-          422
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "跳过boss演出动画": {
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 3558
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]跳过boss演出动画[/color]",
-    "recognition": {
-      "param": {
-        "expected": "跳过",
-        "roi": [
-          1119,
-          30,
-          87,
-          44
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "进入活动探索界面": {
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 2342
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]进入活动探索界面[/color]",
-    "next": [
-      "活动选择",
-      {
-        "jump_back": true,
-        "name": "活动探索-右滑"
-      }
-    ],
-    "post_wait_freezes": {
-      "threshold": 0.95,
-      "time": 1000
-    },
-    "recognition": {
-      "param": {
-        "expected": "活动探索",
-        "roi": [
-          527,
-          110,
-          227,
-          90
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "通用-啥也不做": {
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 3837
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "DoNothing"
-    },
-    "focus": "[color:green]结束任务[/color]",
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    }
-  },
-  "通用-确认获得物品": {
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 4049
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]确认获得物品[/color]",
-    "pre_wait_freezes": {
-      "threshold": 0.95,
-      "time": 2000
-    },
-    "recognition": {
-      "param": {
-        "expected": "获得物品",
-        "roi": [
-          511,
-          154,
-          276,
-          116
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "通用-返回": {
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 4360
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]返回[/color]",
-    "pre_wait_freezes": {
-      "threshold": 0.95,
-      "time": 1000
-    },
-    "recognition": {
-      "param": {
-        "roi": [
-          11,
-          8,
-          426,
-          102
-        ],
-        "template": "交错返回.png"
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "通用-返回主页": {
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 4672
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]返回主页[/color]",
-    "pre_wait_freezes": {
-      "threshold": 0.95,
-      "time": 1000
-    },
-    "recognition": {
-      "param": {
-        "roi": [
-          164,
-          21,
-          112,
-          51
-        ],
-        "template": "交错返回主页.png"
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "首页_出击": {
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 4984
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "focus": "[color:green]首页_出击[/color]",
-    "next_doc": "Set in code.",
-    "recognition": {
-      "param": {
-        "roi": [
-          1094,
-          539,
-          176,
-          175
-        ],
-        "template": "StartUp/chuji.png"
-      },
-      "type": "TemplateMatch"
-    }
-  }
 }

@@ -1,31 +1,13 @@
 {
-  "$__mpe_config_新建Pipeline1": {
-    "$__mpe_code": {
-      "prefix": "",
-      "savedViewport": {
-        "x": 928,
-        "y": 391,
-        "zoom": 0.29
-      },
-      "filename": "新建Pipeline1",
-      "version": "v0.14.2"
+    "error": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "focus": "[color:red]节点异常[/color]"
     }
-  },
-  "error": {
-    "recognition": {
-      "type": "DirectHit",
-      "param": {}
-    },
-    "action": {
-      "type": "DoNothing",
-      "param": {}
-    },
-    "focus": "[color:red]节点异常[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 0
-      }
-    }
-  }
 }

@@ -1,261 +1,191 @@
 {
-  "$__mpe_config_新建Pipeline1": {
-    "$__mpe_code": {
-      "prefix": "",
-      "savedViewport": {
-        "x": 671,
-        "y": 308,
-        "zoom": 0.29
-      },
-      "filename": "新建Pipeline1",
-      "version": "v0.14.2"
+    "失落之剑竞技场": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "战斗.png",
+                "roi": [
+                    909,
+                    590,
+                    78,
+                    101
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]失落之剑竞技场[/color]",
+        "next": [
+            "失落之剑竞技场2"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "失落之剑竞技场2": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "竞技场",
+                "roi": [
+                    478,
+                    537,
+                    103,
+                    54
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]失落之剑竞技场2[/color]",
+        "next": [
+            "失落之剑竞技场挑战"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "失落之剑竞技场挑战": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "挑战",
+                "roi": [
+                    1120,
+                    155,
+                    159,
+                    533
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_delay": 1000,
+        "focus": "[color:green]失落之剑竞技场挑战[/color]",
+        "next": [
+            "失落之剑竞技场挑战2"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "失落之剑竞技场挑战2": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "进入",
+                "roi": [
+                    1069,
+                    638,
+                    59,
+                    49
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]失落之剑竞技场挑战2[/color]",
+        "next": [
+            "失落之剑竞技场门票不足",
+            "失落之剑竞技场等待"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "失落之剑竞技场门票不足": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "竞技场门票不足",
+                "roi": [
+                    557,
+                    320,
+                    144,
+                    39
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    476,
+                    464,
+                    62,
+                    36
+                ]
+            }
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]失落之剑竞技场挑战2[/color]",
+        "next": [
+            "讨伐返回"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "失落之剑竞技场等待": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:blue]失落之剑竞技场等待[/color]",
+        "next": [
+            "失落之剑竞技场继续",
+            "失落之剑竞技场门票不足",
+            "失落之剑竞技场等待"
+        ]
+    },
+    "失落之剑竞技场继续": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "胜点分",
+                "roi": [
+                    84,
+                    597,
+                    92,
+                    43
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1228,
+                    27,
+                    28,
+                    26
+                ]
+            }
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]失落之剑竞技场继续[/color]",
+        "next": [
+            "失落之剑竞技场挑战",
+            "失落之剑竞技场继续"
+        ],
+        "on_error": [
+            "error"
+        ]
     }
-  },
-  "失落之剑竞技场": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "战斗.png",
-        "roi": [
-          909,
-          590,
-          78,
-          101
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]失落之剑竞技场[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 16
-      }
-    },
-    "next": [
-      "失落之剑竞技场2"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "失落之剑竞技场2": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "竞技场",
-        "roi": [
-          478,
-          537,
-          103,
-          54
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]失落之剑竞技场2[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 16
-      }
-    },
-    "next": [
-      "失落之剑竞技场挑战"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "失落之剑竞技场挑战": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "挑战",
-        "roi": [
-          1120,
-          155,
-          159,
-          533
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_delay": 1000,
-    "focus": "[color:green]失落之剑竞技场挑战[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 16
-      }
-    },
-    "next": [
-      "失落之剑竞技场挑战2"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "失落之剑竞技场挑战2": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "进入",
-        "roi": [
-          1069,
-          638,
-          59,
-          49
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]失落之剑竞技场挑战2[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 900,
-        "y": 376
-      }
-    },
-    "next": [
-      "失落之剑竞技场门票不足",
-      "失落之剑竞技场等待"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "失落之剑竞技场门票不足": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "竞技场门票不足",
-        "roi": [
-          557,
-          320,
-          144,
-          39
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          476,
-          464,
-          62,
-          36
-        ]
-      }
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]失落之剑竞技场挑战2[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 373
-      }
-    },
-    "next": [
-      "讨伐返回"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "失落之剑竞技场等待": {
-    "recognition": {
-      "type": "DirectHit",
-      "param": {}
-    },
-    "action": {
-      "type": "DoNothing",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:blue]失落之剑竞技场等待[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1200,
-        "y": 410
-      }
-    },
-    "next": [
-      "失落之剑竞技场继续",
-      "失落之剑竞技场门票不足",
-      "失落之剑竞技场等待"
-    ]
-  },
-  "失落之剑竞技场继续": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "胜点分",
-        "roi": [
-          84,
-          597,
-          92,
-          43
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          1228,
-          27,
-          28,
-          26
-        ]
-      }
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]失落之剑竞技场继续[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 0
-      }
-    },
-    "next": [
-      "失落之剑竞技场挑战",
-      "失落之剑竞技场继续"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "$__mpe_external_error_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1800,
-        "y": 685
-      }
-    }
-  },
-  "$__mpe_external_讨伐返回_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1800,
-        "y": 497
-      }
-    }
-  }
 }

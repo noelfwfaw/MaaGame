@@ -1,523 +1,405 @@
 {
-  "$__mpe_config_新建Pipeline1": {
-    "$__mpe_code": {
-      "prefix": "",
-      "savedViewport": {
-        "x": 585,
-        "y": 206,
-        "zoom": 0.29
-      },
-      "filename": "新建Pipeline1",
-      "version": "v0.14.2"
+    "棕色尘埃活动": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1051,
+                    326,
+                    144,
+                    72
+                ]
+            }
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]棕色尘埃活动[/color]",
+        "next": [
+            "普通战斗"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "普通战斗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "普通战斗.png",
+                "roi": [
+                    374,
+                    637,
+                    81,
+                    31
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 10000,
+        "focus": "[color:green]普通战斗[/color]",
+        "next": [
+            "快速战斗",
+            "棕色尘埃战斗"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "快速战斗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "快速战斗.png",
+                "roi": [
+                    845,
+                    620,
+                    98,
+                    51
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]快速战斗[/color]",
+        "next": [
+            "快速战斗次数",
+            "AP不足返回2"
+        ]
+    },
+    "快速战斗次数": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "快速战斗次数.png",
+                "roi": [
+                    770,
+                    368,
+                    72,
+                    42
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]快速战斗次数[/color]",
+        "next": [
+            "快速战斗确认"
+        ],
+        "on_error": [
+            "活动AP不足"
+        ]
+    },
+    "快速战斗确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "快速战斗确认.png",
+                "roi": [
+                    658,
+                    576,
+                    52,
+                    30
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]快速战斗确认[/color]",
+        "next": [
+            "快速战斗奖励"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "快速战斗奖励": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "快速战斗奖励.png",
+                "roi": [
+                    558,
+                    628,
+                    144,
+                    35
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]快速战斗奖励[/color]",
+        "next": [
+            "棕色尘埃活动返回"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "棕色尘埃活动返回": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "抽抽乐返回2.png",
+                "roi": [
+                    0,
+                    10,
+                    164,
+                    63
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]棕色尘埃活动返回[/color]",
+        "next": [
+            "棕色尘埃活动返回2",
+            "棕色尘埃活动返回"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "棕色尘埃活动返回2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "棕色尘埃活动返回2.png",
+                "roi": [
+                    104,
+                    10,
+                    64,
+                    62
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]棕色尘埃活动返回2[/color]",
+        "next": [
+            "棕色尘埃主页面2",
+            "棕色尘埃活动返回2"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "棕色尘埃战斗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "棕色尘埃战斗.png",
+                "roi": [
+                    802,
+                    625,
+                    199,
+                    47
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 10000,
+        "focus": "[color:green]棕色尘埃战斗[/color]",
+        "next": [
+            "前往下一场战斗",
+            "未能识别下一场战斗"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "前往下一场战斗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "前往下一场战斗.png",
+                "roi": [
+                    1023,
+                    653,
+                    160,
+                    37
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "timeout": 5000,
+        "focus": "[color:green]前往下一场战斗[/color]",
+        "next": [
+            "前往下一场战斗确认"
+        ],
+        "on_error": [
+            "活动AP不足"
+        ]
+    },
+    "未能识别下一场战斗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "前往下一场战斗.png",
+                "roi": [
+                    1023,
+                    653,
+                    160,
+                    37
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "inverse": true,
+        "post_wait_freezes": 10000,
+        "focus": "[color:green]未能识别下一场战斗[/color]",
+        "next": [
+            "前往下一场战斗",
+            "未能识别下一场战斗"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "前往下一场战斗确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "前往下一场战斗确认.png",
+                "roi": [
+                    666,
+                    395,
+                    79,
+                    41
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 10000,
+        "focus": "[color:green]前往下一场战斗确认[/color]",
+        "next": [
+            "前往下一场战斗",
+            "未能识别下一场战斗"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "活动AP不足": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "活动AP不足.png",
+                "roi": [
+                    555,
+                    219,
+                    174,
+                    52
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    541,
+                    467,
+                    64,
+                    24
+                ]
+            }
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]活动AP不足[/color]",
+        "next": [
+            "AP不足返回",
+            "AP不足返回2"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "AP不足返回": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "AP不足返回.png",
+                "roi": [
+                    837,
+                    644,
+                    143,
+                    51
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]AP不足返回[/color]",
+        "next": [
+            "棕色尘埃活动返回"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "AP不足返回2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "AP不足返回2.png",
+                "roi": [
+                    13,
+                    12,
+                    145,
+                    57
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]AP不足返回2[/color]",
+        "next": [
+            "棕色尘埃活动返回"
+        ],
+        "on_error": [
+            "error"
+        ]
     }
-  },
-  "棕色尘埃活动": {
-    "recognition": {
-      "type": "DirectHit",
-      "param": {}
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          1051,
-          326,
-          144,
-          72
-        ]
-      }
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]棕色尘埃活动[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 17
-      }
-    },
-    "next": [
-      "普通战斗"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "普通战斗": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "普通战斗.png",
-        "roi": [
-          374,
-          637,
-          81,
-          31
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 10000,
-    "focus": "[color:green]普通战斗[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 0
-      }
-    },
-    "next": [
-      "快速战斗",
-      "棕色尘埃战斗"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "快速战斗": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "快速战斗.png",
-        "roi": [
-          845,
-          620,
-          98,
-          51
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]快速战斗[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 0
-      }
-    },
-    "next": [
-      "快速战斗次数",
-      "AP不足返回2"
-    ]
-  },
-  "快速战斗次数": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "快速战斗次数.png",
-        "roi": [
-          770,
-          368,
-          72,
-          42
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]快速战斗次数[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 900,
-        "y": 0
-      }
-    },
-    "next": [
-      "快速战斗确认"
-    ],
-    "on_error": [
-      "活动AP不足"
-    ]
-  },
-  "快速战斗确认": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "快速战斗确认.png",
-        "roi": [
-          658,
-          576,
-          52,
-          30
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]快速战斗确认[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1200,
-        "y": 0
-      }
-    },
-    "next": [
-      "快速战斗奖励"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "快速战斗奖励": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "快速战斗奖励.png",
-        "roi": [
-          558,
-          628,
-          144,
-          35
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]快速战斗奖励[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 0
-      }
-    },
-    "next": [
-      "棕色尘埃活动返回"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "棕色尘埃活动返回": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "抽抽乐返回2.png",
-        "roi": [
-          0,
-          10,
-          164,
-          63
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]棕色尘埃活动返回[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1800,
-        "y": 332
-      }
-    },
-    "next": [
-      "棕色尘埃活动返回2",
-      "棕色尘埃活动返回"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "棕色尘埃活动返回2": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "棕色尘埃活动返回2.png",
-        "roi": [
-          104,
-          10,
-          64,
-          62
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]棕色尘埃活动返回2[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 2100,
-        "y": 332
-      }
-    },
-    "next": [
-      "棕色尘埃主页面2",
-      "棕色尘埃活动返回2"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "棕色尘埃战斗": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "棕色尘埃战斗.png",
-        "roi": [
-          802,
-          625,
-          199,
-          47
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 10000,
-    "focus": "[color:green]棕色尘埃战斗[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 624
-      }
-    },
-    "next": [
-      "前往下一场战斗",
-      "未能识别下一场战斗"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "前往下一场战斗": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "前往下一场战斗.png",
-        "roi": [
-          1023,
-          653,
-          160,
-          37
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "timeout": 5000,
-    "focus": "[color:green]前往下一场战斗[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 900,
-        "y": 608
-      }
-    },
-    "next": [
-      "前往下一场战斗确认"
-    ],
-    "on_error": [
-      "活动AP不足"
-    ]
-  },
-  "未能识别下一场战斗": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "前往下一场战斗.png",
-        "roi": [
-          1023,
-          653,
-          160,
-          37
-        ]
-      }
-    },
-    "action": {
-      "type": "DoNothing",
-      "param": {}
-    },
-    "inverse": true,
-    "post_wait_freezes": 10000,
-    "focus": "[color:green]未能识别下一场战斗[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 1158
-      }
-    },
-    "next": [
-      "前往下一场战斗",
-      "未能识别下一场战斗"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "前往下一场战斗确认": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "前往下一场战斗确认.png",
-        "roi": [
-          666,
-          395,
-          79,
-          41
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 10000,
-    "focus": "[color:green]前往下一场战斗确认[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1200,
-        "y": 972
-      }
-    },
-    "next": [
-      "前往下一场战斗",
-      "未能识别下一场战斗"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "活动AP不足": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "活动AP不足.png",
-        "roi": [
-          555,
-          219,
-          174,
-          52
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          541,
-          467,
-          64,
-          24
-        ]
-      }
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]活动AP不足[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1200,
-        "y": 628
-      }
-    },
-    "next": [
-      "AP不足返回",
-      "AP不足返回2"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "AP不足返回": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "AP不足返回.png",
-        "roi": [
-          837,
-          644,
-          143,
-          51
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]AP不足返回[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 644
-      }
-    },
-    "next": [
-      "棕色尘埃活动返回"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "AP不足返回2": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "AP不足返回2.png",
-        "roi": [
-          13,
-          12,
-          145,
-          57
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]AP不足返回2[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 332
-      }
-    },
-    "next": [
-      "棕色尘埃活动返回"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "$__mpe_external_error_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 2400,
-        "y": 1033
-      }
-    }
-  },
-  "$__mpe_external_棕色尘埃主页面2_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 2400,
-        "y": 433
-      }
-    }
-  }
 }

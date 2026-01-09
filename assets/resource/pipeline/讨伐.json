@@ -1,362 +1,274 @@
 {
-  "$__mpe_config_新建Pipeline1": {
-    "$__mpe_code": {
-      "prefix": "",
-      "savedViewport": {
-        "x": 499,
-        "y": 282,
-        "zoom": 0.29
-      },
-      "filename": "新建Pipeline1",
-      "version": "v0.14.2"
+    "讨伐": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "战斗.png",
+                "roi": [
+                    909,
+                    590,
+                    78,
+                    101
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]讨伐[/color]",
+        "next": [
+            "领主突袭"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "领主突袭": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "领主突袭.png",
+                "roi": [
+                    45,
+                    552,
+                    285,
+                    101
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]领主突袭[/color]",
+        "next": [
+            "讨伐次数0",
+            "讨伐一次"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "讨伐次数0": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "讨伐次数0.png",
+                "roi": [
+                    1062,
+                    646,
+                    76,
+                    41
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1211,
+                    25,
+                    36,
+                    27
+                ]
+            }
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]讨伐次数0[/color]",
+        "next": [
+            "讨伐返回"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "讨伐一次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "讨伐一次.png",
+                "roi": [
+                    1081,
+                    644,
+                    55,
+                    39
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 5000,
+        "focus": "[color:green]讨伐一次[/color]",
+        "next": [
+            "讨伐一次确认",
+            "讨伐等待"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "讨伐一次确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "讨伐一次确认.png",
+                "roi": [
+                    1016,
+                    508,
+                    238,
+                    55
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]讨伐一次确认[/color]",
+        "next": [
+            "讨伐扫荡"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "讨伐等待": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "post_wait_freezes": 5000,
+        "focus": "[color:green]讨伐等待[/color]",
+        "focus_tip": "讨伐等待5秒",
+        "focus_tip_color": "blue",
+        "next": [
+            "讨伐一次确认",
+            "讨伐等待"
+        ]
+    },
+    "讨伐扫荡": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "讨伐扫荡.png",
+                "roi": [
+                    909,
+                    641,
+                    60,
+                    43
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]讨伐扫荡[/color]",
+        "next": [
+            "讨伐确认"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "讨伐返回": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "讨伐返回.png",
+                "roi": [
+                    1209,
+                    15,
+                    51,
+                    52
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "timeout": 60000,
+        "focus": "[color:green]讨伐返回[/color]",
+        "next": [
+            "失落之剑主页面确认",
+            "讨伐返回"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "讨伐确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "讨伐确认.png",
+                "roi": [
+                    291,
+                    156,
+                    689,
+                    388
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    585,
+                    502,
+                    100,
+                    33
+                ]
+            }
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]讨伐确认[/color]",
+        "next": [
+            "讨伐奖励确认"
+        ],
+        "on_error": [
+            "error"
+        ]
+    },
+    "讨伐奖励确认": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "获取宝藏确认.png",
+                "roi": [
+                    540,
+                    264,
+                    174,
+                    52
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]讨伐奖励确认[/color]",
+        "next": [
+            "讨伐扫荡",
+            "讨伐次数0",
+            "讨伐返回"
+        ],
+        "on_error": [
+            "error"
+        ]
     }
-  },
-  "讨伐": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "战斗.png",
-        "roi": [
-          909,
-          590,
-          78,
-          101
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]讨伐[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 16
-      }
-    },
-    "next": [
-      "领主突袭"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "领主突袭": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "领主突袭.png",
-        "roi": [
-          45,
-          552,
-          285,
-          101
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]领主突袭[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 16
-      }
-    },
-    "next": [
-      "讨伐次数0",
-      "讨伐一次"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "讨伐次数0": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "讨伐次数0.png",
-        "roi": [
-          1062,
-          646,
-          76,
-          41
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          1211,
-          25,
-          36,
-          27
-        ]
-      }
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]讨伐次数0[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 2400,
-        "y": 0
-      }
-    },
-    "next": [
-      "讨伐返回"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "讨伐一次": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "讨伐一次.png",
-        "roi": [
-          1081,
-          644,
-          55,
-          39
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 5000,
-    "focus": "[color:green]讨伐一次[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 410
-      }
-    },
-    "next": [
-      "讨伐一次确认",
-      "讨伐等待"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "讨伐一次确认": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "讨伐一次确认.png",
-        "roi": [
-          1016,
-          508,
-          238,
-          55
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]讨伐一次确认[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1200,
-        "y": 410
-      }
-    },
-    "next": [
-      "讨伐扫荡"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "讨伐等待": {
-    "recognition": {
-      "type": "DirectHit",
-      "param": {}
-    },
-    "action": {
-      "type": "DoNothing",
-      "param": {}
-    },
-    "post_wait_freezes": 5000,
-    "focus": "[color:green]讨伐等待[/color]",
-    "focus_tip": "讨伐等待5秒",
-    "focus_tip_color": "blue",
-    "$__mpe_code": {
-      "position": {
-        "x": 900,
-        "y": 630
-      }
-    },
-    "next": [
-      "讨伐一次确认",
-      "讨伐等待"
-    ]
-  },
-  "讨伐扫荡": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "讨伐扫荡.png",
-        "roi": [
-          909,
-          641,
-          60,
-          43
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]讨伐扫荡[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 410
-      }
-    },
-    "next": [
-      "讨伐确认"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "讨伐返回": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "讨伐返回.png",
-        "roi": [
-          1209,
-          15,
-          51,
-          52
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "timeout": 60000,
-    "focus": "[color:green]讨伐返回[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 2700,
-        "y": 202
-      }
-    },
-    "next": [
-      "失落之剑主页面确认",
-      "讨伐返回"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "讨伐确认": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "讨伐确认.png",
-        "roi": [
-          291,
-          156,
-          689,
-          388
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          585,
-          502,
-          100,
-          33
-        ]
-      }
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]讨伐确认[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1800,
-        "y": 394
-      }
-    },
-    "next": [
-      "讨伐奖励确认"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "讨伐奖励确认": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "获取宝藏确认.png",
-        "roi": [
-          540,
-          264,
-          174,
-          52
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]讨伐奖励确认[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 2100,
-        "y": 596
-      }
-    },
-    "next": [
-      "讨伐扫荡",
-      "讨伐次数0",
-      "讨伐返回"
-    ],
-    "on_error": [
-      "error"
-    ]
-  },
-  "$__mpe_external_error_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 3000,
-        "y": 863
-      }
-    }
-  },
-  "$__mpe_external_失落之剑主页面确认_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 3000,
-        "y": 319
-      }
-    }
-  }
 }

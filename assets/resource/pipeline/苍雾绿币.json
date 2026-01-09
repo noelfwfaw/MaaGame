@@ -1,233 +1,176 @@
 {
-  "$__mpe_config_新建Pipeline1": {
-    "$__mpe_code": {
-      "prefix": "",
-      "savedViewport": {
-        "x": 671,
-        "y": 312,
-        "zoom": 0.29
-      },
-      "filename": "新建Pipeline1",
-      "version": "v0.14.2"
+    "苍雾绿币": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    42,
+                    419,
+                    124,
+                    64
+                ]
+            }
+        },
+        "focus": "[color:green]苍雾绿币[/color]",
+        "next": [
+            "点击支援角色"
+        ]
+    },
+    "点击支援角色": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "支援角色"
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    94,
+                    470,
+                    23,
+                    19
+                ]
+            }
+        },
+        "post_wait_freezes": 2000,
+        "focus": "[color:green]点击支援角色[/color]",
+        "recommended roi": [
+            25,
+            368,
+            126,
+            51
+        ],
+        "next": [
+            "绿币领取"
+        ]
+    },
+    "获得资源": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "获得资源",
+                "roi": [
+                    561,
+                    237,
+                    159,
+                    53
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        }
+    },
+    "绿币领取": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "领取",
+                "roi": [
+                    255,
+                    244,
+                    64,
+                    27
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]绿币领取[/color]",
+        "next": [
+            {
+                "name": "获得资源",
+                "jump_back": true
+            },
+            "绿币领取2"
+        ]
+    },
+    "绿币领取2": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "领取",
+                "roi": [
+                    253,
+                    389,
+                    62,
+                    31
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]绿币领取2[/color]",
+        "next": [
+            {
+                "name": "获得资源",
+                "jump_back": true
+            },
+            "绿币领取3"
+        ]
+    },
+    "绿币领取3": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "领取",
+                "roi": [
+                    262,
+                    544,
+                    53,
+                    25
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]绿币领取3[/color]",
+        "next": [
+            {
+                "name": "获得资源",
+                "jump_back": true
+            },
+            "绿币返回"
+        ]
+    },
+    "绿币返回": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "返回.png",
+                "roi": [
+                    7,
+                    13,
+                    166,
+                    41
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "focus": "[color:green]绿币领取3[/color]",
+        "next": [
+            "初始状态",
+            "绿币返回"
+        ]
     }
-  },
-  "苍雾绿币": {
-    "recognition": {
-      "type": "DirectHit",
-      "param": {}
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          42,
-          419,
-          124,
-          64
-        ]
-      }
-    },
-    "focus": "[color:green]苍雾绿币[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 48
-      }
-    },
-    "next": [
-      "点击支援角色"
-    ]
-  },
-  "点击支援角色": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "支援角色"
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [94,470,23,19]
-      }
-    },
-    "post_wait_freezes": 2000,
-    "focus": "[color:green]点击支援角色[/color]",
-    "recommended roi": [
-      25,
-      368,
-      126,
-      51
-    ],
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 0
-      }
-    },
-    "next": [
-      "绿币领取"
-    ]
-  },
-  "获得资源": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "获得资源",
-        "roi": [
-          561,
-          237,
-          159,
-          53
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 225
-      }
-    }
-  },
-  "绿币领取": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "领取",
-        "roi": [
-          255,
-          244,
-          64,
-          27
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]绿币领取[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 16
-      }
-    },
-    "next": [
-      {
-        "name": "获得资源",
-        "jump_back": true
-      },
-      "绿币领取2"
-    ]
-  },
-  "绿币领取2": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "领取",
-        "roi": [
-          253,
-          389,
-          62,
-          31
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]绿币领取2[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 900,
-        "y": 182
-      }
-    },
-    "next": [
-      {
-        "name": "获得资源",
-        "jump_back": true
-      },
-      "绿币领取3"
-    ]
-  },
-  "绿币领取3": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "领取",
-        "roi": [
-          262,
-          544,
-          53,
-          25
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]绿币领取3[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1200,
-        "y": 430
-      }
-    },
-    "next": [
-      {
-        "name": "获得资源",
-        "jump_back": true
-      },
-      "绿币返回"
-    ]
-  },
-  "绿币返回": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": "返回.png",
-        "roi": [
-          7,
-          13,
-          166,
-          41
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 1000,
-    "focus": "[color:green]绿币领取3[/color]",
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 449
-      }
-    },
-    "next": [
-      "初始状态",
-      "绿币返回"
-    ]
-  },
-  "$__mpe_external_初始状态_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1800,
-        "y": 550
-      }
-    }
-  }
 }

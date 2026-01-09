@@ -1,241 +1,171 @@
 {
-  "$__mpe_config_新建Pipeline1": {
-    "$__mpe_code": {
-      "prefix": "",
-      "savedViewport": {
-        "x": 455,
-        "y": 288,
-        "zoom": 0.5
-      },
-      "filename": "新建Pipeline1",
-      "version": "v0.14.2"
+    "妮姬派遣": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "前哨基地",
+                "roi": [
+                    107,
+                    955,
+                    168,
+                    71
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 10000,
+        "next": [
+            "派遣公告栏"
+        ]
+    },
+    "派遣公告栏": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "派遣公告栏",
+                "roi": [
+                    309,
+                    1234,
+                    110,
+                    43
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    326,
+                    1185,
+                    66,
+                    42
+                ]
+            }
+        },
+        "next": [
+            "派遣全部领取"
+        ]
+    },
+    "派遣全部领取": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "全部领取",
+                "roi": [
+                    511,
+                    1041,
+                    138,
+                    62
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            {
+                "name": "点击领取奖励",
+                "jump_back": true
+            },
+            "全部派遣"
+        ]
+    },
+    "全部派遣": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "全部派遣",
+                "roi": [
+                    323,
+                    1046,
+                    110,
+                    66
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "派遣",
+            "妮姬派遣返回"
+        ]
+    },
+    "派遣": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "派遣",
+                "roi": [
+                    434,
+                    1046,
+                    94,
+                    59
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "妮姬派遣返回"
+        ]
+    },
+    "妮姬派遣返回": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "派遣公告栏",
+                "roi": [
+                    79,
+                    168,
+                    201,
+                    53
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    642,
+                    152,
+                    26,
+                    33
+                ]
+            }
+        },
+        "next": [
+            {
+                "name": "前哨基地返回",
+                "jump_back": true
+            },
+            "妮姬主页面"
+        ]
+    },
+    "前哨基地返回": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "返回",
+                "roi": [
+                    63,
+                    1183,
+                    80,
+                    43
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_wait_freezes": 10000
     }
-  },
-  "妮姬派遣": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "前哨基地",
-        "roi": [
-          107,
-          955,
-          168,
-          71
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 10000,
-    "$__mpe_code": {
-      "position": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    "next": [
-      "派遣公告栏"
-    ]
-  },
-  "派遣公告栏": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "派遣公告栏",
-        "roi": [
-          309,
-          1234,
-          110,
-          43
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          326,
-          1185,
-          66,
-          42
-        ]
-      }
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 300,
-        "y": 14
-      }
-    },
-    "next": [
-      "派遣全部领取"
-    ]
-  },
-  "派遣全部领取": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "全部领取",
-        "roi": [
-          511,
-          1041,
-          138,
-          62
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 600,
-        "y": 28
-      }
-    },
-    "next": [
-      {
-        "name": "点击领取奖励",
-        "jump_back": true
-      },
-      "全部派遣"
-    ]
-  },
-  "全部派遣": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "全部派遣",
-        "roi": [
-          323,
-          1046,
-          110,
-          66
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 900,
-        "y": 195
-      }
-    },
-    "next": [
-      "派遣",
-      "妮姬派遣返回"
-    ]
-  },
-  "派遣": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "派遣",
-        "roi": [
-          434,
-          1046,
-          94,
-          59
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 1200,
-        "y": 317
-      }
-    },
-    "next": [
-      "妮姬派遣返回"
-    ]
-  },
-  "妮姬派遣返回": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "派遣公告栏",
-        "roi": [
-          79,
-          168,
-          201,
-          53
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          642,
-          152,
-          26,
-          33
-        ]
-      }
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": 181
-      }
-    },
-    "next": [
-      {
-        "name": "前哨基地返回",
-        "jump_back": true
-      },
-      "妮姬主页面"
-    ]
-  },
-  "前哨基地返回": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": "返回",
-        "roi": [
-          63,
-          1183,
-          80,
-          43
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "post_wait_freezes": 10000,
-    "$__mpe_code": {
-      "position": {
-        "x": 1800,
-        "y": 167
-      }
-    }
-  },
-  "$__mpe_external_点击领取奖励_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 905,
-        "y": 85
-      }
-    }
-  },
-  "$__mpe_external_妮姬主页面_新建Pipeline1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1805,
-        "y": 446
-      }
-    }
-  }
 }
