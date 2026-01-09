@@ -1,0 +1,73 @@
+{
+    "E9每日任务": {
+        "next": [
+            "E9打开菜单",
+            "[JumpBack]E9返回",
+            "[JumpBack]E9激活主页面"
+        ]
+    },
+    "E9打开菜单": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "Chaos/E9打开菜单.png",
+                "roi": [
+                    0,
+                    0,
+                    147,
+                    137
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "E9日常任务",
+            "E9打开菜单"
+        ]
+    },
+    "E9日常任务": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "日常任务",
+                "roi": [
+                    1056,
+                    39,
+                    171,
+                    141
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "E9全部領取"
+        ]
+    },
+    "E9全部領取": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "全部領取",
+                "roi": [
+                    1056,
+                    39,
+                    171,
+                    141
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "repeat": 3,
+        "repeat_delay": 500,
+        "next": [
+            "[JumpBack]E9关闭",
+            "E9主页面"
+        ]
+    }
+}
